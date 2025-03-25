@@ -12,7 +12,9 @@ int main(int argc, char *argv[])
         &app,
         []() { QCoreApplication::exit(-1); },
         Qt::QueuedConnection);
-    engine.loadFromModule("OpenBook", "Main");
+    engine.loadFromModule("Main", "Main");
+    // const QUrl url(QStringLiteral("qrc:/ui/qml/Main.qml"));
+    // engine.load(url);
 
     return app.exec();
 }
