@@ -1,25 +1,25 @@
-项目结构
 myapp/
-├── CMakeLists.txt              # 根 CMake 配置
-├── cmake/                      # 自定义 CMake 模块
-│   └── FindQt6Modules.cmake   # 可选：自定义 Qt 模块查找
+├── CMakeLists.txt            # 根CMake配置
+├── cmake/                    # 自定义CMake模块
+│   ├── Qt6QmlMacros.cmake    # QML模块专用宏（推荐）
+│   └── ...                  
 ├── src/
-│   ├── core/                  # C++ 核心逻辑（非 UI 相关）
+│   ├── app/                  # 主应用程序
+│   │   ├── CMakeLists.txt
+│   │   └── main.cpp          # 程序入口
+│   ├── core/                 # 核心逻辑（纯C++）
 │   │   ├── CMakeLists.txt
 │   │   ├── core.cpp
 │   │   └── core.h
-│   ├── ui/                    # Qt/QML 前端
-│   │   ├── CMakeLists.txt
-│   │   ├── main.cpp           # 程序入口
-│   │   └── qml/
-│   │       ├── MainWindow.qml  # QML 主界面
-│   │       ├── components/     # 可复用 QML 组件
-│   │       └── resources.qrc   # QML 资源集合
-│   └── plugins/               # 可选：Qt 插件
-├── tests/                     # 单元测试
-│   ├── CMakeLists.txt
-│   └── core_tests.cpp
-├── thirdparty/                # 第三方依赖
-├── docs/                      # 文档
-├── scripts/                   # 构建/部署脚本
+│   └── qml/                  # QML前端
+│       ├── CMakeLists.txt
+│       ├── qml.qrc           # 资源文件
+│       ├── MainWindow.qml    # 主界面
+│       ├── components/       # 可复用组件
+│       │   └── Button.qml
+│       └── imports/          # QML模块导入目录
+├── tests/                    # 单元测试
+├── thirdparty/               # 第三方依赖
+├── docs/                     # 文档
+├── scripts/                  # 部署脚本（添加qt_deploy）
 └── README.md
