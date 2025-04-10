@@ -1,9 +1,7 @@
-myapp/
-├── CMakeLists.txt            # 根CMake配置
-├── cmake/                    # 自定义CMake模块
-│   ├── Qt6QmlMacros.cmake    # QML模块专用宏（推荐）
-│   └── ...                  
-├── src/
+OpenBook/
+├── CMakeLists.txt            # 根CMake：全局配置、项目定义、依赖查找
+├── bookEditer/
+│   ├── CMakeLists.txt        # 主项目声明
 │   ├── app/                  # 主应用程序
 │   │   ├── CMakeLists.txt
 │   │   └── main.cpp          # 程序入口
@@ -11,15 +9,26 @@ myapp/
 │   │   ├── CMakeLists.txt
 │   │   ├── core.cpp
 │   │   └── core.h
-│   └── qml/                  # QML前端
+│   └── view/                 # views
 │       ├── CMakeLists.txt
 │       ├── qml.qrc           # 资源文件
 │       ├── MainWindow.qml    # 主界面
-│       ├── components/       # 可复用组件
+│       ├── views/            # 子界面
 │       │   └── Button.qml
 │       └── imports/          # QML模块导入目录
+├── thirdparty/               # 第三方依赖,第三方库或者自定义库
+│       ├── CMakeLists.txt
+│       └── 第三方源码
+├── CustomControl/
+│        ├── CMakeLists.txt   # 模块的构建定义
+│        ├── qmldir           # 模块元数据文件（必须！）
+│        └── Controls/        # QML 控件目录
+│            └── Button.qml   # 如：自定义按钮控件         
+├── 3rdparty/                 # 第三方dll、lib、或者mac上需要的依赖
+│       ├── win
+│       └── mac
+│       └── linux
 ├── tests/                    # 单元测试
-├── thirdparty/               # 第三方依赖
 ├── docs/                     # 文档
 ├── scripts/                  # 部署脚本（添加qt_deploy）
 └── README.md
