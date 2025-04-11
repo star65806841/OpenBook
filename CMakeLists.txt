@@ -1,3 +1,8 @@
+#===========================================
+# Output Directories.
+#===========================================
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
 cmake_minimum_required(VERSION 3.21)
 
 project(OpenBook VERSION 1.0.0 LANGUAGES CXX)
@@ -26,3 +31,4 @@ add_subdirectory(bookEditer)
 # add_subdirectory(src/core)
 # add_subdirectory(src/qml)
 # add_subdirectory(src/app)
+
