@@ -1,0 +1,22 @@
+﻿#ifndef CONFIG_H
+#define CONFIG_H
+
+/**
+ * 该头文件设置了所有工程所需要的配置字段
+ * 由cmake生成
+ */
+#if _MSC_VER
+#pragma execution_character_set("utf-8")
+#endif
+
+namespace @COMPANY_NAME@{
+
+constexpr char AppName[]                    = "@CMAKE_PROJECT_NAME@";
+constexpr char LogName[]                    = "@CMAKE_PROJECT_NAME@.log";
+constexpr char CompanyName[]                = "@COMPANY_NAME@";
+constexpr char AppVersion[]                 = "@CMAKE_PROJECT_VERSION@";
+constexpr char Copyright[]                  = "@COMPANY_COPYRIGHT@";
+
+}
+
+#endif // CONFIG_H

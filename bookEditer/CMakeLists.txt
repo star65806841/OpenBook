@@ -23,6 +23,7 @@ endif()
 add_subdirectory(core)
 add_subdirectory(view)
 add_subdirectory(app)
+add_subdirectory(config)
 
 qt_add_executable(${CMAKE_PROJECT_NAME}
     app/main.cpp
