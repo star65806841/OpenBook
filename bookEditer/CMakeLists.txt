@@ -42,3 +42,4 @@ set_target_properties(${CMAKE_PROJECT_NAME} PROPERTIES
     # ‌附加效果‌：自动生成默认的 Info.plist 文件，可通过 MACOSX_BUNDLE_INFO_PLIST 属性自定义该文件路径‌1。
     MACOSX_BUNDLE ON
 )
+
