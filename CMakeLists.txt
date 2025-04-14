@@ -22,7 +22,9 @@ find_package(Qt6 COMPONENTS Core Gui Quick QuickControls2 Qml REQUIRED)
 #===================================
 # Output Directories.
 #===================================
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/output)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/include)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/include)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/include)
 set(GENERATED_INCLUDE_DIR ${CMAKE_BINARY_DIR}/include)
 # ----------------------------------
 # 添加子目录
