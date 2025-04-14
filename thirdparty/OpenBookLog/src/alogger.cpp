@@ -12,7 +12,7 @@
 #include <glog/logging.h>
 #endif
 
-namespace PAIRIDEA {
+namespace PairIdea {
 
 #ifdef QT_DEBUG
 void customMessageHandler(QtMsgType type, const QMessageLogContext &context, const QString& log)

@@ -11,6 +11,14 @@ option(TOOLUNIT_BUILD_LOG "Build Log module" ON)
 option(TOOLUNIT_INSTALL "Install library" OFF)
 
 # ----------------------------------
+# Project Variables
+# ----------------------------------
+# set(TOOLUNIT_VERSION ${PROJECT_VERSION})
+set(TOOLUNIT_INSTALL_NAME ${PROJECT_NAME})
+set(TOOLUNIT_GENERATED_INCLUDE_DIR ${GENERATED_INCLUDE_DIR}/${TOOLUNIT_INSTALL_NAME})
+# set(TOOLUNIT_TRANSLATE_LIST)
+
+# ----------------------------------
 # CMake Settings
 # ----------------------------------
 if(MSVC)
@@ -29,23 +37,37 @@ if (LINUX)
   add_compile_options(-no-pie)
 endif()
 
+# ----------------------------------
+# Find basic dependencies
+# ----------------------------------
+add_subdirectory(qwindowkit)
+find_package(qmsetup QUIET)
+if(NOT TARGET qmsetup::library)
+    # Modify this variable according to your project structure
+    set(_source_dir ${CURRENT_SOURCE_DIR}/qwindowkit/qmsetup)
+
+    # Import install function
+    include("${_source_dir}/cmake/modules/private/InstallPackage.cmake")
+
+    # Install package in place
+    set(_package_path)
+    qm_install_package(qmsetup
+        SOURCE_DIR ${_source_dir}
+        BUILD_TYPE Release
+        RESULT_PATH _package_path
+    )
+
+    # Find package again
+    find_package(qmsetup REQUIRED PATHS ${_package_path})
+
+    # Update import path
+    set(qmsetup_DIR ${_package_path} CACHE PATH "" FORCE)
+endif()
+
 # if(AIMOKIT_INSTALL)
 #     include(GNUInstallDirs)
 #     include(CMakePackageConfigHelpers)
 # endif()
-
-# ----------------------------------
-# Project Variables
-# ----------------------------------
-# set(TOOLUNIT_VERSION ${PROJECT_VERSION})
-set(TOOLUNIT_INSTALL_NAME ${PROJECT_NAME})
-set(TOOLUNIT_GENERATED_INCLUDE_DIR ${GENERATED_INCLUDE_DIR}/${TOOLUNIT_INSTALL_NAME})
-# set(TOOLUNIT_TRANSLATE_LIST)
-
-# ----------------------------------
-# Find basic dependencies
-# ----------------------------------
-# find_package(qmsetup QUIET)
 
 # ----------------------------------
 # Add source modules
@@ -65,7 +87,7 @@ set(TOOLUNIT_GENERATED_INCLUDE_DIR ${GENERATED_INCLUDE_DIR}/${TOOLUNIT_INSTALL_N
 # endif()
 
 if(TOOLUNIT_BUILD_LOG)
-    add_subdirectory(Log)
+    add_subdirectory(OpenBookLog)
 endif()
 
 # if(AIMOKIT_BUILD_DUMP)

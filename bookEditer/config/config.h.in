@@ -9,7 +9,7 @@
 #pragma execution_character_set("utf-8")
 #endif
 
-namespace @COMPANY_NAME@{
+namespace PairIdea{
 
 constexpr char AppName[]                    = "@CMAKE_PROJECT_NAME@";
 constexpr char LogName[]                    = "@CMAKE_PROJECT_NAME@.log";

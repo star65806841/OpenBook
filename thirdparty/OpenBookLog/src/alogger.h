@@ -5,7 +5,7 @@
 #include <QObject>
 #include <QLocale>
 
-namespace PAIRIDEA {
+namespace PairIdea {
 
 /*!
  * \brief 日志模块，内部通过qInstallMessageHandler重定向输出

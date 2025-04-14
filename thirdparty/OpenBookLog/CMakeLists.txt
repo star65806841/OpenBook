@@ -21,7 +21,7 @@ set(WITH_GFLAGS OFF)
 set(BUILD_TESTING OFF)
 set(BUILD_SHARED_LIBS OFF)
 add_subdirectory(3rdparty/glog)
-# 编译阶段_目标文件的宏定义
+# 编译阶段_宏定义 标准导出安装
 target_compile_definitions(${PROJECT_NAME} PRIVATE PAIRLOG_LIBRARY)
 target_link_libraries(${PROJECT_NAME} PRIVATE Qt6::Core glog)
 # qm_include_qt_private(${PROJECT_NAME} PRIVATE Core)
@@ -51,11 +51,11 @@ if(TOOLUNIT_INSTALL)
     )
 endif()
 
-# qm_import(Preprocess)
+qm_import(Preprocess)
 # Generate a standard include directory in build directory
-# qm_sync_include(src "${AIMOKIT_LOG_GENERATED_INCLUDE_DIR}"
-# 	${_install_options} FORCE
-# )
-target_include_directories(${PROJECT_NAME} PUBLIC
-    "$<BUILD_INTERFACE:${AIMOKIT_LOG_GENERATED_INCLUDE_DIR}>"
+qm_sync_include(src "${LOG_GENERATED_INCLUDE_DIR}"
+        ${_install_options} FORCE
 )
+# target_include_directories(${PROJECT_NAME} PUBLIC
+#     "$<BUILD_INTERFACE:${LOG_GENERATED_INCLUDE_DIR}>"
+# )

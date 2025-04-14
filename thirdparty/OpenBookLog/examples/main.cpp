@@ -3,15 +3,15 @@
 // SPDX-License-Identifier: Apache-2.0
 
 #include <QtCore/QCoreApplication>
-#include <tool Log/alogger.h>
+#include <OpenBookLog/alogger.h>
 #include <QDebug>
 
 int main(int argc, char *argv[]) {
     QCoreApplication application(argc, argv);
-    PAIRIDEA::ALogger logger;
-    logger.installLogHandler("AimoLogTest");
+    PairIdea::ALogger logger;
+    logger.installLogHandler("OpenBookLogTest");
     
-    for(qint64 i = 0; i < 999999999; ++i){
+    for(qint64 i = 0; i < 50; ++i){
         qDebug() << "debugdebugdebugdebugdebugdebugdebugdebugdebugdebugdebugdebug"
                     "debugdebugdebugdebugdebugdebugdebugdebugdebugdebugdebugdebug"
                     "debugdebugdebugdebugdebugdebugdebugdebugdebugdebugdebugdebug"
