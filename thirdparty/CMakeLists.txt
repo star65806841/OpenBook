@@ -1,4 +1,4 @@
-﻿project(TOOLUNIT VERSION 1.0.0 LANGUAGES CXX)
+﻿project(ToolUnit VERSION 1.0.0 LANGUAGES CXX)
 # ----------------------------------
 # Build Options
 # ----------------------------------

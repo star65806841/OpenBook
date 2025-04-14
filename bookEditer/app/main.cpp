@@ -1,7 +1,7 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 
-#include <TOOLUNIT/OpenBookLog/alogger.h>
+#include <ToolUnit/OpenBookLog/alogger.h>
 #include <Config/config.h>
 
 int main(int argc, char *argv[])
