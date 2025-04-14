@@ -1,7 +1,14 @@
 project(app VERSION 1.0 LANGUAGES CXX)
 
+if(WIN32)
+    file(GLOB_RECURSE APP_SRC *.h *.cpp)
+elseif(APPLE)
+    file(GLOB_RECURSE MM_SOURCES *.mm)
+    list(APPEND SOURCES ${MM_SOURCES})
+endif()
+
 qt_add_executable(${CMAKE_PROJECT_NAME}
-    main.cpp
+    ${APP_SRC}
 )
 
 set_target_properties(${CMAKE_PROJECT_NAME} PROPERTIES
@@ -17,8 +24,10 @@ target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE
     OpenBookLog
     Qt6::Gui
     Qt6::Qml
+    Qt6::Widgets
 )
 
 target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC
     "$<BUILD_INTERFACE:${GENERATED_INCLUDE_DIR}>"
 )
+target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})

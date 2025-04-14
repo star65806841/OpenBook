@@ -12,7 +12,7 @@ set(COMPANY_COPYRIGHT "Copyright PairIdea Co., Ltd. All rights reserved")
 # ----------------------------------
 # 查找 Qt 组件
 # ----------------------------------
-find_package(Qt6 COMPONENTS Core Gui Quick QuickControls2 Qml REQUIRED)
+find_package(Qt6 COMPONENTS Core Gui Quick QuickControls2 Qml Widgets REQUIRED)
 
 # ----------------------------------
 # 添加QML模块路径
