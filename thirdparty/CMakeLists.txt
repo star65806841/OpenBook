@@ -45,36 +45,10 @@ endif()
 #     "${CURRENT_SOURCE_DIR}/thirdparty/*.cpp"
 # )
 
-# ----------------------------------
-# Find basic dependencies
-# ----------------------------------
-add_subdirectory(qwindowkit)
-find_package(qmsetup QUIET)
-if(NOT TARGET qmsetup::library)
-    # Modify this variable according to your project structure
-    set(_source_dir ${CURRENT_SOURCE_DIR}/qwindowkit/qmsetup)
-
-    # Import install function
-    include("${_source_dir}/cmake/modules/private/InstallPackage.cmake")
-
-    # Install package in place
-    set(_package_path)
-    qm_install_package(qmsetup
-        SOURCE_DIR ${_source_dir}
-        BUILD_TYPE Release
-        RESULT_PATH _package_path
-    )
-
-    # Find package again
-    find_package(qmsetup REQUIRED PATHS ${_package_path})
-
-    # Update import path
-    set(qmsetup_DIR ${_package_path} CACHE PATH "" FORCE)
-endif()
-
 if(TOOLUNIT_BUILD_LOG)
     add_subdirectory(OpenBookLog)
 endif()
+add_subdirectory(qwindowkit)
 # if(AIMOKIT_INSTALL)
 #     include(GNUInstallDirs)
 #     include(CMakePackageConfigHelpers)

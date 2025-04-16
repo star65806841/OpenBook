@@ -95,7 +95,7 @@ if(NOT TARGET qmsetup::library)
     # Update import path
     set(qmsetup_DIR ${_package_path} CACHE PATH "" FORCE)
 endif()
-
+# find_package(qmsetup QUIET PATHS ${_package_path})
 qm_import(Filesystem)
 qm_init_directories()
 
