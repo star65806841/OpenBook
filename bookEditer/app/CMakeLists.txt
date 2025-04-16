@@ -22,12 +22,12 @@ set_target_properties(${CMAKE_PROJECT_NAME} PROPERTIES
 target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE
     mainQml
     OpenBookLog
+    QWKCore
+    QWKQuick
     Qt6::Gui
     Qt6::Qml
-    Qt6::Widgets
+    Qt6::Quick
 )
 
-target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC
-    "$<BUILD_INTERFACE:${GENERATED_INCLUDE_DIR}>"
-)
+target_include_directories(${CMAKE_PROJECT_NAME} PUBLIC "$<BUILD_INTERFACE:${GENERATED_INCLUDE_DIR}>")
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})

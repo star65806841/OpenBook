@@ -38,6 +38,14 @@ if (LINUX)
 endif()
 
 # ----------------------------------
+# Add source modules
+# ----------------------------------
+# file(GLOB_RECURSE THIRDPARTY_SROUCES
+#     "${CURRENT_SOURCE_DIR}/thirdparty/*.h"
+#     "${CURRENT_SOURCE_DIR}/thirdparty/*.cpp"
+# )
+
+# ----------------------------------
 # Find basic dependencies
 # ----------------------------------
 add_subdirectory(qwindowkit)
@@ -64,6 +72,9 @@ if(NOT TARGET qmsetup::library)
     set(qmsetup_DIR ${_package_path} CACHE PATH "" FORCE)
 endif()
 
+if(TOOLUNIT_BUILD_LOG)
+    add_subdirectory(OpenBookLog)
+endif()
 # if(AIMOKIT_INSTALL)
 #     include(GNUInstallDirs)
 #     include(CMakePackageConfigHelpers)
@@ -85,10 +96,6 @@ endif()
 # if(AIMOKIT_BUILD_TRANSLATE_CORE)
 #     add_subdirectory(AimoTranslateCore)
 # endif()
-
-if(TOOLUNIT_BUILD_LOG)
-    add_subdirectory(OpenBookLog)
-endif()
 
 # if(AIMOKIT_BUILD_DUMP)
 #     add_subdirectory(AimoDump)
