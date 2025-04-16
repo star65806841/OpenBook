@@ -34,3 +34,5 @@ add_subdirectory(thirdparty)
 # add_subdirectory(src/qml)
 # add_subdirectory(src/app)
 
+# qm_import(Filesystem)
+# qm_init_directories()
