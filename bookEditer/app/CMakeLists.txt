@@ -22,8 +22,8 @@ set_target_properties(${CMAKE_PROJECT_NAME} PROPERTIES
 target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE
     mainQml
     OpenBookLog
-    QWKCore
-    QWKQuick
+    # QWKCore
+    # QWKQuick
     Qt6::Gui
     Qt6::Qml
     Qt6::Quick

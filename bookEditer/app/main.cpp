@@ -14,16 +14,15 @@ int main(int argc, char *argv[])
     logger.installLogHandler(PairIdea::AppName);
     qInfo() << ".................Application Start .................";
 
-    qputenv("QT_WIN_DEBUG_CONSOLE", "attach");
-    qputenv("QSG_INFO", "1");
-    qputenv("QT_QUICK_CONTROLS_STYLE", "Default");
+    // qputenv("QT_WIN_DEBUG_CONSOLE", "attach");
+    // qputenv("QSG_INFO", "1");
+    // qputenv("QT_QUICK_CONTROLS_STYLE", "Default");
     // qputenv("QT_QUICK_CONTROLS_STYLE", "Basic");
     // #if 0
-    qputenv("QSG_RHI_BACKEND", "opengl");
+    // qputenv("QSG_RHI_BACKEND", "opengl");
     //qputenv("QSG_RHI_HDR", "scrgb");
     //qputenv("QT_QPA_DISABLE_REDIRECTION_SURFACE", "1");
-    QGuiApplication::setHighDpiScaleFactorRoundingPolicy(
-        Qt::HighDpiScaleFactorRoundingPolicy::PassThrough);
+    QGuiApplication::setHighDpiScaleFactorRoundingPolicy(Qt::HighDpiScaleFactorRoundingPolicy::PassThrough);
     // #endif
     QQuickWindow::setDefaultAlphaBuffer(true);
 
@@ -46,8 +45,8 @@ int main(int argc, char *argv[])
     engine.loadFromModule("Main", "Main");
     // const QUrl url(QStringLiteral("../view/Main.qml"));
     // engine.load(url);
-
+    auto ret = app.exec();
     qInfo() << ".................Application End .................";
     logger.uninstallLogHandler();
-    return app.exec();
+    return ret;
 }
