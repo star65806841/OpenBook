@@ -51,11 +51,11 @@ if(TOOLUNIT_INSTALL)
     )
 endif()
 
-qm_import(Preprocess)
+# qm_import(Preprocess)
 # Generate a standard include directory in build directory
-qm_sync_include(src "${LOG_GENERATED_INCLUDE_DIR}"
-        ${_install_options} FORCE
-)
+# qm_sync_include(src "${LOG_GENERATED_INCLUDE_DIR}"
+#         ${_install_options} FORCE
+# )
 # target_include_directories(${PROJECT_NAME} PUBLIC
 #     "$<BUILD_INTERFACE:${LOG_GENERATED_INCLUDE_DIR}>"
 # )

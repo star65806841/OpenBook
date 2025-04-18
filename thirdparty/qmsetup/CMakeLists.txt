@@ -6,7 +6,7 @@ project(qmsetup VERSION 0.0.2.1)
 # Configure Options
 # ----------------------------------
 option(QMSETUP_VCPKG_TOOLS_HINT "Install executables to tools directory" OFF)
-option(QMSETUP_STATIC_RUNTIME "Static link runtime libraries on Windows" ON)
+option(QMSETUP_STATIC_RUNTIME "Static link runtime libraries on Windows" OFF)
 
 # ----------------------------------
 # CMake Settings
@@ -21,17 +21,6 @@ endif()
 
 if(NOT DEFINED CMAKE_ARCHIVE_OUTPUT_DIRECTORY)
     set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
-endif()
-
-if(MSVC)
-    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /manifest:no")
-    set(CMAKE_MODULE_LINKER_FLAGS "${CMAKE_MODULE_LINKER_FLAGS} /manifest:no")
-    set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} /manifest:no")
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /utf-8")
-
-    if(NOT DEFINED CMAKE_DEBUG_POSTFIX)
-        set(CMAKE_DEBUG_POSTFIX "d")
-    endif()
 endif()
 
 # ----------------------------------
