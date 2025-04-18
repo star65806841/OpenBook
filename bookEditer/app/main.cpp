@@ -15,6 +15,7 @@ int main(int argc, char *argv[])
     qInfo() << ".................Application Start .................";
 
     // qputenv("QT_WIN_DEBUG_CONSOLE", "attach");
+    // qDebug()<<"QT_WIN_DEBUG_CONSOLE";
     // qputenv("QSG_INFO", "1");
     // qputenv("QT_QUICK_CONTROLS_STYLE", "Default");
     // qputenv("QT_QUICK_CONTROLS_STYLE", "Basic");
