@@ -1,0 +1,28 @@
+﻿[
+    {
+        "amlLocalPathFileName": "",
+        "amlUrl": "",
+        "appClient": "",
+        "createTime": "",
+        "createUser": "",
+        "creatorId": "",
+        "deleteTime": "",
+        "groupId": 57,
+        "height": "70",
+        "id": "3314",
+        "isPriceTag": 0,
+        "jsonLocalPathFileName": "C:/Users/donghai_h/AppData/Roaming/QUIN/Labelife\\Config.Debug\\AimoDetails\\zh-CN\\TemplateDetailsDir\\PM-241-BT\\57\\3314_7f00ece97719d01ed0833fd70f41bc06.json",
+        "jsonUrl": "https://cos.qu-in.fun/saas/lifemaster/material/684493857269886977_template-1729489770887.json",
+        "langName": "",
+        "name": "鑫亮点-70100",
+        "printDirection": 1,
+        "sort": 0,
+        "status": 1,
+        "thumbLocalPathFileName": "C:/Users/donghai_h/AppData/Roaming/QUIN/Labelife/Config.Debug/AimoDetails/zh-CN/TemplateDetailsDir/PM-241-BT/57/3314_bdce012cf65cece5df7e59f48375ed6e.png",
+        "thumbUrl": "https://oss.qu-in.com/quinSystem/material/merge/user/userId_603701790101479424/screenShot/684493856544268288_previewImage.png",
+        "updateTime": "",
+        "updateUser": "",
+        "useCount": 20,
+        "width": "100"
+    }
+]

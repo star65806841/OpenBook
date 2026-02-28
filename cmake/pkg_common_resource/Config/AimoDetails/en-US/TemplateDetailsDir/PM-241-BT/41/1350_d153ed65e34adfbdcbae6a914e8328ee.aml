@@ -1,0 +1,454 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LPAPI version="1.3">
+  <isPrintHorizontal>0</isPrintHorizontal>
+  <labelHeight>80</labelHeight>
+  <labelWidth>50</labelWidth>
+  <paperName>Custom Label</paperName>
+  <validBoundsX>0</validBoundsX>
+  <validBoundsY>0</validBoundsY>
+  <validBoundsWidth>50</validBoundsWidth>
+  <validBoundsHeight>80</validBoundsHeight>
+  <paperType>0</paperType>
+  <paperDesc />
+  <paperBackground>#FFFFFFFF</paperBackground>
+  <paperForeground>#FF000000</paperForeground>
+  <DisplaySize_mm>50mm × 80mm</DisplaySize_mm>
+  <DisplaySize_in>1.97" × 3.15"</DisplaySize_in>
+  <isAutoHeight>0</isAutoHeight>
+  <isRotate180>0</isRotate180>
+  <leftBlank>0</leftBlank>
+  <rightBlank>0</rightBlank>
+  <isCustomSize>1</isCustomSize>
+  <columnCount>0</columnCount>
+  <rowCount>0</rowCount>
+  <marginLeft>0</marginLeft>
+  <marginTop>0</marginTop>
+  <marginRight>0</marginRight>
+  <marginBottom>0</marginBottom>
+  <cornerRadius>0</cornerRadius>
+  <paddingWidth>0</paddingWidth>
+  <paddingHeight>0</paddingHeight>
+  <isCustomTemplateSize>false</isCustomTemplateSize>
+  <templateHeight>0</templateHeight>
+  <templateWidth>0</templateWidth>
+  <labelName>Information-50x80-02</labelName>
+  <Platform>win</Platform>
+  <contents>
+    <WdPage>
+      <isPrintHorizontal>0</isPrintHorizontal>
+      <labelHeight>80</labelHeight>
+      <labelWidth>50</labelWidth>
+      <paperName>Custom Label</paperName>
+      <validBoundsX>0</validBoundsX>
+      <validBoundsY>0</validBoundsY>
+      <validBoundsWidth>50</validBoundsWidth>
+      <validBoundsHeight>80</validBoundsHeight>
+      <paperType>0</paperType>
+      <paperDesc />
+      <paperBackground>#FFFFFFFF</paperBackground>
+      <paperForeground>#FF000000</paperForeground>
+      <DisplaySize_mm>50mm × 80mm</DisplaySize_mm>
+      <DisplaySize_in>1.97" × 3.15"</DisplaySize_in>
+      <isAutoHeight>0</isAutoHeight>
+      <isRotate180>0</isRotate180>
+      <leftBlank>0</leftBlank>
+      <rightBlank>0</rightBlank>
+      <isCustomSize>1</isCustomSize>
+      <columnCount>0</columnCount>
+      <rowCount>0</rowCount>
+      <marginLeft>0</marginLeft>
+      <marginTop>0</marginTop>
+      <marginRight>0</marginRight>
+      <marginBottom>0</marginBottom>
+      <cornerRadius>0</cornerRadius>
+      <paddingWidth>0</paddingWidth>
+      <paddingHeight>0</paddingHeight>
+      <isCustomTemplateSize>false</isCustomTemplateSize>
+      <templateHeight>0</templateHeight>
+      <templateWidth>0</templateWidth>
+      <masksToBoundsType>0</masksToBoundsType>
+      <borderDisplay>0</borderDisplay>
+      <lineType>0</lineType>
+ <borderWidth>0.70555556</borderWidth>
+<borderHeight>0.70555556</borderHeight>
+<borderColor>#FF000000</borderColor>
+      <isBorderTemplate>0</isBorderTemplate>
+      <lockMovement>0</lockMovement>
+      <bgImage />
+      <useBgImage>0</useBgImage>
+      <group />
+      <contents>
+        <Text>
+          <id>d72e2e259eac47168d9f3a0378a8e7ef</id>
+          <x>2.7500002</x>
+          <y>3.4687502</y>
+          <width>45.5</width>
+          <height>4.5312505</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.70555556</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <orientation>0</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <textDataFormat>Angela's Dessert Shop</textDataFormat>
+          <selectedDataIndexs />
+          <horAlignment>1</horAlignment>
+          <verAlignment>1</verAlignment>
+          <textColor>#FF000000</textColor>
+          <bgAlpha>0</bgAlpha>
+          <bgColor>#00FFFFFF</bgColor>
+          <fontStyleIsBlod>1</fontStyleIsBlod>
+          <fontStyleIsUnderLine>1</fontStyleIsUnderLine>
+          <fontStyleIsitalics>0</fontStyleIsitalics>
+          <fontHeight>3.625</fontHeight>
+          <fontName>Arial</fontName>
+          <isAutoSize>0</isAutoSize>
+          <verDisplay>0</verDisplay>
+          <Lines>
+            <string>Angela's Dessert Shop</string>
+          </Lines>
+          <charSpace>0</charSpace>
+          <lineSpace>0</lineSpace>
+          <paragraphStyle>0</paragraphStyle>
+          <indentWidth>0</indentWidth>
+          <hideBlankLines>0</hideBlankLines>
+          <stretchHorizontal>0</stretchHorizontal>
+          <stretchVertical>0</stretchVertical>
+          <fontInfos />
+          <content>Angela's Dessert Shop</content>
+        </Text>
+        <Image>
+          <id>323f856a6e9d41ee81493560af134e96</id>
+          <x>11.5</x>
+          <y>38.500004</y>
+          <width>4.7500005</width>
+          <height>4.7500005</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.70555556</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <orientation>0</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <content>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</content>
+          <categoryName />
+          <item />
+          <isFavorite>0</isFavorite>
+          <imageEffect>0</imageEffect>
+          <antiColor>0</antiColor>
+        </Image>
+        <Image>
+          <id>e1d10d3e533f44a68e1d6cd0bdfd01b9</id>
+          <x>33.875</x>
+          <y>38.75</y>
+          <width>4.375</width>
+          <height>4.375</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.70555556</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <orientation>0</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <content>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</content>
+          <categoryName />
+          <item />
+          <isFavorite>0</isFavorite>
+          <imageEffect>0</imageEffect>
+          <antiColor>0</antiColor>
+        </Image>
+        <Text>
+          <id>8f3cf9b5688748548abc42d6629aa575</id>
+          <x>2.625</x>
+          <y>45.28125</y>
+          <width>23.5</width>
+          <height>2.96875</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.70555556</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <orientation>0</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <textDataFormat>@YOURNAME</textDataFormat>
+          <selectedDataIndexs />
+          <horAlignment>1</horAlignment>
+          <verAlignment>1</verAlignment>
+          <textColor>#FF000000</textColor>
+          <bgAlpha>0</bgAlpha>
+          <bgColor>#00FFFFFF</bgColor>
+          <fontStyleIsBlod>1</fontStyleIsBlod>
+          <fontStyleIsUnderLine>0</fontStyleIsUnderLine>
+          <fontStyleIsitalics>0</fontStyleIsitalics>
+          <fontHeight>2.375</fontHeight>
+          <fontName>Arial</fontName>
+          <isAutoSize>0</isAutoSize>
+          <verDisplay>0</verDisplay>
+          <Lines>
+            <string>@YOURNAME</string>
+          </Lines>
+          <charSpace>0</charSpace>
+          <lineSpace>0</lineSpace>
+          <paragraphStyle>0</paragraphStyle>
+          <indentWidth>0</indentWidth>
+          <hideBlankLines>0</hideBlankLines>
+          <stretchHorizontal>0</stretchHorizontal>
+          <stretchVertical>0</stretchVertical>
+          <fontInfos />
+          <content>@YOURNAME</content>
+        </Text>
+        <Text>
+          <id>20347bdf89f242baad51314f347e1f76</id>
+          <x>3.25</x>
+          <y>72.5625</y>
+          <width>44.500004</width>
+          <height>2.8125002</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.70555556</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <orientation>0</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <textDataFormat>Follow us to order the latest offers！♥</textDataFormat>
+          <selectedDataIndexs />
+          <horAlignment>1</horAlignment>
+          <verAlignment>1</verAlignment>
+          <textColor>#FF000000</textColor>
+          <bgAlpha>0</bgAlpha>
+          <bgColor>#00FFFFFF</bgColor>
+          <fontStyleIsBlod>0</fontStyleIsBlod>
+          <fontStyleIsUnderLine>0</fontStyleIsUnderLine>
+          <fontStyleIsitalics>0</fontStyleIsitalics>
+          <fontHeight>2.25</fontHeight>
+          <fontName>Arial</fontName>
+          <isAutoSize>0</isAutoSize>
+          <verDisplay>0</verDisplay>
+          <Lines>
+            <string>Follow us to order the latest offers！♥</string>
+          </Lines>
+          <charSpace>0</charSpace>
+          <lineSpace>0</lineSpace>
+          <paragraphStyle>0</paragraphStyle>
+          <indentWidth>0</indentWidth>
+          <hideBlankLines>0</hideBlankLines>
+          <stretchHorizontal>0</stretchHorizontal>
+          <stretchVertical>0</stretchVertical>
+          <fontInfos />
+          <content>Follow us to order the latest offers！♥</content>
+        </Text>
+        <Qrcode>
+          <id>89274e2427334f8485056b72068bb53b</id>
+          <x>5.75</x>
+          <y>51.124996</y>
+          <width>16.375</width>
+          <height>16.375</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.70555556</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <orientation>0</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <selectedDataIndexs />
+          <encodingType>0</encodingType>
+          <qrCodeType>0</qrCodeType>
+          <textContent>Change to your QR code</textContent>
+          <multiplier>5</multiplier>
+          <dateOffset>0</dateOffset>
+          <showDate>0</showDate>
+          <showTime>0</showTime>
+          <isCustomTime>0</isCustomTime>
+          <serialNumber>0</serialNumber>
+        </Qrcode>
+        <Text>
+          <id>5bce8cf69d5f4f0bad7ced84ffdfe482</id>
+          <x>5.6250005</x>
+          <y>10.213319</y>
+          <width>39.982994</width>
+          <height>14.135043</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.70555556</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <orientation>0</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <textDataFormat>write down your address,write down your address,write down your address</textDataFormat>
+          <selectedDataIndexs />
+          <horAlignment>1</horAlignment>
+          <verAlignment>1</verAlignment>
+          <textColor>#FF000000</textColor>
+          <bgAlpha>0</bgAlpha>
+          <bgColor>#00FFFFFF</bgColor>
+          <fontStyleIsBlod>0</fontStyleIsBlod>
+          <fontStyleIsUnderLine>0</fontStyleIsUnderLine>
+          <fontStyleIsitalics>0</fontStyleIsitalics>
+          <fontHeight>2.875</fontHeight>
+          <fontName>Arial</fontName>
+          <isAutoSize>0</isAutoSize>
+          <verDisplay>0</verDisplay>
+          <Lines>
+            <string>write down your address,write</string>
+            <string>down your address,write </string>
+            <string>down your address</string>
+          </Lines>
+          <charSpace>0</charSpace>
+          <lineSpace>0</lineSpace>
+          <paragraphStyle>0</paragraphStyle>
+          <indentWidth>0</indentWidth>
+          <hideBlankLines>0</hideBlankLines>
+          <stretchHorizontal>0</stretchHorizontal>
+          <stretchVertical>0</stretchVertical>
+          <fontInfos />
+          <content>write down your address,write down your address,write down your address</content>
+        </Text>
+        <Text>
+          <id>4cdfa5d5debc4cd581cf13736429ebf8</id>
+          <x>26.125</x>
+          <y>45.406254</y>
+          <width>20.875002</width>
+          <height>2.96875</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.70555556</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <orientation>0</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <textDataFormat>@YOURNAME</textDataFormat>
+          <selectedDataIndexs />
+          <horAlignment>1</horAlignment>
+          <verAlignment>1</verAlignment>
+          <textColor>#FF000000</textColor>
+          <bgAlpha>0</bgAlpha>
+          <bgColor>#00FFFFFF</bgColor>
+          <fontStyleIsBlod>1</fontStyleIsBlod>
+          <fontStyleIsUnderLine>0</fontStyleIsUnderLine>
+          <fontStyleIsitalics>0</fontStyleIsitalics>
+          <fontHeight>2.375</fontHeight>
+          <fontName>Arial</fontName>
+          <isAutoSize>0</isAutoSize>
+          <verDisplay>0</verDisplay>
+          <Lines>
+            <string>@YOURNAME</string>
+          </Lines>
+          <charSpace>0</charSpace>
+          <lineSpace>0</lineSpace>
+          <paragraphStyle>0</paragraphStyle>
+          <indentWidth>0</indentWidth>
+          <hideBlankLines>0</hideBlankLines>
+          <stretchHorizontal>0</stretchHorizontal>
+          <stretchVertical>0</stretchVertical>
+          <fontInfos />
+          <content>@YOURNAME</content>
+        </Text>
+        <Qrcode>
+          <id>9461f77445294f43a2a0455e7dbd9c37</id>
+          <x>27.875</x>
+          <y>51.250004</y>
+          <width>16.375</width>
+          <height>16.375</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.70555556</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <orientation>0</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <selectedDataIndexs />
+          <encodingType>0</encodingType>
+          <qrCodeType>0</qrCodeType>
+          <textContent>Change to your QR code</textContent>
+          <multiplier>5</multiplier>
+          <dateOffset>0</dateOffset>
+          <showDate>0</showDate>
+          <showTime>0</showTime>
+          <isCustomTime>0</isCustomTime>
+          <serialNumber>0</serialNumber>
+        </Qrcode>
+        <Text>
+          <id>783179c9af3d4c94b7be0daabd3c1377</id>
+          <x>5.6250005</x>
+          <y>26.156248</y>
+          <width>39.75</width>
+          <height>3.5937502</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.70555556</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <orientation>0</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <textDataFormat>123-123-1234</textDataFormat>
+          <selectedDataIndexs />
+          <horAlignment>1</horAlignment>
+          <verAlignment>1</verAlignment>
+          <textColor>#FF000000</textColor>
+          <bgAlpha>0</bgAlpha>
+          <bgColor>#00FFFFFF</bgColor>
+          <fontStyleIsBlod>0</fontStyleIsBlod>
+          <fontStyleIsUnderLine>0</fontStyleIsUnderLine>
+          <fontStyleIsitalics>0</fontStyleIsitalics>
+          <fontHeight>2.875</fontHeight>
+          <fontName>Arial</fontName>
+          <isAutoSize>0</isAutoSize>
+          <verDisplay>0</verDisplay>
+          <Lines>
+            <string>123-123-1234</string>
+          </Lines>
+          <charSpace>0</charSpace>
+          <lineSpace>0</lineSpace>
+          <paragraphStyle>0</paragraphStyle>
+          <indentWidth>0</indentWidth>
+          <hideBlankLines>0</hideBlankLines>
+          <stretchHorizontal>0</stretchHorizontal>
+          <stretchVertical>0</stretchVertical>
+          <fontInfos />
+          <content>123-123-1234</content>
+        </Text>
+        <Text>
+          <id>49c390f59eeb49db9a3196915f124820</id>
+          <x>5.6250005</x>
+          <y>29.781248</y>
+          <width>39.75</width>
+          <height>3.5937502</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.70555556</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <orientation>0</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <textDataFormat>www.123.com</textDataFormat>
+          <selectedDataIndexs />
+          <horAlignment>1</horAlignment>
+          <verAlignment>1</verAlignment>
+          <textColor>#FF000000</textColor>
+          <bgAlpha>0</bgAlpha>
+          <bgColor>#00FFFFFF</bgColor>
+          <fontStyleIsBlod>0</fontStyleIsBlod>
+          <fontStyleIsUnderLine>0</fontStyleIsUnderLine>
+          <fontStyleIsitalics>0</fontStyleIsitalics>
+          <fontHeight>2.875</fontHeight>
+          <fontName>Arial</fontName>
+          <isAutoSize>0</isAutoSize>
+          <verDisplay>0</verDisplay>
+          <Lines>
+            <string>www.123.com</string>
+          </Lines>
+          <charSpace>0</charSpace>
+          <lineSpace>0</lineSpace>
+          <paragraphStyle>0</paragraphStyle>
+          <indentWidth>0</indentWidth>
+          <hideBlankLines>0</hideBlankLines>
+          <stretchHorizontal>0</stretchHorizontal>
+          <stretchVertical>0</stretchVertical>
+          <fontInfos />
+          <content>www.123.com</content>
+        </Text>
+      </contents>
+    </WdPage>
+  </contents>
+</LPAPI>

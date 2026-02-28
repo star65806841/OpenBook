@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LPAPI version="1.3">
+  <isPrintHorizontal>0</isPrintHorizontal>
+  <labelHeight>70</labelHeight>
+  <labelWidth>50</labelWidth>
+  <paperName>Custom Label</paperName>
+  <validBoundsX>0</validBoundsX>
+  <validBoundsY>0</validBoundsY>
+  <validBoundsWidth>50</validBoundsWidth>
+  <validBoundsHeight>70</validBoundsHeight>
+  <paperType>0</paperType>
+  <paperDesc />
+  <paperBackground>#FFFFFFFF</paperBackground>
+  <paperForeground>#FF000000</paperForeground>
+  <DisplaySize_mm>50mm × 70mm</DisplaySize_mm>
+  <DisplaySize_in>1.97" × 2.76"</DisplaySize_in>
+  <isAutoHeight>0</isAutoHeight>
+  <isRotate180>0</isRotate180>
+  <leftBlank>0</leftBlank>
+  <rightBlank>0</rightBlank>
+  <isCustomSize>1</isCustomSize>
+  <columnCount>0</columnCount>
+  <rowCount>0</rowCount>
+  <marginLeft>0</marginLeft>
+  <marginTop>0</marginTop>
+  <marginRight>0</marginRight>
+  <marginBottom>0</marginBottom>
+  <cornerRadius>0</cornerRadius>
+  <paddingWidth>0</paddingWidth>
+  <paddingHeight>0</paddingHeight>
+  <isCustomTemplateSize>false</isCustomTemplateSize>
+  <templateHeight>0</templateHeight>
+  <templateWidth>0</templateWidth>
+  <labelName>Clothing-50x70-06</labelName>
+  <Platform>win</Platform>
+  <contents>
+    <WdPage>
+      <isPrintHorizontal>0</isPrintHorizontal>
+      <labelHeight>70</labelHeight>
+      <labelWidth>50</labelWidth>
+      <paperName>Custom Label</paperName>
+      <validBoundsX>0</validBoundsX>
+      <validBoundsY>0</validBoundsY>
+      <validBoundsWidth>50</validBoundsWidth>
+      <validBoundsHeight>70</validBoundsHeight>
+      <paperType>0</paperType>
+      <paperDesc />
+      <paperBackground>#FFFFFFFF</paperBackground>
+      <paperForeground>#FF000000</paperForeground>
+      <DisplaySize_mm>50mm × 70mm</DisplaySize_mm>
+      <DisplaySize_in>1.97" × 2.76"</DisplaySize_in>
+      <isAutoHeight>0</isAutoHeight>
+      <isRotate180>0</isRotate180>
+      <leftBlank>0</leftBlank>
+      <rightBlank>0</rightBlank>
+      <isCustomSize>1</isCustomSize>
+      <columnCount>0</columnCount>
+      <rowCount>0</rowCount>
+      <marginLeft>0</marginLeft>
+      <marginTop>0</marginTop>
+      <marginRight>0</marginRight>
+      <marginBottom>0</marginBottom>
+      <cornerRadius>0</cornerRadius>
+      <paddingWidth>0</paddingWidth>
+      <paddingHeight>0</paddingHeight>
+      <isCustomTemplateSize>false</isCustomTemplateSize>
+      <templateHeight>0</templateHeight>
+      <templateWidth>0</templateWidth>
+      <masksToBoundsType>0</masksToBoundsType>
+      <borderDisplay>0</borderDisplay>
+      <lineType>0</lineType>
+  <borderWidth>0.70555556</borderWidth>
+<borderHeight>0.70555556</borderHeight>
+<borderColor>#FF000000</borderColor>
+      <isBorderTemplate>0</isBorderTemplate>
+      <lockMovement>0</lockMovement>
+      <bgImage />
+      <useBgImage>0</useBgImage>
+      <group />
+      <contents>
+        <Text>
+          <id>cb70169ecc3f45f38e0b160402371848</id>
+          <x>3.75</x>
+          <y>2.3750002</y>
+          <width>27.125</width>
+          <height>5.78125</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.70555556</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <orientation>0</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <textDataFormat>Certificate</textDataFormat>
+          <selectedDataIndexs />
+          <horAlignment>0</horAlignment>
+          <verAlignment>1</verAlignment>
+          <textColor>#FF000000</textColor>
+          <bgAlpha>0</bgAlpha>
+          <bgColor>#00FFFFFF</bgColor>
+          <fontStyleIsBlod>1</fontStyleIsBlod>
+          <fontStyleIsUnderLine>0</fontStyleIsUnderLine>
+          <fontStyleIsitalics>0</fontStyleIsitalics>
+          <fontHeight>4.233333</fontHeight>
+          <fontName>Source Han Sans SC</fontName>
+          <isAutoSize>0</isAutoSize>
+          <verDisplay>0</verDisplay>
+          <Lines>
+            <string>Certificate</string>
+          </Lines>
+          <charSpace>0</charSpace>
+          <lineSpace>0</lineSpace>
+          <paragraphStyle>0</paragraphStyle>
+          <indentWidth>0</indentWidth>
+          <hideBlankLines>0</hideBlankLines>
+          <stretchHorizontal>0</stretchHorizontal>
+          <stretchVertical>0</stretchVertical>
+          <fontInfos />
+          <content>Certificate</content>
+        </Text>
+        <Text>
+          <id>b04c7daaaaea4410ba0b2b03b79e7aae</id>
+          <x>3.75</x>
+          <y>9.5625</y>
+          <width>36.750004</width>
+          <height>3.4374998</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.70555556</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <orientation>0</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <textDataFormat>Name:</textDataFormat>
+          <selectedDataIndexs />
+          <horAlignment>0</horAlignment>
+          <verAlignment>1</verAlignment>
+          <textColor>#FF000000</textColor>
+          <bgAlpha>0</bgAlpha>
+          <bgColor>#00FFFFFF</bgColor>
+          <fontStyleIsBlod>0</fontStyleIsBlod>
+          <fontStyleIsUnderLine>0</fontStyleIsUnderLine>
+          <fontStyleIsitalics>0</fontStyleIsitalics>
+          <fontHeight>2.75</fontHeight>
+          <fontName>Source Han Sans SC</fontName>
+          <isAutoSize>0</isAutoSize>
+          <verDisplay>0</verDisplay>
+          <Lines>
+            <string>Name:</string>
+          </Lines>
+          <charSpace>0</charSpace>
+          <lineSpace>0</lineSpace>
+          <paragraphStyle>0</paragraphStyle>
+          <indentWidth>0</indentWidth>
+          <hideBlankLines>0</hideBlankLines>
+          <stretchHorizontal>0</stretchHorizontal>
+          <stretchVertical>0</stretchVertical>
+          <fontInfos />
+          <content>Name:</content>
+        </Text>
+        <Text>
+          <id>85d80757ec174988826cf0601292b1b9</id>
+          <x>3.75</x>
+          <y>18.0625</y>
+          <width>36.375</width>
+          <height>3.4374998</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.70555556</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <orientation>0</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <textDataFormat>Item:</textDataFormat>
+          <selectedDataIndexs />
+          <horAlignment>0</horAlignment>
+          <verAlignment>1</verAlignment>
+          <textColor>#FF000000</textColor>
+          <bgAlpha>0</bgAlpha>
+          <bgColor>#00FFFFFF</bgColor>
+          <fontStyleIsBlod>0</fontStyleIsBlod>
+          <fontStyleIsUnderLine>0</fontStyleIsUnderLine>
+          <fontStyleIsitalics>0</fontStyleIsitalics>
+          <fontHeight>2.75</fontHeight>
+          <fontName>Source Han Sans SC</fontName>
+          <isAutoSize>0</isAutoSize>
+          <verDisplay>0</verDisplay>
+          <Lines>
+            <string>Item:</string>
+          </Lines>
+          <charSpace>0</charSpace>
+          <lineSpace>0</lineSpace>
+          <paragraphStyle>0</paragraphStyle>
+          <indentWidth>0</indentWidth>
+          <hideBlankLines>0</hideBlankLines>
+          <stretchHorizontal>0</stretchHorizontal>
+          <stretchVertical>0</stretchVertical>
+          <fontInfos />
+          <content>Item:</content>
+        </Text>
+        <Text>
+          <id>ac9a2fc6bc3c4d9fa939d0af587b3d7a</id>
+          <x>3.75</x>
+          <y>26.6875</y>
+          <width>36.5</width>
+          <height>3.4374998</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.70555556</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <orientation>0</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <textDataFormat>Color:</textDataFormat>
+          <selectedDataIndexs />
+          <horAlignment>0</horAlignment>
+          <verAlignment>1</verAlignment>
+          <textColor>#FF000000</textColor>
+          <bgAlpha>0</bgAlpha>
+          <bgColor>#00FFFFFF</bgColor>
+          <fontStyleIsBlod>0</fontStyleIsBlod>
+          <fontStyleIsUnderLine>0</fontStyleIsUnderLine>
+          <fontStyleIsitalics>0</fontStyleIsitalics>
+          <fontHeight>2.75</fontHeight>
+          <fontName>Source Han Sans SC</fontName>
+          <isAutoSize>0</isAutoSize>
+          <verDisplay>0</verDisplay>
+          <Lines>
+            <string>Color:</string>
+          </Lines>
+          <charSpace>0</charSpace>
+          <lineSpace>0</lineSpace>
+          <paragraphStyle>0</paragraphStyle>
+          <indentWidth>0</indentWidth>
+          <hideBlankLines>0</hideBlankLines>
+          <stretchHorizontal>0</stretchHorizontal>
+          <stretchVertical>0</stretchVertical>
+          <fontInfos />
+          <content>Color:</content>
+        </Text>
+        <Text>
+          <id>60ef23da7ae24db38d80aef7f827573f</id>
+          <x>3.75</x>
+          <y>35.1875</y>
+          <width>36.125</width>
+          <height>3.4374998</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.70555556</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <orientation>0</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <textDataFormat>Fabirc:</textDataFormat>
+          <selectedDataIndexs />
+          <horAlignment>0</horAlignment>
+          <verAlignment>1</verAlignment>
+          <textColor>#FF000000</textColor>
+          <bgAlpha>0</bgAlpha>
+          <bgColor>#00FFFFFF</bgColor>
+          <fontStyleIsBlod>0</fontStyleIsBlod>
+          <fontStyleIsUnderLine>0</fontStyleIsUnderLine>
+          <fontStyleIsitalics>0</fontStyleIsitalics>
+          <fontHeight>2.75</fontHeight>
+          <fontName>Source Han Sans SC</fontName>
+          <isAutoSize>0</isAutoSize>
+          <verDisplay>0</verDisplay>
+          <Lines>
+            <string>Fabirc:</string>
+          </Lines>
+          <charSpace>0</charSpace>
+          <lineSpace>0</lineSpace>
+          <paragraphStyle>0</paragraphStyle>
+          <indentWidth>0</indentWidth>
+          <hideBlankLines>0</hideBlankLines>
+          <stretchHorizontal>0</stretchHorizontal>
+          <stretchVertical>0</stretchVertical>
+          <fontInfos />
+          <content>Fabirc:</content>
+        </Text>
+        <Barcode>
+          <id>60feb77ceb1741a18df44ef6f13b2450</id>
+          <x>3.75</x>
+          <y>52.75</y>
+          <width>42.5</width>
+          <height>14.250002</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.70555556</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <orientation>0</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <selectedDataIndexs />
+          <horAlignment>1</horAlignment>
+          <verAlignment>1</verAlignment>
+          <textColor>#FF000000</textColor>
+          <bgAlpha>0</bgAlpha>
+          <bgColor>#00FFFFFF</bgColor>
+          <fontStyleIsBlod>0</fontStyleIsBlod>
+          <fontStyleIsUnderLine>0</fontStyleIsUnderLine>
+          <fontStyleIsitalics>0</fontStyleIsitalics>
+          <fontHeight>2.25</fontHeight>
+          <fontName>Source Han Sans SC</fontName>
+          <isAutoSize>0</isAutoSize>
+          <verDisplay>0</verDisplay>
+          <Lines />
+          <charSpace>0</charSpace>
+          <lineSpace>0</lineSpace>
+          <paragraphStyle>0</paragraphStyle>
+          <indentWidth>0</indentWidth>
+          <hideBlankLines>0</hideBlankLines>
+          <stretchHorizontal>0</stretchHorizontal>
+          <stretchVertical>0</stretchVertical>
+          <fontInfos />
+          <content>123456</content>
+          <hidenText>0</hidenText>
+          <flags>0</flags>
+          <type>1</type>
+          <multiplier>5.3</multiplier>
+        </Barcode>
+        <Rectangle>
+          <id>226f7d064128445f8414c3cb5b0d994a</id>
+          <x>35.5</x>
+          <y>2.3750002</y>
+          <width>10.625</width>
+          <height>10.625</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.625</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <orientation>0</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <rectangleType>0</rectangleType>
+          <bgAlpha>0</bgAlpha>
+          <fillColor>#00FFFFFF</fillColor>
+          <lineWidth>0.625</lineWidth>
+        </Rectangle>
+        <Text>
+          <id>0d6a6b4cf907421cb8072d2038be892c</id>
+          <x>37</x>
+          <y>4</y>
+          <width>8.75</width>
+          <height>6.8749995</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.70555556</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <orientation>0</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <textDataFormat>M</textDataFormat>
+          <selectedDataIndexs />
+          <horAlignment>1</horAlignment>
+          <verAlignment>1</verAlignment>
+          <textColor>#FF000000</textColor>
+          <bgAlpha>0</bgAlpha>
+          <bgColor>#00FFFFFF</bgColor>
+          <fontStyleIsBlod>1</fontStyleIsBlod>
+          <fontStyleIsUnderLine>0</fontStyleIsUnderLine>
+          <fontStyleIsitalics>0</fontStyleIsitalics>
+          <fontHeight>5.5</fontHeight>
+          <fontName>Source Han Sans SC</fontName>
+          <isAutoSize>0</isAutoSize>
+          <verDisplay>0</verDisplay>
+          <Lines>
+            <string>M</string>
+          </Lines>
+          <charSpace>0</charSpace>
+          <lineSpace>0</lineSpace>
+          <paragraphStyle>0</paragraphStyle>
+          <indentWidth>0</indentWidth>
+          <hideBlankLines>0</hideBlankLines>
+          <stretchHorizontal>0</stretchHorizontal>
+          <stretchVertical>0</stretchVertical>
+          <fontInfos />
+          <content>M</content>
+        </Text>
+        <Text>
+          <id>6711b99f72b34953bcd531da1c706ea8</id>
+          <x>10</x>
+          <y>40.78125</y>
+          <width>31.125002</width>
+          <height>7.34375</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.70555556</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <orientation>0</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <textDataFormat>$ 69.9</textDataFormat>
+          <selectedDataIndexs />
+          <horAlignment>1</horAlignment>
+          <verAlignment>1</verAlignment>
+          <textColor>#FF000000</textColor>
+          <bgAlpha>0</bgAlpha>
+          <bgColor>#00FFFFFF</bgColor>
+          <fontStyleIsBlod>1</fontStyleIsBlod>
+          <fontStyleIsUnderLine>1</fontStyleIsUnderLine>
+          <fontStyleIsitalics>0</fontStyleIsitalics>
+          <fontHeight>5.875</fontHeight>
+          <fontName>Source Han Sans SC</fontName>
+          <isAutoSize>0</isAutoSize>
+          <verDisplay>0</verDisplay>
+          <Lines>
+            <string>$ 69.9</string>
+          </Lines>
+          <charSpace>0</charSpace>
+          <lineSpace>0</lineSpace>
+          <paragraphStyle>0</paragraphStyle>
+          <indentWidth>0</indentWidth>
+          <hideBlankLines>0</hideBlankLines>
+          <stretchHorizontal>0</stretchHorizontal>
+          <stretchVertical>0</stretchVertical>
+          <fontInfos />
+          <content>$ 69.9</content>
+        </Text>
+      </contents>
+    </WdPage>
+  </contents>
+</LPAPI>

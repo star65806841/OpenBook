@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LPAPI version="1.3">
+  <isPrintHorizontal>0</isPrintHorizontal>
+  <labelHeight>15</labelHeight>
+  <labelWidth>40</labelWidth>
+  <paperName>Custom Label</paperName>
+  <validBoundsX>0</validBoundsX>
+  <validBoundsY>0</validBoundsY>
+  <validBoundsWidth>40</validBoundsWidth>
+  <validBoundsHeight>15</validBoundsHeight>
+  <paperType>0</paperType>
+  <paperDesc />
+  <paperBackground>#FFFFFFFF</paperBackground>
+  <paperForeground>#FF000000</paperForeground>
+  <DisplaySize_mm>40mm × 15mm</DisplaySize_mm>
+  <DisplaySize_in>1.57" × 0.59"</DisplaySize_in>
+  <isAutoHeight>0</isAutoHeight>
+  <isRotate180>0</isRotate180>
+  <leftBlank>0</leftBlank>
+  <rightBlank>0</rightBlank>
+  <isCustomSize>1</isCustomSize>
+  <columnCount>0</columnCount>
+  <rowCount>0</rowCount>
+  <marginLeft>0</marginLeft>
+  <marginTop>0</marginTop>
+  <marginRight>0</marginRight>
+  <marginBottom>0</marginBottom>
+  <cornerRadius>0</cornerRadius>
+  <paddingWidth>0</paddingWidth>
+  <paddingHeight>0</paddingHeight>
+  <isCustomTemplateSize>false</isCustomTemplateSize>
+  <templateHeight>0</templateHeight>
+  <templateWidth>0</templateWidth>
+  <labelName>Date-40x15-01</labelName>
+  <Platform>win</Platform>
+  <contents>
+    <WdPage>
+      <isPrintHorizontal>0</isPrintHorizontal>
+      <labelHeight>15</labelHeight>
+      <labelWidth>40</labelWidth>
+      <paperName>Custom Label</paperName>
+      <validBoundsX>0</validBoundsX>
+      <validBoundsY>0</validBoundsY>
+      <validBoundsWidth>40</validBoundsWidth>
+      <validBoundsHeight>15</validBoundsHeight>
+      <paperType>0</paperType>
+      <paperDesc />
+      <paperBackground>#FFFFFFFF</paperBackground>
+      <paperForeground>#FF000000</paperForeground>
+      <DisplaySize_mm>40mm × 15mm</DisplaySize_mm>
+      <DisplaySize_in>1.57" × 0.59"</DisplaySize_in>
+      <isAutoHeight>0</isAutoHeight>
+      <isRotate180>0</isRotate180>
+      <leftBlank>0</leftBlank>
+      <rightBlank>0</rightBlank>
+      <isCustomSize>1</isCustomSize>
+      <columnCount>0</columnCount>
+      <rowCount>0</rowCount>
+      <marginLeft>0</marginLeft>
+      <marginTop>0</marginTop>
+      <marginRight>0</marginRight>
+      <marginBottom>0</marginBottom>
+      <cornerRadius>0</cornerRadius>
+      <paddingWidth>0</paddingWidth>
+      <paddingHeight>0</paddingHeight>
+      <isCustomTemplateSize>false</isCustomTemplateSize>
+      <templateHeight>0</templateHeight>
+      <templateWidth>0</templateWidth>
+      <masksToBoundsType>0</masksToBoundsType>
+      <borderDisplay>0</borderDisplay>
+      <lineType>0</lineType>
+<borderWidth>0.70555556</borderWidth>
+<borderHeight>0.70555556</borderHeight>
+<borderColor>#FF000000</borderColor>
+      <isBorderTemplate>0</isBorderTemplate>
+      <lockMovement>0</lockMovement>
+      <bgImage />
+      <useBgImage>0</useBgImage>
+      <group />
+      <contents>
+        <Text>
+          <id>0f0e876052454e438c94c2adfb8ac99f</id>
+          <x>0.87500006</x>
+          <y>0.68750006</y>
+          <width>11.625001</width>
+          <height>5.3125</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.70555556</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <textColor>#FF000000</textColor>
+          <bgAlpha>0</bgAlpha>
+          <bgColor>#00FFFFFF</bgColor>
+          <orientation>0</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <textDataFormat>MFD</textDataFormat>
+          <selectedDataIndexs />
+          <horAlignment>0</horAlignment>
+          <verAlignment>1</verAlignment>
+          <fontStyleIsBlod>1</fontStyleIsBlod>
+          <fontStyleIsUnderLine>1</fontStyleIsUnderLine>
+          <fontStyleIsitalics>0</fontStyleIsitalics>
+          <fontHeight>3.8805554</fontHeight>
+          <fontName>Source Han Sans SC</fontName>
+          <isAutoSize>0</isAutoSize>
+          <verDisplay>0</verDisplay>
+          <Lines>
+            <string>MFD</string>
+          </Lines>
+          <charSpace>0</charSpace>
+          <lineSpace>0</lineSpace>
+          <paragraphStyle>0</paragraphStyle>
+          <indentWidth>0</indentWidth>
+          <hideBlankLines>0</hideBlankLines>
+          <stretchHorizontal>0</stretchHorizontal>
+          <stretchVertical>0</stretchVertical>
+          <fontInfos />
+          <content>MFD</content>
+        </Text>
+        <Text>
+          <id>def3d441d0714ec28344edd29b883359</id>
+          <x>0.87500006</x>
+          <y>7.9375</y>
+          <width>11.875</width>
+          <height>5.3125</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.70555556</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <textColor>#FF000000</textColor>
+          <bgAlpha>0</bgAlpha>
+          <bgColor>#00FFFFFF</bgColor>
+          <orientation>0</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <textDataFormat>EXP</textDataFormat>
+          <selectedDataIndexs />
+          <horAlignment>0</horAlignment>
+          <verAlignment>1</verAlignment>
+          <fontStyleIsBlod>1</fontStyleIsBlod>
+          <fontStyleIsUnderLine>1</fontStyleIsUnderLine>
+          <fontStyleIsitalics>0</fontStyleIsitalics>
+          <fontHeight>4.25</fontHeight>
+          <fontName>Source Han Sans SC</fontName>
+          <isAutoSize>0</isAutoSize>
+          <verDisplay>0</verDisplay>
+          <Lines>
+            <string>EXP</string>
+          </Lines>
+          <charSpace>0</charSpace>
+          <lineSpace>0</lineSpace>
+          <paragraphStyle>0</paragraphStyle>
+          <indentWidth>0</indentWidth>
+          <hideBlankLines>0</hideBlankLines>
+          <stretchHorizontal>0</stretchHorizontal>
+          <stretchVertical>0</stretchVertical>
+          <fontInfos />
+          <content>EXP</content>
+        </Text>
+        <Rectangle>
+          <id>9d051fec56d84f4997c5efc6c3e92fee</id>
+          <x>11.000001</x>
+          <y>0.75</y>
+          <width>28.375</width>
+          <height>6.375</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.625</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <textColor>#FF000000</textColor>
+          <bgAlpha>0</bgAlpha>
+          <bgColor>#00FFFFFF</bgColor>
+          <orientation>0</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <rectangleType>2</rectangleType>
+          <fillColor>#00FFFFFF</fillColor>
+          <lineWidth>0.625</lineWidth>
+        </Rectangle>
+        <Rectangle>
+          <id>62abf0b354cb49df8d53089b31ef2a12</id>
+          <x>11.000001</x>
+          <y>7.625</y>
+          <width>28.375</width>
+          <height>6.375</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.625</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <textColor>#FF000000</textColor>
+          <bgAlpha>0</bgAlpha>
+          <bgColor>#00FFFFFF</bgColor>
+          <orientation>0</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <rectangleType>2</rectangleType>
+          <fillColor>#00FFFFFF</fillColor>
+          <lineWidth>0.625</lineWidth>
+        </Rectangle>
+        <DateTime>
+          <id>df054a9ac1084552884c7edaa4810623</id>
+          <x>12.393955</x>
+          <y>1.3593408</y>
+          <width>26.16758</width>
+          <height>5.0241756</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.70555556</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <textColor>#FF000000</textColor>
+          <bgAlpha>0</bgAlpha>
+          <bgColor>#00FFFFFF</bgColor>
+          <orientation>0</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <textDataFormat>Label</textDataFormat>
+          <selectedDataIndexs />
+          <horAlignment>0</horAlignment>
+          <verAlignment>1</verAlignment>
+          <fontStyleIsBlod>0</fontStyleIsBlod>
+          <fontStyleIsUnderLine>0</fontStyleIsUnderLine>
+          <fontStyleIsitalics>0</fontStyleIsitalics>
+          <fontHeight>2.625</fontHeight>
+          <fontName>SimHei</fontName>
+          <isAutoSize>0</isAutoSize>
+          <verDisplay>0</verDisplay>
+          <Lines>
+            <string>03/29/2023 16:11</string>
+          </Lines>
+          <charSpace>0</charSpace>
+          <lineSpace>0</lineSpace>
+          <paragraphStyle>0</paragraphStyle>
+          <indentWidth>0</indentWidth>
+          <hideBlankLines>0</hideBlankLines>
+          <stretchHorizontal>0</stretchHorizontal>
+          <stretchVertical>0</stretchVertical>
+          <fontInfos />
+          <showDate>1</showDate>
+          <showTime>0</showTime>
+          <showPrefix>0</showPrefix>
+          <showSuffix>0</showSuffix>
+          <isCustomTime>0</isCustomTime>
+          <dateFormat>MM/dd/yyyy</dateFormat>
+          <timeFormat>HH:mm</timeFormat>
+          <prefix />
+          <suffix />
+          <time>1656066217000</time>
+          <isCustomFormat>1</isCustomFormat>
+          <customFormat>MM/dd/yyyy HH:mm</customFormat>
+        </DateTime>
+        <DateTime>
+          <id>c27bf8b0073d426ebb62007a82e0eedf</id>
+          <x>12.603296</x>
+          <y>8.197803</y>
+          <width>25.260439</width>
+          <height>5.0241756</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.70555556</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <textColor>#FF000000</textColor>
+          <bgAlpha>0</bgAlpha>
+          <bgColor>#00FFFFFF</bgColor>
+          <orientation>0</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <textDataFormat>Label</textDataFormat>
+          <selectedDataIndexs />
+          <horAlignment>0</horAlignment>
+          <verAlignment>1</verAlignment>
+          <fontStyleIsBlod>0</fontStyleIsBlod>
+          <fontStyleIsUnderLine>0</fontStyleIsUnderLine>
+          <fontStyleIsitalics>0</fontStyleIsitalics>
+          <fontHeight>2.625</fontHeight>
+          <fontName>SimHei</fontName>
+          <isAutoSize>0</isAutoSize>
+          <verDisplay>0</verDisplay>
+          <Lines>
+            <string>03/29/2023 16:11</string>
+          </Lines>
+          <charSpace>0</charSpace>
+          <lineSpace>0</lineSpace>
+          <paragraphStyle>0</paragraphStyle>
+          <indentWidth>0</indentWidth>
+          <hideBlankLines>0</hideBlankLines>
+          <stretchHorizontal>0</stretchHorizontal>
+          <stretchVertical>0</stretchVertical>
+          <fontInfos />
+          <showDate>1</showDate>
+          <showTime>0</showTime>
+          <showPrefix>0</showPrefix>
+          <showSuffix>0</showSuffix>
+          <isCustomTime>0</isCustomTime>
+          <dateFormat>MM/dd/yyyy</dateFormat>
+          <timeFormat>HH:mm</timeFormat>
+          <prefix />
+          <suffix />
+          <time>1658917391000</time>
+          <isCustomFormat>1</isCustomFormat>
+          <customFormat>MM/dd/yyyy HH:mm</customFormat>
+        </DateTime>
+      </contents>
+    </WdPage>
+  </contents>
+</LPAPI>

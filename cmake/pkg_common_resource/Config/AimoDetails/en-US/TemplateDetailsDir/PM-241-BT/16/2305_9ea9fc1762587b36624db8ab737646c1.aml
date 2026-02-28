@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LPAPI version="1.3">
+  <isPrintHorizontal>0</isPrintHorizontal>
+  <labelHeight>30</labelHeight>
+  <labelWidth>40</labelWidth>
+  <paperName>Custom Label</paperName>
+  <validBoundsX>0</validBoundsX>
+  <validBoundsY>0</validBoundsY>
+  <validBoundsWidth>40</validBoundsWidth>
+  <validBoundsHeight>30</validBoundsHeight>
+  <paperType>0</paperType>
+  <paperDesc />
+  <paperBackground>#FFFFFFFF</paperBackground>
+  <paperForeground>#FF000000</paperForeground>
+  <DisplaySize_mm>40mm × 30mm</DisplaySize_mm>
+  <DisplaySize_in>1.57" × 1.18"</DisplaySize_in>
+  <isAutoHeight>0</isAutoHeight>
+  <isRotate180>0</isRotate180>
+  <leftBlank>0</leftBlank>
+  <rightBlank>0</rightBlank>
+  <isCustomSize>1</isCustomSize>
+  <columnCount>0</columnCount>
+  <rowCount>0</rowCount>
+  <marginLeft>0</marginLeft>
+  <marginTop>0</marginTop>
+  <marginRight>0</marginRight>
+  <marginBottom>0</marginBottom>
+  <cornerRadius>0</cornerRadius>
+  <paddingWidth>0</paddingWidth>
+  <paddingHeight>0</paddingHeight>
+  <isCustomTemplateSize>false</isCustomTemplateSize>
+  <templateHeight>0</templateHeight>
+  <templateWidth>0</templateWidth>
+  <labelName>Date-40x30-02</labelName>
+  <Platform>win</Platform>
+  <contents>
+    <WdPage>
+      <isPrintHorizontal>0</isPrintHorizontal>
+      <labelHeight>30</labelHeight>
+      <labelWidth>40</labelWidth>
+      <paperName>Custom Label</paperName>
+      <validBoundsX>0</validBoundsX>
+      <validBoundsY>0</validBoundsY>
+      <validBoundsWidth>40</validBoundsWidth>
+      <validBoundsHeight>30</validBoundsHeight>
+      <paperType>0</paperType>
+      <paperDesc />
+      <paperBackground>#FFFFFFFF</paperBackground>
+      <paperForeground>#FF000000</paperForeground>
+      <DisplaySize_mm>40mm × 30mm</DisplaySize_mm>
+      <DisplaySize_in>1.57" × 1.18"</DisplaySize_in>
+      <isAutoHeight>0</isAutoHeight>
+      <isRotate180>0</isRotate180>
+      <leftBlank>0</leftBlank>
+      <rightBlank>0</rightBlank>
+      <isCustomSize>1</isCustomSize>
+      <columnCount>0</columnCount>
+      <rowCount>0</rowCount>
+      <marginLeft>0</marginLeft>
+      <marginTop>0</marginTop>
+      <marginRight>0</marginRight>
+      <marginBottom>0</marginBottom>
+      <cornerRadius>0</cornerRadius>
+      <paddingWidth>0</paddingWidth>
+      <paddingHeight>0</paddingHeight>
+      <isCustomTemplateSize>false</isCustomTemplateSize>
+      <templateHeight>0</templateHeight>
+      <templateWidth>0</templateWidth>
+      <masksToBoundsType>0</masksToBoundsType>
+      <borderDisplay>0</borderDisplay>
+      <lineType>0</lineType>
+ <borderWidth>0.70555556</borderWidth>
+<borderHeight>0.70555556</borderHeight>
+<borderColor>#FF000000</borderColor>
+      <isBorderTemplate>0</isBorderTemplate>
+      <lockMovement>0</lockMovement>
+      <bgImage />
+      <useBgImage>0</useBgImage>
+      <group />
+      <contents>
+        <Rectangle>
+          <id>e917740f0da540be8472daf3274afba9</id>
+          <x>1.625</x>
+          <y>17.250002</y>
+          <width>36.875</width>
+          <height>6.2500005</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.625</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <textColor>#FF000000</textColor>
+          <bgAlpha>0</bgAlpha>
+          <bgColor>#00FFFFFF</bgColor>
+          <orientation>0</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <rectangleType>2</rectangleType>
+          <fillColor>#00FFFFFF</fillColor>
+          <lineWidth>0.625</lineWidth>
+        </Rectangle>
+        <DateTime>
+          <id>16f4aea896f04e949bd520a603a63718</id>
+          <x>1.4401084</x>
+          <y>17.250002</y>
+          <width>37.12143</width>
+          <height>7.257143</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.70555556</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <textColor>#FF000000</textColor>
+          <bgAlpha>0</bgAlpha>
+          <bgColor>#00FFFFFF</bgColor>
+          <orientation>0</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <textDataFormat>Label</textDataFormat>
+          <selectedDataIndexs />
+          <horAlignment>1</horAlignment>
+          <verAlignment>1</verAlignment>
+          <fontStyleIsBlod>0</fontStyleIsBlod>
+          <fontStyleIsUnderLine>0</fontStyleIsUnderLine>
+          <fontStyleIsitalics>0</fontStyleIsitalics>
+          <fontHeight>4.375</fontHeight>
+          <fontName>SimHei</fontName>
+          <isAutoSize>0</isAutoSize>
+          <verDisplay>0</verDisplay>
+          <Lines>
+            <string>29/03/2023 16:07</string>
+          </Lines>
+          <charSpace>0</charSpace>
+          <lineSpace>0</lineSpace>
+          <paragraphStyle>0</paragraphStyle>
+          <indentWidth>0</indentWidth>
+          <hideBlankLines>0</hideBlankLines>
+          <stretchHorizontal>0</stretchHorizontal>
+          <stretchVertical>0</stretchVertical>
+          <fontInfos />
+          <showDate>1</showDate>
+          <showTime>1</showTime>
+          <showPrefix>0</showPrefix>
+          <showSuffix>0</showSuffix>
+          <isCustomTime>0</isCustomTime>
+          <dateFormat>M/d/yyyy</dateFormat>
+          <timeFormat>HH:mm</timeFormat>
+          <prefix />
+          <suffix />
+          <time>1656066189000</time>
+          <isCustomFormat>1</isCustomFormat>
+          <customFormat>dd/MM/yyyy HH:mm</customFormat>
+        </DateTime>
+        <Text>
+          <id>53250e612fc542e08da2a102f2999ca7</id>
+          <x>2.125</x>
+          <y>1.4375</y>
+          <width>37.25</width>
+          <height>4.0625</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.70555556</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <textColor>#FF000000</textColor>
+          <bgAlpha>0</bgAlpha>
+          <bgColor>#00FFFFFF</bgColor>
+          <orientation>0</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <textDataFormat>Cranberry Cookies</textDataFormat>
+          <selectedDataIndexs />
+          <horAlignment>0</horAlignment>
+          <verAlignment>1</verAlignment>
+          <fontStyleIsBlod>1</fontStyleIsBlod>
+          <fontStyleIsUnderLine>1</fontStyleIsUnderLine>
+          <fontStyleIsitalics>0</fontStyleIsitalics>
+          <fontHeight>3.25</fontHeight>
+          <fontName>Source Han Sans SC</fontName>
+          <isAutoSize>0</isAutoSize>
+          <verDisplay>0</verDisplay>
+          <Lines>
+            <string>Cranberry Cookies</string>
+          </Lines>
+          <charSpace>0</charSpace>
+          <lineSpace>0</lineSpace>
+          <paragraphStyle>0</paragraphStyle>
+          <indentWidth>0</indentWidth>
+          <hideBlankLines>0</hideBlankLines>
+          <stretchHorizontal>0</stretchHorizontal>
+          <stretchVertical>0</stretchVertical>
+          <fontInfos />
+          <content>Cranberry Cookies</content>
+        </Text>
+        <Text>
+          <id>168003f44777442db9e18f48e672a497</id>
+          <x>2</x>
+          <y>6.4375</y>
+          <width>36.750004</width>
+          <height>8.0740385</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.70555556</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <textColor>#FF000000</textColor>
+          <bgAlpha>0</bgAlpha>
+          <bgColor>#00FFFFFF</bgColor>
+          <orientation>0</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <textDataFormat>Ingredient:Low-gluten flour, powdered sugar, butter, dried cranberries, eggs, etc.</textDataFormat>
+          <selectedDataIndexs />
+          <horAlignment>0</horAlignment>
+          <verAlignment>1</verAlignment>
+          <fontStyleIsBlod>0</fontStyleIsBlod>
+          <fontStyleIsUnderLine>0</fontStyleIsUnderLine>
+          <fontStyleIsitalics>0</fontStyleIsitalics>
+          <fontHeight>1.7638888</fontHeight>
+          <fontName>Source Han Sans SC</fontName>
+          <isAutoSize>0</isAutoSize>
+          <verDisplay>0</verDisplay>
+          <Lines>
+            <string>Ingredient:Low-gluten flour, powdered </string>
+            <string>sugar, butter, dried cranberries, eggs, </string>
+            <string>etc.</string>
+          </Lines>
+          <charSpace>0</charSpace>
+          <lineSpace>0</lineSpace>
+          <paragraphStyle>0</paragraphStyle>
+          <indentWidth>0</indentWidth>
+          <hideBlankLines>0</hideBlankLines>
+          <stretchHorizontal>0</stretchHorizontal>
+          <stretchVertical>0</stretchVertical>
+          <fontInfos />
+          <content>Ingredient:Low-gluten flour, powdered sugar, butter, dried cranberries, eggs, etc.</content>
+        </Text>
+        <Text>
+          <id>7a9104b29cd64d55a425b16c011460a3</id>
+          <x>0.75</x>
+          <y>25.53125</y>
+          <width>39.5</width>
+          <height>2.34375</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.70555556</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <textColor>#FF000000</textColor>
+          <bgAlpha>0</bgAlpha>
+          <bgColor>#00FFFFFF</bgColor>
+          <orientation>0</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <textDataFormat>♥ Thank you for your purchase! ♥</textDataFormat>
+          <selectedDataIndexs />
+          <horAlignment>1</horAlignment>
+          <verAlignment>1</verAlignment>
+          <fontStyleIsBlod>0</fontStyleIsBlod>
+          <fontStyleIsUnderLine>0</fontStyleIsUnderLine>
+          <fontStyleIsitalics>0</fontStyleIsitalics>
+          <fontHeight>1.875</fontHeight>
+          <fontName>Source Han Sans SC</fontName>
+          <isAutoSize>0</isAutoSize>
+          <verDisplay>0</verDisplay>
+          <Lines>
+            <string>♥ Thank you for your purchase! ♥</string>
+          </Lines>
+          <charSpace>0</charSpace>
+          <lineSpace>0</lineSpace>
+          <paragraphStyle>0</paragraphStyle>
+          <indentWidth>0</indentWidth>
+          <hideBlankLines>0</hideBlankLines>
+          <stretchHorizontal>0</stretchHorizontal>
+          <stretchVertical>0</stretchVertical>
+          <fontInfos />
+          <content>♥ Thank you for your purchase! ♥</content>
+        </Text>
+      </contents>
+    </WdPage>
+  </contents>
+</LPAPI>

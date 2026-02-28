@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LPAPI version="1.3">
+  <isPrintHorizontal>0</isPrintHorizontal>
+  <labelHeight>10</labelHeight>
+  <labelWidth>42</labelWidth>
+  <paperName>Custom Label</paperName>
+  <validBoundsX>0</validBoundsX>
+  <validBoundsY>0</validBoundsY>
+  <validBoundsWidth>42</validBoundsWidth>
+  <validBoundsHeight>10</validBoundsHeight>
+  <paperType>0</paperType>
+  <paperDesc />
+  <paperBackground>#FFFFFFFF</paperBackground>
+  <paperForeground>#FF000000</paperForeground>
+  <DisplaySize_mm>42mm × 10mm</DisplaySize_mm>
+  <DisplaySize_in>1.65" × 0.39"</DisplaySize_in>
+  <isAutoHeight>0</isAutoHeight>
+  <isRotate180>0</isRotate180>
+  <leftBlank>0</leftBlank>
+  <rightBlank>0</rightBlank>
+  <isCustomSize>1</isCustomSize>
+  <columnCount>0</columnCount>
+  <rowCount>0</rowCount>
+  <marginLeft>0</marginLeft>
+  <marginTop>0</marginTop>
+  <marginRight>0</marginRight>
+  <marginBottom>0</marginBottom>
+  <cornerRadius>0</cornerRadius>
+  <paddingWidth>0</paddingWidth>
+  <paddingHeight>0</paddingHeight>
+  <isCustomTemplateSize>false</isCustomTemplateSize>
+  <templateHeight>0</templateHeight>
+  <templateWidth>0</templateWidth>
+  <labelName>Date-20x10-02</labelName>
+  <Platform>win</Platform>
+  <contents>
+    <WdPage>
+      <isPrintHorizontal>0</isPrintHorizontal>
+      <labelHeight>10</labelHeight>
+      <labelWidth>42</labelWidth>
+      <paperName>Custom Label</paperName>
+      <validBoundsX>0</validBoundsX>
+      <validBoundsY>0</validBoundsY>
+      <validBoundsWidth>42</validBoundsWidth>
+      <validBoundsHeight>10</validBoundsHeight>
+      <paperType>0</paperType>
+      <paperDesc />
+      <paperBackground>#FFFFFFFF</paperBackground>
+      <paperForeground>#FF000000</paperForeground>
+      <DisplaySize_mm>42mm × 10mm</DisplaySize_mm>
+      <DisplaySize_in>1.65" × 0.39"</DisplaySize_in>
+      <isAutoHeight>0</isAutoHeight>
+      <isRotate180>0</isRotate180>
+      <leftBlank>0</leftBlank>
+      <rightBlank>0</rightBlank>
+      <isCustomSize>1</isCustomSize>
+      <columnCount>0</columnCount>
+      <rowCount>0</rowCount>
+      <marginLeft>0</marginLeft>
+      <marginTop>0</marginTop>
+      <marginRight>0</marginRight>
+      <marginBottom>0</marginBottom>
+      <cornerRadius>0</cornerRadius>
+      <paddingWidth>0</paddingWidth>
+      <paddingHeight>0</paddingHeight>
+      <isCustomTemplateSize>false</isCustomTemplateSize>
+      <templateHeight>0</templateHeight>
+      <templateWidth>0</templateWidth>
+      <masksToBoundsType>0</masksToBoundsType>
+      <borderDisplay>0</borderDisplay>
+      <lineType>0</lineType>
+  <borderWidth>0.70555556</borderWidth>
+<borderHeight>0.70555556</borderHeight>
+<borderColor>#FF000000</borderColor>
+      <isBorderTemplate>0</isBorderTemplate>
+      <lockMovement>0</lockMovement>
+      <bgImage>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</bgImage>
+      <useBgImage>1</useBgImage>
+      <group />
+      <contents>
+        <DateTime>
+          <id>ce909db6d59648f0aa15e7df7f328da7</id>
+          <x>0.246977</x>
+          <y>0.25494495</y>
+          <width>19.56676</width>
+          <height>9.42033</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.70555556</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <textColor>#FF000000</textColor>
+          <bgAlpha>0</bgAlpha>
+          <bgColor>#00FFFFFF</bgColor>
+          <orientation>0</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <textDataFormat>Label</textDataFormat>
+          <selectedDataIndexs />
+          <horAlignment>1</horAlignment>
+          <verAlignment>1</verAlignment>
+          <fontStyleIsBlod>1</fontStyleIsBlod>
+          <fontStyleIsUnderLine>0</fontStyleIsUnderLine>
+          <fontStyleIsitalics>0</fontStyleIsitalics>
+          <fontHeight>3.375</fontHeight>
+          <fontName>SimHei</fontName>
+          <isAutoSize>0</isAutoSize>
+          <verDisplay>0</verDisplay>
+          <Lines>
+            <string>03-23 </string>
+            <string>16:12</string>
+          </Lines>
+          <charSpace>0</charSpace>
+          <lineSpace>0</lineSpace>
+          <paragraphStyle>0</paragraphStyle>
+          <indentWidth>0</indentWidth>
+          <hideBlankLines>0</hideBlankLines>
+          <stretchHorizontal>0</stretchHorizontal>
+          <stretchVertical>0</stretchVertical>
+          <fontInfos />
+          <showDate>1</showDate>
+          <showTime>0</showTime>
+          <showPrefix>0</showPrefix>
+          <showSuffix>0</showSuffix>
+          <isCustomTime>0</isCustomTime>
+          <dateFormat>M/d/yyyy</dateFormat>
+          <timeFormat>HH:mm</timeFormat>
+          <prefix />
+          <suffix />
+          <time>1656409942000</time>
+          <isCustomFormat>1</isCustomFormat>
+          <customFormat>MM-yy HH:mm</customFormat>
+        </DateTime>
+        <DateTime>
+          <id>8cf3a78a7d7c43fdb09c0dba8f805a57</id>
+          <x>22.256044</x>
+          <y>0.1851647</y>
+          <width>19.60824</width>
+          <height>9.559891</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.70555556</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <textColor>#FF000000</textColor>
+          <bgAlpha>0</bgAlpha>
+          <bgColor>#00FFFFFF</bgColor>
+          <orientation>0</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <textDataFormat>Label</textDataFormat>
+          <selectedDataIndexs />
+          <horAlignment>1</horAlignment>
+          <verAlignment>1</verAlignment>
+          <fontStyleIsBlod>1</fontStyleIsBlod>
+          <fontStyleIsUnderLine>0</fontStyleIsUnderLine>
+          <fontStyleIsitalics>0</fontStyleIsitalics>
+          <fontHeight>3.375</fontHeight>
+          <fontName>SimHei</fontName>
+          <isAutoSize>0</isAutoSize>
+          <verDisplay>0</verDisplay>
+          <Lines>
+            <string>03-23 </string>
+            <string>16:12</string>
+          </Lines>
+          <charSpace>0</charSpace>
+          <lineSpace>0</lineSpace>
+          <paragraphStyle>0</paragraphStyle>
+          <indentWidth>0</indentWidth>
+          <hideBlankLines>0</hideBlankLines>
+          <stretchHorizontal>0</stretchHorizontal>
+          <stretchVertical>0</stretchVertical>
+          <fontInfos />
+          <showDate>1</showDate>
+          <showTime>0</showTime>
+          <showPrefix>0</showPrefix>
+          <showSuffix>0</showSuffix>
+          <isCustomTime>0</isCustomTime>
+          <dateFormat>MM-yy</dateFormat>
+          <timeFormat>HH:mm</timeFormat>
+          <prefix />
+          <suffix />
+          <time>1656409942000</time>
+          <isCustomFormat>1</isCustomFormat>
+          <customFormat>MM-yy HH:mm</customFormat>
+        </DateTime>
+      </contents>
+    </WdPage>
+  </contents>
+</LPAPI>

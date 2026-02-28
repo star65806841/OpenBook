@@ -1,0 +1,28 @@
+﻿[
+    {
+        "amlLocalPathFileName": "",
+        "amlUrl": "",
+        "appClient": "",
+        "createTime": "",
+        "createUser": "",
+        "creatorId": "",
+        "deleteTime": "",
+        "groupId": 44,
+        "height": "15",
+        "id": "1675",
+        "isPriceTag": 0,
+        "jsonLocalPathFileName": "C:/Users/donghai_h/AppData/Roaming/QUIN/Labelife\\Config.Debug\\AimoDetails\\zh-CN\\TemplateDetailsDir\\PM-241-BT\\44\\1675_a307ff5460563a1558ae5a2797ea1796.json",
+        "jsonUrl": "https://oss.qu-in.com/quinSystem/material/template/public/498201967164928000_%E6%A8%A1%E6%9D%BF%E6%96%87%E4%BB%B6.json",
+        "langName": "",
+        "name": "黄色-2515-1",
+        "printDirection": 0,
+        "sort": 0,
+        "status": 1,
+        "thumbLocalPathFileName": "C:/Users/donghai_h/AppData/Roaming/QUIN/Labelife/Config.Debug/AimoDetails/zh-CN/TemplateDetailsDir/PM-241-BT/44/1675_455cac997d35b8df0d8401faeae5f8cd.png",
+        "thumbUrl": "https://oss.qu-in.com/quinSystem/material/template/public/screenshot/498201903680073728_%E9%BB%84%E8%89%B2-2515s.png",
+        "updateTime": "",
+        "updateUser": "",
+        "useCount": 20,
+        "width": "25"
+    }
+]

@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LPAPI version="1.8">
+  <isPrintHorizontal>0</isPrintHorizontal>
+  <labelHeight>95</labelHeight>
+  <labelWidth>30</labelWidth>
+  <paperName>线缆-3045+50</paperName>
+  <validBoundsX>1</validBoundsX>
+  <validBoundsY>1</validBoundsY>
+  <validBoundsWidth>28</validBoundsWidth>
+  <validBoundsHeight>93</validBoundsHeight>
+  <paperType>0</paperType>
+  <paperDesc />
+  <paperBackground>#FFFFFFFF</paperBackground>
+  <paperForeground>#FF000000</paperForeground>
+  <DisplaySize_mm>30mm × 95mm</DisplaySize_mm>
+  <DisplaySize_in>1.18" × 3.74"</DisplaySize_in>
+  <isAutoHeight>0</isAutoHeight>
+  <isRotate180>0</isRotate180>
+  <leftBlank>0</leftBlank>
+  <rightBlank>0</rightBlank>
+  <topBlank>0</topBlank>
+  <bottomBlank>0</bottomBlank>
+  <isCustomSize>0</isCustomSize>
+  <isBannerMode>0</isBannerMode>
+  <paperCategory>0</paperCategory>
+  <columnCount>0</columnCount>
+  <marginLeft>0</marginLeft>
+  <marginRight>0</marginRight>
+  <paddingWidth>0</paddingWidth>
+  <isCustomTemplateSize>0</isCustomTemplateSize>
+  <templateHeight>0</templateHeight>
+  <templateWidth>0</templateWidth>
+  <labelName>线缆-3045+50</labelName>
+  <Platform>win</Platform>
+  <saveTime>1730280818498</saveTime>
+  <contents>
+    <WdPage>
+      <isPrintHorizontal>0</isPrintHorizontal>
+      <labelHeight>95</labelHeight>
+      <labelWidth>30</labelWidth>
+      <paperName>线缆-3045+50</paperName>
+      <validBoundsX>1</validBoundsX>
+      <validBoundsY>1</validBoundsY>
+      <validBoundsWidth>28</validBoundsWidth>
+      <validBoundsHeight>93</validBoundsHeight>
+      <paperType>0</paperType>
+      <paperDesc />
+      <paperBackground>#FFFFFFFF</paperBackground>
+      <paperForeground>#FF000000</paperForeground>
+      <DisplaySize_mm>30mm × 95mm</DisplaySize_mm>
+      <DisplaySize_in>1.18" × 3.74"</DisplaySize_in>
+      <isAutoHeight>0</isAutoHeight>
+      <isRotate180>0</isRotate180>
+      <leftBlank>0</leftBlank>
+      <rightBlank>0</rightBlank>
+      <topBlank>0</topBlank>
+      <bottomBlank>0</bottomBlank>
+      <isCustomSize>0</isCustomSize>
+      <isBannerMode>0</isBannerMode>
+      <paperCategory>0</paperCategory>
+      <columnCount>0</columnCount>
+      <marginLeft>0</marginLeft>
+      <marginRight>0</marginRight>
+      <paddingWidth>0</paddingWidth>
+      <isCustomTemplateSize>0</isCustomTemplateSize>
+      <templateHeight>0</templateHeight>
+      <templateWidth>0</templateWidth>
+      <masksToBoundsType>0</masksToBoundsType>
+      <borderDisplay>0</borderDisplay>
+      <lineType>0</lineType>
+      <borderWidth>0.35277778</borderWidth>
+      <borderColor>#FF000000</borderColor>
+      <selectColor>#FF000000</selectColor>
+      <isBorderTemplate>0</isBorderTemplate>
+      <lockMovement>0</lockMovement>
+      <bgImage>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Hc8DeBMEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhgEAhiNIUOGpKqq4sGBAwfifs+ePXHf1tYW92i+/fv3p3/9619p06ZNneth3759cY/m27t3b6yDPn36pB07dqT+/funo4466mAgAwcOTDt37kz9+vWLF+ux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joPKVZS6cm7S25VDzDeLoRU2EL3dERnBZctZgtDepAyc3q4cRnW9WkccvcMRCUSDRIcYZbC0wp6j0Iag/veWQ00C6R2OyEjWoNA1/kKDo1UGSPk7tXHQrew5Nb++TNAzHZFA4hPHWhAKRlvVVjjM0t+pMPQ3axmUvYn+9t7+IWkraJ1jIeB/QCCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAQSCAcUQC2bNnTzr66KM7HqXUp0+ftGvXrnTgwIGOOT3bvn374n7//v3xdxWaX1VVGjZsWPzNWg6NRiNep/ve8ve3ssMORAOkf//+afDgwWn48OHptddei/kDBw5MbW1tMd1bKAL9XYUi2L17d+rbt2/87QMGDIj5JSgtG/Rshx2ItpZy0kknxUDZsmVLPBYNoJ5Og7zr3kDTe/fujfkbN25MI0aMSKNGjYrnFIc2GMIepOc77BFcBsFZZ52Vdu7cmV5++eW4rx+K9HQKoWwIRIdS2pvI008/nSZMmNAZiGjPWQ6z0LMdkUMsmThxYhozZkz64Q9/GANDhyL1QdVTlcNEbQj0t+pee0r9jdqL3HPPPemUU05Jo0ePjudLOPWI0HMddiBlAOn4e9asWTFg1q9fH/N6wyFG2QDo7yw3BSJPPfVUWrFiRTrzzDPjRL08L71h44AjEIiOtzWINGiuvPLKNG7cuIhEJ6+9eQv6yiuvpDvuuCNNmTIlnXvuuR1zD9LeY9CgQR2P0JMdkYNknXPokGPy5Mnp2muvTT/4wQ/SqlWresUxeNkjFNoz6NBq9erVaf78+emjH/1oHGKVK1eFNg7aSKBnO+wRrEGgS7zt7e3x+PLLL09Dhw5Nt99+e+xZyiGK6JBLg+u/0Ws1ALv78KT83q7KIaL2CPU95R/+8If0ne98JzYIn/nMZ+I15bBLylWsctkXPddhB6JBoMGlDwo3bdqUzjjjjHTTTTelRx55JH35y1+OLfDWrVvjqpb2KP369YuBpy2uLgkrGE1rnl6rLa9uJaYSWbNu+r+X313mFWUPWAa8/p87duxICxcuTGvWrIlDSfRuR+QYSANHA0ufB8h5550X5yNz585Nt9xySwwwXdXSXkaDsQw8ndgqGAXR9VCmPNZ9M28KRPf6P5V5+j/qVmLZtm1b3Oszj09+8pPpwQcfTJ/61KfSySefHPPRi+VBcERs37497vPeotq8eXNM58OPKsdRXX/99VU+qY15eZBVecDFdN4ax/3/FzmWKsde5Tg65lRVjjrm6/7CCy+sctTV3Xff3fk3onc77EDy8XnH1MEBr0CKfH5Sffe7363e9ra3VdOmTauWLFkS8/PhVpUPn2I6n+DHtAahbprWe2payvxm3URB1H9noccKY8GCBdUJJ5xQjR07tpo3b178/0UxoXdr0z8dO5P/iQ6vdHiimw6hypcWdTgycuTIOMFdtmxZuvXWW9PSpUvjs5IZM2bEh4qnnXZanMPoEKwc53e3HEHnIZbovGft2rXpueeei28FLF68OD3xxBNp5syZ6cYbb4zPPKT+t6L3OuxACp2Ely/y6cqWBn4+7EpHHXVURKITcg20fHgSH64dc8wxKW+V0/jx42NQ6qb/SjkX0MDVrX51qBn0u8rvFf0/Xn/99bRu3bqI/JJLLolL17r4MGTIkPhb9Br9Xbr4oCt26L0OOxD9uAaZaED/tw8Hy69RPK+++mpavnx53BYtWpQ2bNgQ8zTwRO+h1+tEubx3syhA7QX1O/V1EYXwnve8J02dOjVNmjQpvmelK1f6f5QP//T/1MUF9HYp/RsTbuukxeWXtQAAAABJRU5ErkJggg==</bgImage>
+      <useBgImage>1</useBgImage>
+      <group />
+      <contents>
+        <Text>
+          <id>e0dad9b9240d46caa8f2956ec6d0e30f</id>
+          <x>-10.006183</x>
+          <y>16.801722</y>
+          <width>36.589603</width>
+          <height>13.835771</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.35277778</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <textColor>#FF000000</textColor>
+          <bgAlpha>0</bgAlpha>
+          <bgColor>#00000000</bgColor>
+          <orientation>270</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <antiColor>0</antiColor>
+          <preTextColor>#FF000000</preTextColor>
+          <preBgColor>#00000000</preBgColor>
+          <preBgAlpha>0</preBgAlpha>
+          <selectColor>#FF000000</selectColor>
+          <isRedBlack>0</isRedBlack>
+          <isRatioScale>0</isRatioScale>
+          <textDataFormat>线架13-10 3号机柜
+254543436 D117</textDataFormat>
+          <selectedDataIndexs />
+          <horAlignment>1</horAlignment>
+          <verAlignment>1</verAlignment>
+          <fontStyleIsBlod>0</fontStyleIsBlod>
+          <fontStyleIsUnderLine>0</fontStyleIsUnderLine>
+          <fontStyleIsitalics>0</fontStyleIsitalics>
+          <fontHeight>3.8805554</fontHeight>
+          <fontName>思源黑体</fontName>
+          <isAutoSize>0</isAutoSize>
+          <verDisplay>0</verDisplay>
+          <Lines>
+            <string>线架13-10 3号机柜</string>
+            <string>254543436 D117</string>
+          </Lines>
+          <charSpace>0</charSpace>
+          <lineSpace>0</lineSpace>
+          <lineSpacingStyle>0</lineSpacingStyle>
+          <letterSpacingStyle>0</letterSpacingStyle>
+          <paragraphStyle>0</paragraphStyle>
+          <indentWidth>0</indentWidth>
+          <hideBlankLines>0</hideBlankLines>
+          <stretchHorizontal>0</stretchHorizontal>
+          <stretchVertical>0</stretchVertical>
+          <fontInfos />
+          <IsShowFontSizeNo>0</IsShowFontSizeNo>
+          <IsShow690Underline>0</IsShow690Underline>
+          <textArcType>0</textArcType>
+          <content>线架13-10 3号机柜
+254543436 D117</content>
+        </Text>
+        <Text>
+          <id>3351f4f9821442f58f837e198dc5ca4f</id>
+          <x>0.46405348</x>
+          <y>16.088799</y>
+          <width>44.35319</width>
+          <height>13.835771</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.35277778</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <textColor>#FF000000</textColor>
+          <bgAlpha>0</bgAlpha>
+          <bgColor>#00000000</bgColor>
+          <orientation>90</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <antiColor>0</antiColor>
+          <preTextColor>#FF000000</preTextColor>
+          <preBgColor>#00000000</preBgColor>
+          <preBgAlpha>0</preBgAlpha>
+          <selectColor>#FF000000</selectColor>
+          <isRedBlack>0</isRedBlack>
+          <isRatioScale>0</isRatioScale>
+          <textDataFormat>线架13-10 3号机柜
+254543436 D117</textDataFormat>
+          <selectedDataIndexs />
+          <horAlignment>1</horAlignment>
+          <verAlignment>1</verAlignment>
+          <fontStyleIsBlod>0</fontStyleIsBlod>
+          <fontStyleIsUnderLine>0</fontStyleIsUnderLine>
+          <fontStyleIsitalics>0</fontStyleIsitalics>
+          <fontHeight>3.8805554</fontHeight>
+          <fontName>思源黑体</fontName>
+          <isAutoSize>0</isAutoSize>
+          <verDisplay>0</verDisplay>
+          <Lines>
+            <string>线架13-10 3号机柜</string>
+            <string>254543436 D117</string>
+          </Lines>
+          <charSpace>0</charSpace>
+          <lineSpace>0</lineSpace>
+          <lineSpacingStyle>0</lineSpacingStyle>
+          <letterSpacingStyle>0</letterSpacingStyle>
+          <paragraphStyle>0</paragraphStyle>
+          <indentWidth>0</indentWidth>
+          <hideBlankLines>0</hideBlankLines>
+          <stretchHorizontal>0</stretchHorizontal>
+          <stretchVertical>0</stretchVertical>
+          <fontInfos />
+          <IsShowFontSizeNo>0</IsShowFontSizeNo>
+          <IsShow690Underline>0</IsShow690Underline>
+          <textArcType>0</textArcType>
+          <content>线架13-10 3号机柜
+254543436 D117</content>
+        </Text>
+      </contents>
+    </WdPage>
+  </contents>
+  <copiesPerPage>1</copiesPerPage>
+  <copiesPerPageData>1</copiesPerPageData>
+  <isRedBlack>0</isRedBlack>
+  <isBorderRedBlack>0</isBorderRedBlack>
+</LPAPI>

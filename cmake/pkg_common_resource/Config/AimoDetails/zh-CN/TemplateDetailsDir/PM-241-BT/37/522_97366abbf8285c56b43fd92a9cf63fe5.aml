@@ -1,0 +1,582 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LPAPI version="1.3">
+  <isPrintHorizontal>1</isPrintHorizontal>
+  <labelHeight>60</labelHeight>
+  <labelWidth>40</labelWidth>
+  <paperName>Custom Label</paperName>
+  <validBoundsX>1</validBoundsX>
+  <validBoundsY>1</validBoundsY>
+  <validBoundsWidth>38</validBoundsWidth>
+  <validBoundsHeight>58</validBoundsHeight>
+  <paperType>0</paperType>
+  <paperDesc />
+  <paperBackground>#FFFFFFFF</paperBackground>
+  <paperForeground>#FF000000</paperForeground>
+  <DisplaySize_mm>40mm × 60mm</DisplaySize_mm>
+  <DisplaySize_in>1.57" × 2.36"</DisplaySize_in>
+  <isAutoHeight>0</isAutoHeight>
+  <isRotate180>0</isRotate180>
+  <leftBlank>0</leftBlank>
+  <rightBlank>0</rightBlank>
+  <topBlank>0</topBlank>
+  <bottomBlank>0</bottomBlank>
+  <isCustomSize>1</isCustomSize>
+  <columnCount>0</columnCount>
+  <rowCount>0</rowCount>
+  <marginLeft>0</marginLeft>
+  <marginTop>0</marginTop>
+  <marginRight>0</marginRight>
+  <marginBottom>0</marginBottom>
+  <cornerRadius>0</cornerRadius>
+  <paddingWidth>0</paddingWidth>
+  <paddingHeight>0</paddingHeight>
+  <isCustomTemplateSize>false</isCustomTemplateSize>
+  <templateHeight>0</templateHeight>
+  <templateWidth>0</templateWidth>
+  <labelName>设备-6040-2</labelName>
+  <Platform>win</Platform>
+  <contents>
+    <WdPage>
+      <isPrintHorizontal>1</isPrintHorizontal>
+      <labelHeight>60</labelHeight>
+      <labelWidth>40</labelWidth>
+      <paperName>Custom Label</paperName>
+      <validBoundsX>1</validBoundsX>
+      <validBoundsY>1</validBoundsY>
+      <validBoundsWidth>38</validBoundsWidth>
+      <validBoundsHeight>58</validBoundsHeight>
+      <paperType>0</paperType>
+      <paperDesc />
+      <paperBackground>#FFFFFFFF</paperBackground>
+      <paperForeground>#FF000000</paperForeground>
+      <DisplaySize_mm>40mm × 60mm</DisplaySize_mm>
+      <DisplaySize_in>1.57" × 2.36"</DisplaySize_in>
+      <isAutoHeight>0</isAutoHeight>
+      <isRotate180>0</isRotate180>
+      <leftBlank>0</leftBlank>
+      <rightBlank>0</rightBlank>
+      <topBlank>0</topBlank>
+      <bottomBlank>0</bottomBlank>
+      <isCustomSize>1</isCustomSize>
+      <columnCount>0</columnCount>
+      <rowCount>0</rowCount>
+      <marginLeft>0</marginLeft>
+      <marginTop>0</marginTop>
+      <marginRight>0</marginRight>
+      <marginBottom>0</marginBottom>
+      <cornerRadius>0</cornerRadius>
+      <paddingWidth>0</paddingWidth>
+      <paddingHeight>0</paddingHeight>
+      <isCustomTemplateSize>false</isCustomTemplateSize>
+      <templateHeight>0</templateHeight>
+      <templateWidth>0</templateWidth>
+      <masksToBoundsType>0</masksToBoundsType>
+      <borderDisplay>0</borderDisplay>
+      <lineType>0</lineType>
+      <borderWidth>0.70555556</borderWidth>
+      <borderColor>#FF000000</borderColor>
+      <isBorderTemplate>0</isBorderTemplate>
+      <lockMovement>0</lockMovement>
+      <bgImage />
+      <useBgImage>0</useBgImage>
+      <group />
+      <contents>
+        <Table>
+          <id>cb5f183329d14299b5c3ff91574e5e4f</id>
+          <x>1.6495017</x>
+          <y>1.1483804</y>
+          <width>56.700996</width>
+          <height>37.995518</height>
+          <borderDisplay>0</borderDisplay>
+          <lineType>0</lineType>
+          <borderHeight>0.375</borderHeight>
+          <borderColor>#FF000000</borderColor>
+          <textColor>#FF000000</textColor>
+          <bgAlpha>0</bgAlpha>
+          <bgColor>#00FFFFFF</bgColor>
+          <orientation>0</orientation>
+          <lockMovement>0</lockMovement>
+          <isTemplate>0</isTemplate>
+          <Cells>
+            <Text>
+              <tableItemRow>1</tableItemRow>
+              <tableItemCol>1</tableItemCol>
+              <id>b45cc70507a84e429817b72a11a48c13</id>
+              <x>2.0245018</x>
+              <y>1.5233804</y>
+              <width>19.538</width>
+              <height>7.1491027</height>
+              <borderDisplay>0</borderDisplay>
+              <lineType>0</lineType>
+              <borderHeight>0.375</borderHeight>
+              <borderColor>#FF000000</borderColor>
+              <textColor>#FF000000</textColor>
+              <bgAlpha>0</bgAlpha>
+              <bgColor>#00FFFFFF</bgColor>
+              <orientation>0</orientation>
+              <lockMovement>0</lockMovement>
+              <isTemplate>0</isTemplate>
+              <antiColor>0</antiColor>
+              <preTextColor>#FF000000</preTextColor>
+              <preBgColor>#00FFFFFF</preBgColor>
+              <preBgAlpha>0</preBgAlpha>
+              <textDataFormat>资产名称</textDataFormat>
+              <selectedDataIndexs />
+              <horAlignment>1</horAlignment>
+              <verAlignment>1</verAlignment>
+              <fontStyleIsBlod>0</fontStyleIsBlod>
+              <fontStyleIsUnderLine>0</fontStyleIsUnderLine>
+              <fontStyleIsitalics>0</fontStyleIsitalics>
+              <fontHeight>3.5</fontHeight>
+              <fontName>Microsoft YaHei UI</fontName>
+              <isAutoSize>0</isAutoSize>
+              <verDisplay>0</verDisplay>
+              <Lines>
+                <string>资产名称</string>
+              </Lines>
+              <charSpace>0</charSpace>
+              <lineSpace>0</lineSpace>
+              <lineSpacingStyle>0</lineSpacingStyle>
+              <letterSpacingStyle>0</letterSpacingStyle>
+              <paragraphStyle>0</paragraphStyle>
+              <indentWidth>0</indentWidth>
+              <hideBlankLines>0</hideBlankLines>
+              <stretchHorizontal>0</stretchHorizontal>
+              <stretchVertical>0</stretchVertical>
+              <fontInfos />
+              <content>资产名称</content>
+            </Text>
+            <Text>
+              <tableItemRow>2</tableItemRow>
+              <tableItemCol>1</tableItemCol>
+              <id>5350df4febe44274acf16290dfa9b496</id>
+              <x>2.0245018</x>
+              <y>9.047483</y>
+              <width>19.538</width>
+              <height>7.1491027</height>
+              <borderDisplay>0</borderDisplay>
+              <lineType>0</lineType>
+              <borderHeight>0.375</borderHeight>
+              <borderColor>#FF000000</borderColor>
+              <textColor>#FF000000</textColor>
+              <bgAlpha>0</bgAlpha>
+              <bgColor>#00FFFFFF</bgColor>
+              <orientation>0</orientation>
+              <lockMovement>0</lockMovement>
+              <isTemplate>0</isTemplate>
+              <antiColor>0</antiColor>
+              <preTextColor>#FF000000</preTextColor>
+              <preBgColor>#00FFFFFF</preBgColor>
+              <preBgAlpha>0</preBgAlpha>
+              <textDataFormat>资产编码</textDataFormat>
+              <selectedDataIndexs />
+              <horAlignment>1</horAlignment>
+              <verAlignment>1</verAlignment>
+              <fontStyleIsBlod>0</fontStyleIsBlod>
+              <fontStyleIsUnderLine>0</fontStyleIsUnderLine>
+              <fontStyleIsitalics>0</fontStyleIsitalics>
+              <fontHeight>3.5</fontHeight>
+              <fontName>Microsoft YaHei UI</fontName>
+              <isAutoSize>0</isAutoSize>
+              <verDisplay>0</verDisplay>
+              <Lines>
+                <string>资产编码</string>
+              </Lines>
+              <charSpace>0</charSpace>
+              <lineSpace>0</lineSpace>
+              <lineSpacingStyle>0</lineSpacingStyle>
+              <letterSpacingStyle>0</letterSpacingStyle>
+              <paragraphStyle>0</paragraphStyle>
+              <indentWidth>0</indentWidth>
+              <hideBlankLines>0</hideBlankLines>
+              <stretchHorizontal>0</stretchHorizontal>
+              <stretchVertical>0</stretchVertical>
+              <fontInfos />
+              <content>资产编码</content>
+            </Text>
+            <Text>
+              <tableItemRow>1</tableItemRow>
+              <tableItemCol>2</tableItemCol>
+              <id>77d3a34f2e81417483d4ae54d427cc3e</id>
+              <x>21.937502</x>
+              <y>1.5233804</y>
+              <width>36.038002</width>
+              <height>7.1491027</height>
+              <borderDisplay>0</borderDisplay>
+              <lineType>0</lineType>
+              <borderHeight>0.70555556</borderHeight>
+              <borderColor>#FF000000</borderColor>
+              <textColor>#FF000000</textColor>
+              <bgAlpha>0</bgAlpha>
+              <bgColor>#00000000</bgColor>
+              <orientation>0</orientation>
+              <lockMovement>0</lockMovement>
+              <isTemplate>0</isTemplate>
+              <antiColor>0</antiColor>
+              <preTextColor>#FF000000</preTextColor>
+              <preBgColor>#00000000</preBgColor>
+              <preBgAlpha>0</preBgAlpha>
+              <textDataFormat />
+              <selectedDataIndexs />
+              <horAlignment>1</horAlignment>
+              <verAlignment>1</verAlignment>
+              <fontStyleIsBlod>0</fontStyleIsBlod>
+              <fontStyleIsUnderLine>0</fontStyleIsUnderLine>
+              <fontStyleIsitalics>0</fontStyleIsitalics>
+              <fontHeight>9.877778</fontHeight>
+              <fontName>Source Han Sans SC</fontName>
+              <isAutoSize>1</isAutoSize>
+              <verDisplay>0</verDisplay>
+              <Lines />
+              <charSpace>0</charSpace>
+              <lineSpace>0</lineSpace>
+              <lineSpacingStyle>0</lineSpacingStyle>
+              <letterSpacingStyle>0</letterSpacingStyle>
+              <paragraphStyle>0</paragraphStyle>
+              <indentWidth>0</indentWidth>
+              <hideBlankLines>0</hideBlankLines>
+              <stretchHorizontal>0</stretchHorizontal>
+              <stretchVertical>0</stretchVertical>
+              <fontInfos />
+              <content />
+            </Text>
+            <Text>
+              <tableItemRow>2</tableItemRow>
+              <tableItemCol>2</tableItemCol>
+              <id>f3bb8d3c8fd24299ab97079287b98423</id>
+              <x>21.937502</x>
+              <y>9.047483</y>
+              <width>36.038002</width>
+              <height>7.1491027</height>
+              <borderDisplay>0</borderDisplay>
+              <lineType>0</lineType>
+              <borderHeight>0.70555556</borderHeight>
+              <borderColor>#FF000000</borderColor>
+              <textColor>#FF000000</textColor>
+              <bgAlpha>0</bgAlpha>
+              <bgColor>#00000000</bgColor>
+              <orientation>0</orientation>
+              <lockMovement>0</lockMovement>
+              <isTemplate>0</isTemplate>
+              <antiColor>0</antiColor>
+              <preTextColor>#FF000000</preTextColor>
+              <preBgColor>#00000000</preBgColor>
+              <preBgAlpha>0</preBgAlpha>
+              <textDataFormat />
+              <selectedDataIndexs />
+              <horAlignment>1</horAlignment>
+              <verAlignment>1</verAlignment>
+              <fontStyleIsBlod>0</fontStyleIsBlod>
+              <fontStyleIsUnderLine>0</fontStyleIsUnderLine>
+              <fontStyleIsitalics>0</fontStyleIsitalics>
+              <fontHeight>9.877778</fontHeight>
+              <fontName>Source Han Sans SC</fontName>
+              <isAutoSize>1</isAutoSize>
+              <verDisplay>0</verDisplay>
+              <Lines />
+              <charSpace>0</charSpace>
+              <lineSpace>0</lineSpace>
+              <lineSpacingStyle>0</lineSpacingStyle>
+              <letterSpacingStyle>0</letterSpacingStyle>
+              <paragraphStyle>0</paragraphStyle>
+              <indentWidth>0</indentWidth>
+              <hideBlankLines>0</hideBlankLines>
+              <stretchHorizontal>0</stretchHorizontal>
+              <stretchVertical>0</stretchVertical>
+              <fontInfos />
+              <content />
+            </Text>
+            <Text>
+              <tableItemRow>3</tableItemRow>
+              <tableItemCol>1</tableItemCol>
+              <id>e1ce08cfb87e4d16b10b4abe55d3ff01</id>
+              <x>2.0245018</x>
+              <y>16.571587</y>
+              <width>19.538</width>
+              <height>7.1491027</height>
+              <borderDisplay>0</borderDisplay>
+              <lineType>0</lineType>
+              <borderHeight>0.375</borderHeight>
+              <borderColor>#FF000000</borderColor>
+              <textColor>#FF000000</textColor>
+              <bgAlpha>0</bgAlpha>
+              <bgColor>#00FFFFFF</bgColor>
+              <orientation>0</orientation>
+              <lockMovement>0</lockMovement>
+              <isTemplate>0</isTemplate>
+              <antiColor>0</antiColor>
+              <preTextColor>#FF000000</preTextColor>
+              <preBgColor>#00FFFFFF</preBgColor>
+              <preBgAlpha>0</preBgAlpha>
+              <textDataFormat>存放地点</textDataFormat>
+              <selectedDataIndexs />
+              <horAlignment>1</horAlignment>
+              <verAlignment>1</verAlignment>
+              <fontStyleIsBlod>0</fontStyleIsBlod>
+              <fontStyleIsUnderLine>0</fontStyleIsUnderLine>
+              <fontStyleIsitalics>0</fontStyleIsitalics>
+              <fontHeight>3.5</fontHeight>
+              <fontName>Microsoft YaHei UI</fontName>
+              <isAutoSize>0</isAutoSize>
+              <verDisplay>0</verDisplay>
+              <Lines>
+                <string>存放地点</string>
+              </Lines>
+              <charSpace>0</charSpace>
+              <lineSpace>0</lineSpace>
+              <lineSpacingStyle>0</lineSpacingStyle>
+              <letterSpacingStyle>0</letterSpacingStyle>
+              <paragraphStyle>0</paragraphStyle>
+              <indentWidth>0</indentWidth>
+              <hideBlankLines>0</hideBlankLines>
+              <stretchHorizontal>0</stretchHorizontal>
+              <stretchVertical>0</stretchVertical>
+              <fontInfos />
+              <content>存放地点</content>
+            </Text>
+            <Text>
+              <tableItemRow>3</tableItemRow>
+              <tableItemCol>2</tableItemCol>
+              <id>1cccfe68d48048a78f3e78562d5556ac</id>
+              <x>21.937502</x>
+              <y>16.571587</y>
+              <width>36.038002</width>
+              <height>7.1491027</height>
+              <borderDisplay>0</borderDisplay>
+              <lineType>0</lineType>
+              <borderHeight>0.70555556</borderHeight>
+              <borderColor>#FF000000</borderColor>
+              <textColor>#FF000000</textColor>
+              <bgAlpha>0</bgAlpha>
+              <bgColor>#00000000</bgColor>
+              <orientation>0</orientation>
+              <lockMovement>0</lockMovement>
+              <isTemplate>0</isTemplate>
+              <antiColor>0</antiColor>
+              <preTextColor>#FF000000</preTextColor>
+              <preBgColor>#00000000</preBgColor>
+              <preBgAlpha>0</preBgAlpha>
+              <textDataFormat />
+              <selectedDataIndexs />
+              <horAlignment>1</horAlignment>
+              <verAlignment>1</verAlignment>
+              <fontStyleIsBlod>0</fontStyleIsBlod>
+              <fontStyleIsUnderLine>0</fontStyleIsUnderLine>
+              <fontStyleIsitalics>0</fontStyleIsitalics>
+              <fontHeight>9.877778</fontHeight>
+              <fontName>Source Han Sans SC</fontName>
+              <isAutoSize>1</isAutoSize>
+              <verDisplay>0</verDisplay>
+              <Lines />
+              <charSpace>0</charSpace>
+              <lineSpace>0</lineSpace>
+              <lineSpacingStyle>0</lineSpacingStyle>
+              <letterSpacingStyle>0</letterSpacingStyle>
+              <paragraphStyle>0</paragraphStyle>
+              <indentWidth>0</indentWidth>
+              <hideBlankLines>0</hideBlankLines>
+              <stretchHorizontal>0</stretchHorizontal>
+              <stretchVertical>0</stretchVertical>
+              <fontInfos />
+              <content />
+            </Text>
+            <Text>
+              <tableItemRow>4</tableItemRow>
+              <tableItemCol>1</tableItemCol>
+              <id>a949692514704d48a3fd7d54a3992a65</id>
+              <x>2.0245018</x>
+              <y>24.095688</y>
+              <width>19.538</width>
+              <height>7.1491027</height>
+              <borderDisplay>0</borderDisplay>
+              <lineType>0</lineType>
+              <borderHeight>0.375</borderHeight>
+              <borderColor>#FF000000</borderColor>
+              <textColor>#FF000000</textColor>
+              <bgAlpha>0</bgAlpha>
+              <bgColor>#00FFFFFF</bgColor>
+              <orientation>0</orientation>
+              <lockMovement>0</lockMovement>
+              <isTemplate>0</isTemplate>
+              <antiColor>0</antiColor>
+              <preTextColor>#FF000000</preTextColor>
+              <preBgColor>#00FFFFFF</preBgColor>
+              <preBgAlpha>0</preBgAlpha>
+              <textDataFormat>使用部门</textDataFormat>
+              <selectedDataIndexs />
+              <horAlignment>1</horAlignment>
+              <verAlignment>1</verAlignment>
+              <fontStyleIsBlod>0</fontStyleIsBlod>
+              <fontStyleIsUnderLine>0</fontStyleIsUnderLine>
+              <fontStyleIsitalics>0</fontStyleIsitalics>
+              <fontHeight>3.5</fontHeight>
+              <fontName>Microsoft YaHei UI</fontName>
+              <isAutoSize>0</isAutoSize>
+              <verDisplay>0</verDisplay>
+              <Lines>
+                <string>使用部门</string>
+              </Lines>
+              <charSpace>0</charSpace>
+              <lineSpace>0</lineSpace>
+              <lineSpacingStyle>0</lineSpacingStyle>
+              <letterSpacingStyle>0</letterSpacingStyle>
+              <paragraphStyle>0</paragraphStyle>
+              <indentWidth>0</indentWidth>
+              <hideBlankLines>0</hideBlankLines>
+              <stretchHorizontal>0</stretchHorizontal>
+              <stretchVertical>0</stretchVertical>
+              <fontInfos />
+              <content>使用部门</content>
+            </Text>
+            <Text>
+              <tableItemRow>4</tableItemRow>
+              <tableItemCol>2</tableItemCol>
+              <id>580f805682834f60a270e13af16ddac0</id>
+              <x>21.937502</x>
+              <y>24.095688</y>
+              <width>36.038002</width>
+              <height>7.1491027</height>
+              <borderDisplay>0</borderDisplay>
+              <lineType>0</lineType>
+              <borderHeight>0.70555556</borderHeight>
+              <borderColor>#FF000000</borderColor>
+              <textColor>#FF000000</textColor>
+              <bgAlpha>0</bgAlpha>
+              <bgColor>#00000000</bgColor>
+              <orientation>0</orientation>
+              <lockMovement>0</lockMovement>
+              <isTemplate>0</isTemplate>
+              <antiColor>0</antiColor>
+              <preTextColor>#FF000000</preTextColor>
+              <preBgColor>#00000000</preBgColor>
+              <preBgAlpha>0</preBgAlpha>
+              <textDataFormat />
+              <selectedDataIndexs />
+              <horAlignment>1</horAlignment>
+              <verAlignment>1</verAlignment>
+              <fontStyleIsBlod>0</fontStyleIsBlod>
+              <fontStyleIsUnderLine>0</fontStyleIsUnderLine>
+              <fontStyleIsitalics>0</fontStyleIsitalics>
+              <fontHeight>9.877778</fontHeight>
+              <fontName>Source Han Sans SC</fontName>
+              <isAutoSize>1</isAutoSize>
+              <verDisplay>0</verDisplay>
+              <Lines />
+              <charSpace>0</charSpace>
+              <lineSpace>0</lineSpace>
+              <lineSpacingStyle>0</lineSpacingStyle>
+              <letterSpacingStyle>0</letterSpacingStyle>
+              <paragraphStyle>0</paragraphStyle>
+              <indentWidth>0</indentWidth>
+              <hideBlankLines>0</hideBlankLines>
+              <stretchHorizontal>0</stretchHorizontal>
+              <stretchVertical>0</stretchVertical>
+              <fontInfos />
+              <content />
+            </Text>
+            <Text>
+              <tableItemRow>5</tableItemRow>
+              <tableItemCol>1</tableItemCol>
+              <id>cb0fc78580c84343a7fa6775e17286e9</id>
+              <x>2.0245018</x>
+              <y>31.61979</y>
+              <width>19.538</width>
+              <height>7.1491027</height>
+              <borderDisplay>0</borderDisplay>
+              <lineType>0</lineType>
+              <borderHeight>0.375</borderHeight>
+              <borderColor>#FF000000</borderColor>
+              <textColor>#FF000000</textColor>
+              <bgAlpha>0</bgAlpha>
+              <bgColor>#00FFFFFF</bgColor>
+              <orientation>0</orientation>
+              <lockMovement>0</lockMovement>
+              <isTemplate>0</isTemplate>
+              <antiColor>0</antiColor>
+              <preTextColor>#FF000000</preTextColor>
+              <preBgColor>#00FFFFFF</preBgColor>
+              <preBgAlpha>0</preBgAlpha>
+              <textDataFormat>责任人</textDataFormat>
+              <selectedDataIndexs />
+              <horAlignment>1</horAlignment>
+              <verAlignment>1</verAlignment>
+              <fontStyleIsBlod>0</fontStyleIsBlod>
+              <fontStyleIsUnderLine>0</fontStyleIsUnderLine>
+              <fontStyleIsitalics>0</fontStyleIsitalics>
+              <fontHeight>3.5</fontHeight>
+              <fontName>Microsoft YaHei UI</fontName>
+              <isAutoSize>0</isAutoSize>
+              <verDisplay>0</verDisplay>
+              <Lines>
+                <string>责任人</string>
+              </Lines>
+              <charSpace>0</charSpace>
+              <lineSpace>0</lineSpace>
+              <lineSpacingStyle>0</lineSpacingStyle>
+              <letterSpacingStyle>0</letterSpacingStyle>
+              <paragraphStyle>0</paragraphStyle>
+              <indentWidth>0</indentWidth>
+              <hideBlankLines>0</hideBlankLines>
+              <stretchHorizontal>0</stretchHorizontal>
+              <stretchVertical>0</stretchVertical>
+              <fontInfos />
+              <content>责任人</content>
+            </Text>
+            <Text>
+              <tableItemRow>5</tableItemRow>
+              <tableItemCol>2</tableItemCol>
+              <id>f23a40aae6b64731aefb4ef8c99ab319</id>
+              <x>21.937502</x>
+              <y>31.61979</y>
+              <width>36.038002</width>
+              <height>7.1491027</height>
+              <borderDisplay>0</borderDisplay>
+              <lineType>0</lineType>
+              <borderHeight>0.70555556</borderHeight>
+              <borderColor>#FF000000</borderColor>
+              <textColor>#FF000000</textColor>
+              <bgAlpha>0</bgAlpha>
+              <bgColor>#00000000</bgColor>
+              <orientation>0</orientation>
+              <lockMovement>0</lockMovement>
+              <isTemplate>0</isTemplate>
+              <antiColor>0</antiColor>
+              <preTextColor>#FF000000</preTextColor>
+              <preBgColor>#00000000</preBgColor>
+              <preBgAlpha>0</preBgAlpha>
+              <textDataFormat />
+              <selectedDataIndexs />
+              <horAlignment>1</horAlignment>
+              <verAlignment>1</verAlignment>
+              <fontStyleIsBlod>0</fontStyleIsBlod>
+              <fontStyleIsUnderLine>0</fontStyleIsUnderLine>
+              <fontStyleIsitalics>0</fontStyleIsitalics>
+              <fontHeight>9.877778</fontHeight>
+              <fontName>Source Han Sans SC</fontName>
+              <isAutoSize>1</isAutoSize>
+              <verDisplay>0</verDisplay>
+              <Lines />
+              <charSpace>0</charSpace>
+              <lineSpace>0</lineSpace>
+              <lineSpacingStyle>0</lineSpacingStyle>
+              <letterSpacingStyle>0</letterSpacingStyle>
+              <paragraphStyle>0</paragraphStyle>
+              <indentWidth>0</indentWidth>
+              <hideBlankLines>0</hideBlankLines>
+              <stretchHorizontal>0</stretchHorizontal>
+              <stretchVertical>0</stretchVertical>
+              <fontInfos />
+              <content />
+            </Text>
+          </Cells>
+          <group />
+          <rowHeight>7.1491027,7.1491027,7.1491027,7.1491027,7.1491027</rowHeight>
+          <colWidth>19.537998,36.038</colWidth>
+          <cols>2</cols>
+          <rows>5</rows>
+          <lineWidth>0.375</lineWidth>
+        </Table>
+      </contents>
+    </WdPage>
+  </contents>
+</LPAPI>

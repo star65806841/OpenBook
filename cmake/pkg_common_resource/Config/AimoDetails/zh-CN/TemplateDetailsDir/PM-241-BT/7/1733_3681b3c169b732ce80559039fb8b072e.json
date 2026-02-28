@@ -1,0 +1,66 @@
+{
+  "dpi" : 200,
+  "labelWidth_dot" : 0,
+  "paperType" : 2,
+  "labelHeight_dot" : 0,
+  "canEdit" : true,
+  "previewImageId" : "512791666848305152",
+  "printDirection" : 0,
+  "newVersion" : true,
+  "interval" : 0,
+  "jsonId" : "",
+  "thermalPrinter" : true,
+  "templateId" : "",
+  "dot_mm" : 8,
+  "userSaveId" : "464603076612071424",
+  "alignment" : "left",
+  "isAutoLength" : true,
+  "labelDirection" : true,
+  "fold" : false,
+  "version" : 4,
+  "dLabelId" : "",
+  "backgroundImageUrl" : "",
+  "controlInfos" : [
+    {
+      "type" : "text",
+      "textInfo" : {
+        "letterSpacing" : 0,
+        "italic" : false,
+        "P3100fontSize" : 100,
+        "strikethrough" : false,
+        "fontSize" : "",
+        "lineSpace" : 1,
+        "underline" : false,
+        "blackBackground" : false,
+        "aligment" : 1,
+        "fontID" : "",
+        "bold" : false,
+        "text" : "         果蔬芝士脆\n配料表：黄油、糯米粉、奶酪、牛奶、果蔬泥\n制作商：东阿奕然食品有限公司\n许可证号：JY23715240044254\n产地：山东省东阿县\n地址：青年街中段\n电话：13396258098\n执行标准：GB\/T20981\n储存标准：请置于通风、阴凉、干燥处、避免处于高温及阳光直射\n生产日期：2023-07-05\n保质期:30天\n",
+        "kerning" : 1,
+        "lineSpacing" : 0,
+        "fontName" : "HarmonyOS",
+        "fontIntSize" : 14
+      },
+      "location" : {
+        "x" : 0,
+        "rotateAngle" : 0,
+        "y" : 5,
+        "height" : 230,
+        "width" : 285
+      }
+    }
+  ],
+  "labelHeight" : 30,
+  "adaptDevices" : [
+
+  ],
+  "pageMargins" : [
+
+  ],
+  "saveTimestamp" : 1688539511,
+  "labelWidth" : 40,
+  "dLabelGroupId" : "",
+  "labelName" : "果蔬芝士脆",
+  "previewImageUrl" : "https:\/\/oss.qu-in.com\/quinSystem\/material\/template\/user\/userId_464511164853129216\/screenshot\/512791666735058945_MTY4ODUzOTUxMC44NDMyODE%3D.jpg",
+  "backgroundImageId" : ""
+}

@@ -1,0 +1,1457 @@
+{
+  "controlInfos": [
+    {
+      "textInfo": {
+        "aligment": 2,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": true,
+        "bold": true,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 42,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "葫芦岛鑫亮点汽车服务有限公司",
+        "underline": false
+      },
+      "location": {
+        "height": 42,
+        "rotateAngle": 0,
+        "width": 804,
+        "x": -2,
+        "y": 8
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 1,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": true,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 16,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "该车按维修合同进行维修，本厂对维修竣工的车辆实行质量保证，质量保证期为车辆行驶      万公里或者      日(以先到为准)。\r\n在托修单位严格执行走合期规定、合理使用、正常维护的情况下,出现的维修质量问题，凭此卡随竣工出厂各格证,由本厂负责包修,免返修工料费和工时费，在原维修类别期限内修竣交托修方。",
+        "underline": false
+      },
+      "location": {
+        "height": 192,
+        "rotateAngle": 0,
+        "width": 218,
+        "x": 526,
+        "y": 135
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 1,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": true,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 26,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "     NO.\n     存根",
+        "underline": false
+      },
+      "location": {
+        "height": 52,
+        "rotateAngle": 0,
+        "width": 176,
+        "x": 22,
+        "y": 60
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 1,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": true,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 26,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": " NO.\n 车属单位保管",
+        "underline": false
+      },
+      "location": {
+        "height": 52,
+        "rotateAngle": 0,
+        "width": 244,
+        "x": 254,
+        "y": 60
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 1,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": true,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 26,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "   NO.\n   质量保证卡",
+        "underline": false
+      },
+      "location": {
+        "height": 52,
+        "rotateAngle": 0,
+        "width": 252,
+        "x": 525,
+        "y": 60
+      },
+      "type": "text"
+    },
+    {
+      "tableInfo": {
+        "color": "",
+        "columnWidth": [
+          37,
+          37,
+          38,
+          37,
+          38,
+          37
+        ],
+        "lineWidth": 3,
+        "merges": [
+          
+        ],
+        "rowHeight": [
+          46,
+          19,
+          20
+        ],
+        "textInfos": [
+          {
+            "cellText": {
+              "aligment": 2,
+              "arcDirection": 0,
+              "autoAddCount": 0,
+              "autoAddNumber": 0,
+              "blackBackground": false,
+              "bold": true,
+              "color": "",
+              "fontID": "0",
+              "fontIntSize": 16,
+              "fontName": "黑体",
+              "italic": false,
+              "kerning": 0.0,
+              "leading": 8,
+              "lineSpace": 0.0,
+              "strikethrough": false,
+              "text": "次数",
+              "underline": false
+            },
+            "column": 0,
+            "row": 0
+          },
+          {
+            "cellText": {
+              "aligment": 2,
+              "arcDirection": 0,
+              "autoAddCount": 0,
+              "autoAddNumber": 0,
+              "blackBackground": false,
+              "bold": true,
+              "color": "",
+              "fontID": "0",
+              "fontIntSize": 16,
+              "fontName": "黑体",
+              "italic": false,
+              "kerning": 0.0,
+              "leading": 8,
+              "lineSpace": 0.0,
+              "strikethrough": false,
+              "text": "返修项目",
+              "underline": false
+            },
+            "column": 1,
+            "row": 0
+          },
+          {
+            "cellText": {
+              "aligment": 2,
+              "arcDirection": 0,
+              "autoAddCount": 0,
+              "autoAddNumber": 0,
+              "blackBackground": false,
+              "bold": true,
+              "color": "",
+              "fontID": "0",
+              "fontIntSize": 16,
+              "fontName": "黑体",
+              "italic": false,
+              "kerning": 0.0,
+              "leading": 8,
+              "lineSpace": 0.0,
+              "strikethrough": false,
+              "text": "返修日期",
+              "underline": false
+            },
+            "column": 2,
+            "row": 0
+          },
+          {
+            "cellText": {
+              "aligment": 2,
+              "arcDirection": 0,
+              "autoAddCount": 0,
+              "autoAddNumber": 0,
+              "blackBackground": false,
+              "bold": true,
+              "color": "",
+              "fontID": "0",
+              "fontIntSize": 16,
+              "fontName": "黑体",
+              "italic": false,
+              "kerning": 0.0,
+              "leading": 8,
+              "lineSpace": 0.0,
+              "strikethrough": false,
+              "text": "修竣日期",
+              "underline": false
+            },
+            "column": 3,
+            "row": 0
+          },
+          {
+            "cellText": {
+              "aligment": 2,
+              "arcDirection": 0,
+              "autoAddCount": 0,
+              "autoAddNumber": 0,
+              "blackBackground": false,
+              "bold": true,
+              "color": "",
+              "fontID": "0",
+              "fontIntSize": 16,
+              "fontName": "黑体",
+              "italic": false,
+              "kerning": 0.0,
+              "leading": 8,
+              "lineSpace": 0.0,
+              "strikethrough": false,
+              "text": "送修人",
+              "underline": false
+            },
+            "column": 4,
+            "row": 0
+          },
+          {
+            "cellText": {
+              "aligment": 2,
+              "arcDirection": 0,
+              "autoAddCount": 0,
+              "autoAddNumber": 0,
+              "blackBackground": false,
+              "bold": true,
+              "color": "",
+              "fontID": "0",
+              "fontIntSize": 16,
+              "fontName": "黑体",
+              "italic": false,
+              "kerning": 0.0,
+              "leading": 8,
+              "lineSpace": 0.0,
+              "strikethrough": false,
+              "text": "质检员",
+              "underline": false
+            },
+            "column": 5,
+            "row": 0
+          }
+        ]
+      },
+      "location": {
+        "height": 98,
+        "rotateAngle": 0,
+        "width": 245,
+        "x": 528,
+        "y": 362
+      },
+      "type": "table"
+    },
+    {
+      "textInfo": {
+        "aligment": 1,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": true,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 18,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "返修情况记录：",
+        "underline": false
+      },
+      "location": {
+        "height": 18,
+        "rotateAngle": 0,
+        "width": 188,
+        "x": 527,
+        "y": 342
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 1,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": true,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 17,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "维修发票号：",
+        "underline": false
+      },
+      "location": {
+        "height": 18,
+        "rotateAngle": 0,
+        "width": 188,
+        "x": 530,
+        "y": 478
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 1,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": true,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 17,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "维修竣工出厂日期：",
+        "underline": false
+      },
+      "location": {
+        "height": 18,
+        "rotateAngle": 0,
+        "width": 168,
+        "x": 531,
+        "y": 502
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 1,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": true,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 16,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "质量检验员:(盖章)",
+        "underline": false
+      },
+      "location": {
+        "height": 16,
+        "rotateAngle": 0,
+        "width": 140,
+        "x": 76,
+        "y": 344
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 1,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": true,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 16,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "承修单位:(盖章)",
+        "underline": false
+      },
+      "location": {
+        "height": 16,
+        "rotateAngle": 0,
+        "width": 126,
+        "x": 93,
+        "y": 392
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 1,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": true,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 15,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "进厂日期:",
+        "underline": false
+      },
+      "location": {
+        "height": 16,
+        "rotateAngle": 0,
+        "width": 82,
+        "x": 17,
+        "y": 440
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 1,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": true,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 15,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "出厂日期:",
+        "underline": false
+      },
+      "location": {
+        "height": 16,
+        "rotateAngle": 0,
+        "width": 76,
+        "x": 144,
+        "y": 440
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 1,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": true,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 15,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "托修方接车人:(签字)",
+        "underline": false
+      },
+      "location": {
+        "height": 16,
+        "rotateAngle": 0,
+        "width": 162,
+        "x": 16,
+        "y": 470
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 1,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": true,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 15,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "接车日期:",
+        "underline": false
+      },
+      "location": {
+        "height": 16,
+        "rotateAngle": 0,
+        "width": 82,
+        "x": 17,
+        "y": 499
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 1,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": true,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 16,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "该车按维修合同维修， 经检验合格准予出厂。",
+        "underline": false
+      },
+      "location": {
+        "height": 32,
+        "rotateAngle": 0,
+        "width": 200,
+        "x": 17,
+        "y": 293
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 3,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": true,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 16,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "维 修 类 别",
+        "underline": false
+      },
+      "location": {
+        "height": 16,
+        "rotateAngle": 0,
+        "width": 98,
+        "x": 9,
+        "y": 247
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 3,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": true,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 16,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "底盘(车身号)",
+        "underline": false
+      },
+      "location": {
+        "height": 16,
+        "rotateAngle": 0,
+        "width": 104,
+        "x": 7,
+        "y": 219
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 3,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": true,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 16,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "车       型",
+        "underline": false
+      },
+      "location": {
+        "height": 16,
+        "rotateAngle": 0,
+        "width": 98,
+        "x": 11,
+        "y": 191
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 3,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": true,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 16,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "车 牌 号 码",
+        "underline": false
+      },
+      "location": {
+        "height": 16,
+        "rotateAngle": 0,
+        "width": 92,
+        "x": 18,
+        "y": 163
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 3,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": true,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 16,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "托   修  方",
+        "underline": false
+      },
+      "location": {
+        "height": 16,
+        "rotateAngle": 0,
+        "width": 90,
+        "x": 18,
+        "y": 136
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 3,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": true,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 16,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "托   修  方",
+        "underline": false
+      },
+      "location": {
+        "height": 16,
+        "rotateAngle": 0,
+        "width": 90,
+        "x": 251,
+        "y": 136
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 3,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": true,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 16,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "车 牌 号 码",
+        "underline": false
+      },
+      "location": {
+        "height": 16,
+        "rotateAngle": 0,
+        "width": 92,
+        "x": 249,
+        "y": 163
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 3,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": true,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 16,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "车       型",
+        "underline": false
+      },
+      "location": {
+        "height": 16,
+        "rotateAngle": 0,
+        "width": 98,
+        "x": 243,
+        "y": 191
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 3,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": true,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 16,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "底盘(车身号)",
+        "underline": false
+      },
+      "location": {
+        "height": 16,
+        "rotateAngle": 0,
+        "width": 104,
+        "x": 245,
+        "y": 219
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 3,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": true,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 16,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "维 修 类 别",
+        "underline": false
+      },
+      "location": {
+        "height": 16,
+        "rotateAngle": 0,
+        "width": 98,
+        "x": 243,
+        "y": 247
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 1,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": true,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 16,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "该车按维修合同维修， 经检验合格准予出厂。",
+        "underline": false
+      },
+      "location": {
+        "height": 32,
+        "rotateAngle": 0,
+        "width": 254,
+        "x": 249,
+        "y": 293
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 1,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": true,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 16,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "质量检验员:(盖章)",
+        "underline": false
+      },
+      "location": {
+        "height": 16,
+        "rotateAngle": 0,
+        "width": 140,
+        "x": 345,
+        "y": 344
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 1,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": true,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 16,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "承修单位:(盖章)",
+        "underline": false
+      },
+      "location": {
+        "height": 16,
+        "rotateAngle": 0,
+        "width": 124,
+        "x": 362,
+        "y": 392
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 1,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": true,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 15,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "出厂日期:",
+        "underline": false
+      },
+      "location": {
+        "height": 16,
+        "rotateAngle": 0,
+        "width": 76,
+        "x": 413,
+        "y": 440
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 1,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": true,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 15,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "进厂日期:",
+        "underline": false
+      },
+      "location": {
+        "height": 16,
+        "rotateAngle": 0,
+        "width": 82,
+        "x": 286,
+        "y": 440
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 1,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": true,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 15,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "托修方接车人:(签字)",
+        "underline": false
+      },
+      "location": {
+        "height": 16,
+        "rotateAngle": 0,
+        "width": 162,
+        "x": 285,
+        "y": 470
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 1,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": true,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 15,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "接车日期:",
+        "underline": false
+      },
+      "location": {
+        "height": 16,
+        "rotateAngle": 0,
+        "width": 82,
+        "x": 286,
+        "y": 499
+      },
+      "type": "text"
+    },
+    {
+      "lineInfo": {
+        "color": "",
+        "interval": 8.0,
+        "lineType": 0
+      },
+      "location": {
+        "height": 16,
+        "rotateAngle": 0,
+        "width": 800,
+        "x": 0,
+        "y": 545
+      },
+      "type": "line"
+    },
+    {
+      "lineInfo": {
+        "color": "",
+        "interval": 8.0,
+        "lineType": 0
+      },
+      "location": {
+        "height": 10,
+        "rotateAngle": 0,
+        "width": 804,
+        "x": -2,
+        "y": 0
+      },
+      "type": "line"
+    },
+    {
+      "lineInfo": {
+        "color": "",
+        "interval": 8.0,
+        "lineType": 0
+      },
+      "location": {
+        "height": 10,
+        "rotateAngle": 0,
+        "width": 804,
+        "x": -2,
+        "y": 49
+      },
+      "type": "line"
+    },
+    {
+      "textInfo": {
+        "aligment": 1,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": false,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 21,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "____________",
+        "underline": true
+      },
+      "location": {
+        "height": 42,
+        "rotateAngle": 0,
+        "width": 130,
+        "x": 112,
+        "y": 123
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 1,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": false,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 21,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "____________",
+        "underline": true
+      },
+      "location": {
+        "height": 42,
+        "rotateAngle": 0,
+        "width": 130,
+        "x": 112,
+        "y": 151
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 1,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": false,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 21,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "____________",
+        "underline": true
+      },
+      "location": {
+        "height": 42,
+        "rotateAngle": 0,
+        "width": 130,
+        "x": 112,
+        "y": 182
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 1,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": false,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 21,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "____________",
+        "underline": true
+      },
+      "location": {
+        "height": 42,
+        "rotateAngle": 0,
+        "width": 130,
+        "x": 112,
+        "y": 209
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 1,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": false,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 21,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "____________",
+        "underline": true
+      },
+      "location": {
+        "height": 42,
+        "rotateAngle": 0,
+        "width": 130,
+        "x": 112,
+        "y": 234
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 1,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": false,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 21,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "____________",
+        "underline": true
+      },
+      "location": {
+        "height": 42,
+        "rotateAngle": 0,
+        "width": 130,
+        "x": 344,
+        "y": 122
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 1,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": false,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 21,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "____________",
+        "underline": true
+      },
+      "location": {
+        "height": 42,
+        "rotateAngle": 0,
+        "width": 130,
+        "x": 344,
+        "y": 151
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 1,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": false,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 21,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "____________",
+        "underline": true
+      },
+      "location": {
+        "height": 42,
+        "rotateAngle": 0,
+        "width": 130,
+        "x": 344,
+        "y": 180
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 1,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": false,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 21,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "____________",
+        "underline": true
+      },
+      "location": {
+        "height": 42,
+        "rotateAngle": 0,
+        "width": 130,
+        "x": 344,
+        "y": 208
+      },
+      "type": "text"
+    },
+    {
+      "textInfo": {
+        "aligment": 1,
+        "arcDirection": 0,
+        "autoAddCount": 0,
+        "autoAddNumber": 0,
+        "blackBackground": false,
+        "bold": false,
+        "color": "",
+        "fontID": "0",
+        "fontIntSize": 21,
+        "fontName": "黑体",
+        "italic": false,
+        "kerning": 0.0,
+        "leading": 0,
+        "lineSpace": 1.0,
+        "strikethrough": false,
+        "text": "____________",
+        "underline": true
+      },
+      "location": {
+        "height": 42,
+        "rotateAngle": 0,
+        "width": 130,
+        "x": 344,
+        "y": 233
+      },
+      "type": "text"
+    }
+  ],
+  "dpi": 0,
+  "hasTail": 0,
+  "id": 1729476502833,
+  "isRedBlack": false,
+  "labelDirection": false,
+  "labelHeight": 70.0,
+  "labelName": "鑫亮点-70100-间隙",
+  "labelWidth": 100.0,
+  "newVersion": true,
+  "paperDirection": 0,
+  "paperType": 2,
+  "previewImageId": 684493856699457536,
+  "previewImageUrl": "https://oss.qu-in.com/quinSystem/material/merge/user/userId_603701790101479424/screenShot/684493856544268288_previewImage.png",
+  "printDirection": 270,
+  "saveTimestamp": 0,
+  "storeType": 0,
+  "tailDirection": 0,
+  "tailLength": 0,
+  "thermalPrinter": false,
+  "version": 6
+}
