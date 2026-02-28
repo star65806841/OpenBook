@@ -1,0 +1,59 @@
+﻿
+import subprocess
+from pathlib import Path
+import os
+
+def compress():
+    cmake_path = Path(__file__).parent
+    labelife_dir = cmake_path / "deploy" / "install_amd64" / "Labelife"
+    output_dir = cmake_path / "win_resources" / "SetupScripts"
+    seven_zip = cmake_path / "bin" / "7z.exe"
+    final_7z = output_dir / "app.7z"
+
+    # 保存原始工作目录
+    original_cwd = os.getcwd()
+
+    try:
+        # 验证必要路径
+        required_paths = {
+            "Labelife目录": labelife_dir,
+            "7z程序": seven_zip
+        }
+        for name, path in required_paths.items():
+            if not path.exists():
+                raise FileNotFoundError(f"{name}不存在: {path}")
+
+        # 确保输出目录存在
+        output_dir.mkdir(parents=True, exist_ok=True)
+
+        # 构建7z命令
+        cmd = [
+            str(seven_zip),
+            "a", "-t7z", "-mx=9",
+            str(final_7z),
+            "*"
+        ]
+
+        # 执行压缩（自动处理工作目录）
+        subprocess.run(cmd, check=True, cwd=labelife_dir)
+        print(f"成功生成: {final_7z}")
+
+        # 验证压缩包
+        verify_cmd = [str(seven_zip), "l", str(final_7z)]
+        print("\n压缩包内容验证:")
+        subprocess.run(verify_cmd, check=True)
+
+    except subprocess.CalledProcessError as e:
+        print(f"7z命令执行失败: {e}")
+        if final_7z.exists():
+            final_7z.unlink()
+        raise
+    except Exception as e:
+        print(f"未知错误: {e}")
+        raise
+    finally:
+        # 恢复原始工作目录
+        os.chdir(original_cwd)
+
+if __name__ == "__main__":
+    compress()

@@ -1,0 +1,68 @@
+﻿
+import os
+import subprocess
+from pathlib import Path
+
+def validate_path(path: Path, name: str) -> None:
+    """验证路径是否存在"""
+    if not path.exists():
+        raise FileNotFoundError(f"{name}路径不存在: {path}")
+
+def main():
+    # 定义路径（使用绝对路径）
+    base_path = Path(__file__).parent.absolute()
+    print(f"当前脚本目录: {base_path}")
+
+    # 路径配置
+    skin_dir = base_path / "win_resources" / "skins"
+    output_dir = base_path / "win_resources" / "SetupScripts" / "Labelife"
+    output_file = output_dir / "skin.zip"
+    seven_zip = base_path / "bin" / "7z.exe"
+
+    try:
+        # 验证关键路径（打印完整路径）
+        print(f"7z程序路径: {seven_zip}")
+        validate_path(seven_zip, "7z程序")
+        validate_path(skin_dir, "皮肤资源")
+
+        # 确保输出目录存在
+        output_dir.mkdir(parents=True, exist_ok=True)
+        print(f"输出目录已确认: {output_dir}")
+
+        # 删除已存在的压缩文件
+        if output_file.exists():
+            output_file.unlink()
+            print(f"已清理旧文件: {output_file}")
+
+        # 构建压缩命令（使用绝对路径）
+        cmd = [
+            str(seven_zip),
+            "a", "-r", "-mx=9", "-bb3",
+            str(output_file),
+            "*"
+        ]
+        
+        # 执行压缩（指定工作目录）
+        print("开始压缩...")
+        subprocess.run(cmd, check=True, cwd=skin_dir)
+        print(f"压缩完成: {output_file}")
+
+        # 验证压缩包
+        print("\n压缩包内容验证:")
+        subprocess.run([str(seven_zip), "l", str(output_file)], check=True)
+
+    except subprocess.CalledProcessError as e:
+        print(f"7z命令执行失败: {e}")
+        if output_file.exists():
+            output_file.unlink()
+        return 1
+    except Exception as e:
+        print(f"处理失败: {type(e).__name__}: {str(e)}")
+        return 1
+    finally:
+        print(f"最终工作目录: {os.getcwd()}")
+
+    return 0
+
+if __name__ == "__main__":
+    exit(main())

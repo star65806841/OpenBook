@@ -1,0 +1,190 @@
+﻿#!/usr/bin/env python3
+import os
+import sys
+import cprint
+from modules import Modules
+import subprocess
+
+# 该脚本用于部署mac下的安装包
+# 生成绿色压缩包和dmg两种包
+if len(sys.argv) < 6:
+    cprint.errorExit('参数数量小于6个，无法执行',1)
+
+modules = Modules()
+project_path = sys.argv[1]
+output_path = sys.argv[2]
+qt_path = sys.argv[3]
+project_name = sys.argv[4]
+version = sys.argv[5]
+
+qt_path = os.path.abspath(os.path.join(qt_path,'../../..'))
+qml_path = os.path.join(qt_path,'qml')
+qt_bin_path = os.path.join(qt_path,'bin')
+qt_lib_path = os.path.join(qt_path,'lib')
+qt_plugin_path = os.path.join(qt_path,'plugins')
+qmake_path = os.path.join(qt_bin_path,'qmake')
+deploy_path = os.path.join(qt_bin_path,'macdeployqt')
+resources_path = os.path.join(project_path,'cmake/mac_resources')
+pkg_common_resource_path = os.path.join(project_path,'cmake/pkg_common_resource')
+app_name = project_name + '.app'
+app_path = os.path.join(output_path,app_name)
+
+# arch先默认这个
+arch = 'amd64'
+output_name = '_'.join([project_name,version,arch])
+
+if os.path.exists(app_path):
+    cprint.info('目标目录存在，即将删除目标目录所有文件:' + app_path)
+    modules.deleteDir(app_path)
+
+# 获取app 列表
+app_src_path = os.path.join(output_path,'bin')
+app_files = os.listdir(app_src_path)
+
+# 目前仅有Labelife一个，暂不做多app适配,删除原来的app，并拷贝一份新的
+if os.path.exists(app_path):
+    modules.deleteDir(app_path)
+modules.copyDir(os.path.join(app_src_path,app_name),app_path)
+target_app_contentes_path = os.path.join(app_path,'Contents')
+target_app_resources_path = os.path.join(target_app_contentes_path,'Resources')
+target_app_qml_path = os.path.join(target_app_contentes_path,'Resources/qml')
+target_app_plugins_path = os.path.join(target_app_contentes_path,'Plugins')
+
+# 执行macdeployqt
+# 目前可知只有Labelife.app可执行，暂时不做app查找功能
+modules.deployqt(deploy_path,qmake_path,qml_path,app_path)
+
+modules.copyDir(os.path.join(qml_path,'Qt/labs/platform'),os.path.join(target_app_qml_path,'Qt/labs/platform'))
+
+# 拷贝AimoUI到目标目录
+modules.copyDir(os.path.join(output_path,'AimoUI'),os.path.join(target_app_qml_path,'AimoUI'))
+# modules.deployqt(deploy_path,qmake_path,qml_path, os.path.join(target_app_qml_path,'AimoUI'))
+
+#拷贝离线数据到目标目录
+cprint.info("#copy Config dir...")
+modules.copyDir(os.path.join(pkg_common_resource_path,'Config'),os.path.join(target_app_resources_path,'Config'))
+
+cprint.info("#copy LICENSE.LGPLv3...")
+modules.copyFile(os.path.join(pkg_common_resource_path,'LICENSE.LGPLv3'), target_app_resources_path)
+def fix_plugin_paths():
+    plugin_path = f"{os.path.join(target_app_qml_path,'AimoUI')}/libaimoquickcontrolplugin.dylib"    
+    qt_libs = ["QtQuickTemplates2", "QtQuickControls2", "QtQuick", "QtQmlModels", "QtQml", "QtNetwork", "QtGui", "QtCore"]
+    
+    cprint.info('修正动态库 ->' + plugin_path)
+
+    #install_name_tool -change /opt/homebrew/opt/qt@5/lib/QtCore.framework/Versions/5/QtCore @executable_path/../Frameworks/QtCore.framework/Versions/5/QtCore Labelife.app/Contents/Resources/qml/AimoUI/libaimoquickcontrolplugin.dylib
+    #qt_lib_path = '/opt/homebrew/Cellar/qt@5/5.15.16_1/lib/cmake/Qt5/lib'
+
+    for lib in qt_libs:
+        old_path = f"/opt/homebrew/opt/qt@5/lib/{lib}.framework/Versions/5/{lib}"
+        subprocess.run([
+            "install_name_tool",
+            "-change",
+            old_path,
+            f"@executable_path/../Frameworks/{lib}.framework/Versions/5/{lib}",            
+            plugin_path
+        ], check=True)
+        cprint.info('修正:' + old_path + "->" + f"@executable_path/../Frameworks/{lib}.framework/Versions/5/{lib}")
+
+    qt_libs.append("QtQuickShapes")
+
+    #/Users/aimo/Desktop/labelife/cmake/deploy/install_amd64/labelife.app/contents/frameworks/QtQuickShapes.framework/versions/5
+    plugin_path = f"{target_app_contentes_path}/frameworks/QtQuickShapes.framework/versions/5/QtQuickShapes"                      
+    cprint.info('修正动态库 ->' + plugin_path)
+    for lib in qt_libs:
+        old_path = f"{qt_path}/lib/{lib}.framework/Versions/5/{lib}" #/opt/homebrew/Cellar/qt@5/5.15.16_1/lib/QtCore.framework/Versions/5/QtCore
+        subprocess.run([
+            "install_name_tool",
+            "-change",
+            old_path,
+            f"@executable_path/../Frameworks/{lib}.framework/Versions/5/{lib}",            
+            plugin_path
+        ], check=True)
+        cprint.info('修正:' + old_path + "->" + f"@executable_path/../Frameworks/{lib}.framework/Versions/5/{lib}")        
+
+    plugin_path = f"{target_app_contentes_path}/PlugIns/quick/libqmlshapesplugin.dylib"
+    cprint.info('修正动态库 ->' + plugin_path)
+    for lib in qt_libs:
+        old_path = f"{qt_path}/lib/{lib}.framework/Versions/5/{lib}" #/opt/homebrew/Cellar/qt@5/5.15.16_1/lib/QtQuickShapes.framework/Versions/5/QtQuickShapes
+        subprocess.run([
+            "install_name_tool",
+            "-change",
+            old_path,
+            f"@executable_path/../Frameworks/{lib}.framework/Versions/5/{lib}",            
+            plugin_path
+        ], check=True)
+        cprint.info('修正:' + old_path + "->" + f"@executable_path/../Frameworks/{lib}.framework/Versions/5/{lib}")
+
+    plugin_path = f"{target_app_contentes_path}/PlugIns/imageformats/libqsvg.dylib"
+    cprint.info('修正动态库 ->' + plugin_path)
+    for lib in ["QtSvg","QtWidgets","QtGui","QtCore"]:
+        old_path = f"{qt_path}/lib/{lib}.framework/Versions/5/{lib}" #/opt/homebrew/Cellar/qt@5/5.15.16_1/lib/QtCore.framework/Versions/5/QtCore
+        subprocess.run([
+            "install_name_tool",
+            "-change",
+            old_path,
+            f"@executable_path/../Frameworks/{lib}.framework/Versions/5/{lib}",            
+            plugin_path
+        ], check=True)
+        cprint.info('修正:' + old_path + "->" + f"@executable_path/../Frameworks/{lib}.framework/Versions/5/{lib}")
+
+# 拷贝动态链接库到Frameworks
+# 这一步deploy就已经拷贝
+# src_lib_path = os.path.join(output_path,'lib')
+tgt_frameworks_path = os.path.join(target_app_contentes_path,'Frameworks')
+# modules.copyDir(src_lib_path,tgt_frameworks_path,['.a','cmake'])
+
+# 删除多余的Frameworks
+frameworks_list = ['QtQuick3D.framework','QtQuick3DAssetImport.framework','QtQuick3DRender.framework','QtQuick3DRuntimeRender.framework',
+                   'QtQuick3DUtils.framework','QtQuickTest.framework','QtRemoteObjects.framework','QtTest.framework']
+modules.deleteFiles(tgt_frameworks_path,frameworks_list)
+
+# 删除多余的Plugins, platforminputcontexts
+modules.deleteFiles(target_app_plugins_path,['platforminputcontexts'])
+
+# 删除多余的qml文件
+qml_list = ['QtTest','QtQuick3D']
+modules.deleteFiles(target_app_qml_path,qml_list)
+
+# 拷贝shapes组件
+# modules.deploy_framework(os.path.join(qt_lib_path,'QtQuickShapes.framework'),os.path.join(tgt_frameworks_path,'QtQuickShapes.framework'))
+modules.copyDir(os.path.join(qml_path,'QtQuick/Shapes'),os.path.join(target_app_qml_path,'QtQuick/Shapes'))
+
+# 拷贝svg插件
+modules.copyFile(os.path.join(qt_plugin_path,"imageformats/libqsvg.dylib"),os.path.join(target_app_plugins_path,'imageformats/libqsvg.dylib'))
+
+modules.deleteDir(os.path.join(target_app_plugins_path,'virtualkeyboard'))
+modules.deleteDir(os.path.join(target_app_plugins_path,'mediaservice'))
+
+# modules.deleteFiles(os.path.join(tgt_frameworks_path,'QtQuickShapes.framework'), ['QtQuickShapes_debug', 'Versions/5/QtQuickShapes_debug', 'ersions/5/Resources/QtQuickShapes_debug.prl']);
+modules.deleteFiles(os.path.join(target_app_qml_path,'Qt/labs/platform'), ['libqtlabsplatformplugin_debug.dylib']);
+modules.deleteFiles(os.path.join(target_app_qml_path,'QQtQuick/Shapes'), ['libqmlshapesplugin_debug.dylib']);
+
+#如果Qt安装在homebrew下，则需要处理一些dylib的链接问题，使用otool -L *.dylib可以看到某个lib依赖的lib路径
+if "homebrew/Cellar" in qt_lib_path:
+    fix_plugin_paths()
+
+# 压缩7z
+# modules.compress7z('7z',output_path,app_name,output_name)
+
+# 制作dmg
+os.chdir(output_path)
+#modules.buildDmg(os.path.join(output_path,dmg_settings_name),project_name,output_name)
+
+cprint.info("复制app.entitlements to:" + os.path.join(output_path, 'app.entitlements'));
+modules.copyFile(os.path.join(resources_path,"app.entitlements"), os.path.join(output_path, 'app.entitlements'))
+
+cprint.info("复制parfait_crash_handler.entitlements to:" + os.path.join(output_path, 'parfait_crash_handler.entitlements'));
+modules.copyFile(os.path.join(resources_path,"parfait_crash_handler.entitlements"), os.path.join(output_path, 'parfait_crash_handler.entitlements'))
+
+if(os.path.exists(os.path.join(output_path, "app.entitlements"))):
+    cprint.info('开始签名...')
+    modules.signFileAndApp()
+
+#使用create-dmg制作dmg安装包，解决背景图自动缩放的问题
+dmgFile = modules.createDmg(output_path, output_name, os.path.join(resources_path,'installBG@2x.png'), app_path, project_name)
+
+if(os.path.exists(os.path.join(output_path, "app.entitlements"))):    
+    modules.signDmg(dmgFile)
+    cprint.info('dmg签名完成')
+

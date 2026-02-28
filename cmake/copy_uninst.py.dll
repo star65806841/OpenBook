@@ -1,0 +1,43 @@
+
+import subprocess
+from pathlib import Path
+
+def append_uninstaller():
+    # 定义路径
+    cmake_path = Path(__file__).parent
+    seven_zip = cmake_path / "bin" / "7z.exe"
+    output_dir = cmake_path / "win_resources" / "SetupScripts"
+    final_7z = output_dir / "app.7z"
+    final_uninst = cmake_path / "win_resources" / "uninst" / "uninst.exe"
+
+    # 验证路径
+    if not seven_zip.exists():
+        raise FileNotFoundError(f"7z程序不存在: {seven_zip}")
+    if not final_7z.exists():
+        raise FileNotFoundError(f"压缩包不存在: {final_7z}") 
+    if not final_uninst.exists():
+        raise FileNotFoundError(f"卸载程序不存在: {final_uninst}")
+
+    # 构建追加命令
+    cmd = [
+        str(seven_zip),
+        "u",  # 更新模式
+        str(final_7z),
+        str(final_uninst)
+    ]
+
+    try:
+        # 执行追加操作
+        subprocess.run(cmd, check=True)
+        print(f"成功将 {final_uninst.name} 追加到 {final_7z}")
+
+        # 验证结果
+        print("\n更新后压缩包内容:")
+        subprocess.run([str(seven_zip), "l", str(final_7z)], check=True)
+
+    except subprocess.CalledProcessError as e:
+        print(f"7z命令执行失败: {e}")
+        raise
+
+if __name__ == "__main__":
+    append_uninstaller()

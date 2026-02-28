@@ -1,0 +1,58 @@
+﻿
+import os
+import subprocess
+import sys
+from pathlib import Path
+
+def run_script(script_name: str) -> bool:
+    """执行脚本并直接打印输出"""
+    if not os.path.exists(script_name):
+        print(f"error：The script file does not exist: {script_name}")
+        return False
+
+    print(f"start {script_name}")
+    try:
+        process = subprocess.Popen(
+            [sys.executable, script_name],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            universal_newlines=False
+        )
+
+        def decode_stream(stream):
+            """尝试多种编码解码输出流"""
+            encodings = ['utf-8', 'gbk', 'latin1']
+            for enc in encodings:
+                try:
+                    return stream.decode(enc)
+                except UnicodeDecodeError:
+                    continue
+            return stream.decode(errors='replace')
+
+        while True:
+            output = process.stdout.readline()
+            if not output and process.poll() is not None:
+                break
+            if output:
+                print(decode_stream(output).strip())
+
+        return process.returncode == 0
+    except Exception as e:
+        print(f"error: {str(e)}")
+        return False
+
+def main():
+    base_path = Path(__file__).parent
+    """原来的打包流程"""
+    make_build = base_path / "completely_build_and_deploy.py"
+    """制作skin.zip文件"""
+    make_skinzip = base_path / "makeskinzip.py"
+    # 在父目录执行的脚本在这里执行，其余改为在modules.py中执行
+    scripts = [make_skinzip, make_build]
+    for script in scripts:
+        if not run_script(script):
+            print("error: Execution process interruption")
+            break
+
+if __name__ == "__main__":
+    main()

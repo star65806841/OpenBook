@@ -1,0 +1,121 @@
+﻿#!/usr/bin/env python3
+import os
+import sys
+import platform
+import cprint
+from systemtype import SystemType
+from multiprocessing import cpu_count
+from dataFromSaas import SaasData
+
+# 该脚本用于完整流程的编译，安装，部署步骤
+
+# 通过目标机器生成对应的名字
+def make_build_name(arch):
+    return 'build_' + arch
+
+def make_install_name(arch):
+    return 'install_' + arch
+
+# 安全构建函数，捕获异常并返回成功状态
+def safe_build(qt, arch='amd64'):
+    try:
+        cmake_cmd = 'cmake -B ./deploy/%(build)s -S ../ -DCMAKE_INSTALL_PREFIX=./deploy/%(install)s -DQT_DIR=%(qt_dir)s -DQt5_DIR=%(qt_dir)s -DLABELIFE_INSTALL=ON -DCMAKE_BUILD_TYPE=Release -DCOPYDLL=OFF -DAIMOKIT_KERNEL_SERVER_DEBUG=OFF' % {
+                'qt_dir': qt,
+                'arch': arch,
+                'build': make_build_name(arch),
+                'install': make_install_name(arch)
+            }
+        
+        if SystemType.isWin() and arch == 'i386':
+            cmake_cmd += ' -AWin32'
+
+        # 开始cmake
+        cprint.info('run ' + cmake_cmd)
+        ret = os.system(cmake_cmd)
+        if ret != 0:
+            raise Exception(f"CMake failed with exit code {ret}: {cmake_cmd}")
+
+        # 开始构建
+        build_cmd = 'cmake --build ./deploy/%(arch)s --target {0} install --config Release -j %(count)d' % {
+            'arch': make_build_name(arch),
+            'count': cpu_count()
+        }
+        
+        if SystemType.isWin():
+            build_cmd = build_cmd.format('all_build')
+        else:
+            build_cmd = build_cmd.format('all')
+            
+        cprint.info('run ' + build_cmd)
+        ret = os.system(build_cmd)
+        if ret != 0:
+            raise Exception(f"Build failed with exit code {ret}: {build_cmd}")
+        
+        return True
+    except Exception as e:
+        cprint.error(f"Error in build({arch}): {str(e)}")
+        return False
+
+# 安全部署函数，捕获异常
+def safe_deploy(dir):
+    try:
+        if SystemType.isWin():
+            deploy_script = os.path.join(dir, 'deploy.bat')
+        elif SystemType.isMac():
+            deploy_script = os.path.join(dir, 'deploy.sh')
+            os.system(f'chmod 777 {deploy_script}')
+        elif SystemType.isLinux():
+            deploy_script = os.path.join(dir, 'deploy.sh')
+        else:
+            return False
+        
+        if os.path.exists(deploy_script):
+            cprint.info(f"Running deploy script: {deploy_script}")
+            os.system(deploy_script)
+            return True
+        else:
+            cprint.warning(f"Deploy script not found: {deploy_script}")
+            return False
+    except Exception as e:
+        cprint.error(f"Error in deploy: {str(e)}")
+        return False
+
+cprint.info('start build source')
+
+saasData = SaasData()
+
+if SystemType.isLinux():
+    qt_dir = '/usr/local/Qt-5.15.16/lib/cmake/Qt5'
+
+elif SystemType.isMac():
+    saasData.update("Mac_Qt", "api.saas.qu-in.top")
+
+    qt_dir = '/usr/local/Qt-5.15.16/lib/cmake/Qt5'
+    if safe_build(qt_dir, 'amd64'):
+        safe_deploy(os.path.abspath('./deploy/' + make_install_name('amd64')))
+    # todo: build arm64
+
+elif SystemType.isWin():
+    saasData.update("Win_Qt", "api.saas.qu-in.top")
+    
+    # 32位构建（即使64位失败也尝试）
+    qt_32_dir = 'C:/Qt/5.15.16/msvc2019/lib/cmake/Qt5'
+    if os.path.exists(qt_32_dir):
+        cprint.info("Building 32-bit version...")
+        if safe_build(qt_32_dir, 'i386'):
+            install_dir = os.path.abspath('./deploy/' + make_install_name('i386'))
+            safe_deploy(install_dir)
+    else:
+        cprint.warning('32-bit Qt not found at: ' + qt_32_dir)
+
+    # 64位构建
+    qt_64_dir = 'C:/Qt/5.15.16/msvc2019_64/lib/cmake/Qt5'
+    if os.path.exists(qt_64_dir):
+        cprint.info("Building 64-bit version...")
+        if safe_build(qt_64_dir, 'amd64'):
+            install_dir = os.path.abspath('./deploy/' + make_install_name('amd64'))
+            safe_deploy(install_dir)
+    else:
+        cprint.warning('64-bit Qt not found at: ' + qt_64_dir)
+else:
+    cprint.errorExit('Error: The system type was not identified', 1)

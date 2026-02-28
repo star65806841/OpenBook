@@ -1,0 +1,35 @@
+
+import os
+import subprocess
+import shutil
+from pathlib import Path
+
+def compile_nsis_installer():
+    # 定义路径（使用Path对象确保跨平台兼容）
+    base_path = Path(__file__).parent
+    makensis_path = base_path / "win_resources" / "NSIS" / "makensis.exe"
+    nsi_script_path = base_path / "win_resources" / "SetupScripts" / "Labelife" / "labelife_setup_package.nsi"
+    output_dir = base_path / "win_resources" / "Output"
+    
+    # 验证必要文件存在
+    if not makensis_path.exists():
+        raise FileNotFoundError(f"NSIS编译器未找到: {makensis_path}")
+    if not nsi_script_path.exists():
+        raise FileNotFoundError(f"NSIS脚本未找到: {nsi_script_path}")
+
+    # 清理并重建输出目录
+    if output_dir.exists():
+        shutil.rmtree(output_dir)
+        print(f"已删除旧目录: {output_dir}")
+    output_dir.mkdir(parents=True, exist_ok=True)
+    print(f"已创建新目录: {output_dir}")
+
+    # 执行编译命令
+    try:
+        subprocess.run([str(makensis_path), str(nsi_script_path)], check=True)
+        print("NSIS安装包编译成功")
+    except subprocess.CalledProcessError as e:
+        print(f"编译失败: {e}")
+
+if __name__ == "__main__":
+    compile_nsis_installer()

@@ -1,0 +1,152 @@
+﻿#!/usr/bin/env python3
+import os
+import sys
+import cprint
+from modules import Modules
+
+# 该脚本用于部署Windows下的安装包
+# 生成绿色压缩包和安装程序两种包
+if len(sys.argv) < 6:
+    cprint.errorExit('the number of parameters is less than 6, it cannot be executed',1)
+
+modules = Modules()
+project_path = sys.argv[1]
+output_path = sys.argv[2]
+qt_path = sys.argv[3]
+project_name = sys.argv[4]
+version = sys.argv[5]
+
+qt_path = os.path.abspath(os.path.join(qt_path,'../../..'))
+qml_path = os.path.join(qt_path,'qml')
+qt_dll_path = os.path.join(qt_path,'bin')
+qmake_path = os.path.join(qt_dll_path,'qmake.exe')
+deploy_path = os.path.join(qt_dll_path,'windeployqt.exe')
+resources_path = os.path.join(project_path,'cmake/win_resources')
+pkg_common_resource_path = os.path.join(project_path,'cmake/pkg_common_resource')
+app_path = os.path.join(output_path,project_name)
+p7zip_path = os.path.join(project_path,'cmake/bin/7z.exe')
+
+# RemoteSignClient.exe {signDir} {signedDir}
+sign_client_exe = os.path.join(project_path,'cmake/win_resources/RemoteSignClient/RemoteSignClient.exe')
+
+# Windows下，通过qt路径判断arch
+# todo : 是否应该由cmake输出arch?
+if qt_path.endswith('64'):
+    arch = 'amd64'
+else:
+    arch = 'i386'
+    
+output_name = '_'.join([project_name,version,arch])
+
+if os.path.exists(app_path):
+    cprint.info('The target directory exists. All files in the target directory will be deleted soon:' + app_path)
+    modules.deleteDir(app_path)
+
+# 拷贝工程的dll到目标目录,顺便创建目录和记录所有文件名字
+modules.copyDir(os.path.join(output_path,'bin'),app_path)
+all_files = os.listdir(app_path)
+
+# 拷贝AimoUI到目标目录,过滤掉lib文件
+modules.copyDir(os.path.join(output_path,'AimoUI'),os.path.join(app_path,'qml/AimoUI'),['.lib'])
+modules.copyDir(os.path.join(qml_path,'Qt/labs/platform'),os.path.join(app_path,'qml/Qt/labs/platform'), ['.lib','.pdb','d.dll'])
+
+# 执行windeployqt,依次遍历部署，最后再处理可执行
+project_exe = project_name + '.exe'
+for i in all_files:
+    if i == project_exe or i == 'miniLZO.dll':
+        continue
+    modules.deployqt(deploy_path,qmake_path,qml_path,os.path.join(app_path,i))
+
+modules.deployqt(deploy_path,qmake_path,qml_path,os.path.join(app_path,project_exe))
+
+# 删除多余的dll
+dll_list = ['Qt5Quick3D.dll','Qt5Quick3DAssetImport.dll','Qt5Quick3DRender.dll','Qt5Quick3DRuntimeRender.dll','Qt5Quick3DUtils.dll',
+            'Qt5QuickTest.dll','Qt5RemoteObjects.dll','Qt5Quick3D.dll','Qt5Test.dll', "Qt5Multimedia.dll", "Qt5MultimediaQuick.dll"]
+modules.deleteFiles(app_path,dll_list)
+
+#删除virtualkeyboard文件夹
+modules.deleteDir(os.path.join(app_path, "virtualkeyboard"))
+modules.deleteDir(os.path.join(app_path, "mediaservice"))
+modules.deleteDir(os.path.join(app_path, "QtMultimedia"))
+modules.deleteDir(os.path.join(app_path, "QtTest"))
+
+# 拷贝shapes组件
+modules.copyFile(os.path.join(qt_dll_path,'Qt5QuickShapes.dll'),os.path.join(app_path,'Qt5QuickShapes.dll'))
+#modules.copyDir(os.path.join(qml_path,'QtQuick/Shapes'),os.path.join(app_path,'QtQuick/Shapes'),['.pdb','d.dll'])
+
+cprint.info("拷贝ssl组件及其他3rdParty动态库")
+if arch == 'amd64':
+    modules.copyDir(os.path.join(project_path,'3rdParty/win_x64'),app_path)
+    modules.copyDir(os.path.join(project_path,'3rdParty/AIRetouchAPI/x64-release/bin'),app_path)
+    modules.copyFile(os.path.join(project_path,'3rdParty/parfait-win_1.4.3.1/binary/x64/parfait.dll'), os.path.join(app_path,'parfait.dll'))
+    modules.copyFile(os.path.join(project_path,'3rdParty/parfait-win_1.4.3.1/binary/x64/parfait_crash_handler.exe'), os.path.join(app_path,'parfait_crash_handler.exe'))
+else:
+    modules.copyDir(os.path.join(project_path,'3rdParty/win32'),app_path)
+    modules.copyDir(os.path.join(project_path,'3rdParty/AIRetouchAPI/x86-release/bin'),app_path)
+    modules.copyFile(os.path.join(project_path,'3rdParty/parfait-win_1.4.3.1/binary/x86/parfait.dll'), os.path.join(app_path,'parfait.dll'))
+    modules.copyFile(os.path.join(project_path,'3rdParty/parfait-win_1.4.3.1/binary/x86/parfait_crash_handler.exe'), os.path.join(app_path,'parfait_crash_handler.exe'))
+
+cprint.info("#copy 7z.exe & dll")
+modules.copyDir(os.path.join(project_path,'3rdParty/7z'), app_path)
+
+cprint.info("copy uninst.exe")
+modules.copyFile(os.path.join(project_path,'cmake/win_resources/uninst/uninst.exe'), os.path.join(app_path,'uninst.exe'))
+
+parts = version.rsplit('.', 1)
+if len(parts) == 2:
+    part1 = parts[0]   # 即'1.0.8'
+    part2 = parts[1]   # 即'x'
+
+    if len(part2) > 3:
+        cprint.info("-----开始签名[dll]---------")
+        modules.signDlls(sign_client_exe, output_path)
+        cprint.info("-----完成签名---------")
+
+cprint.info("#copy Config dir...")
+modules.copyDir(os.path.join(pkg_common_resource_path,'Config'), os.path.join(app_path, 'Config'))
+
+cprint.info("#copy LICENSE.LGPLv3...")
+modules.copyFile(os.path.join(pkg_common_resource_path,'LICENSE.LGPLv3'), app_path)
+
+# 压缩7z
+modules.compress7z(p7zip_path,output_path,project_name,output_name)
+
+# 压缩pdb
+pdb_name = output_name + '_pdb'
+modules.compress7z(p7zip_path,output_path,'pdb',pdb_name)
+
+# 创建nsis安装包构建临时目录
+temp_path = os.path.join(output_path,output_name + '_temp_nsis')
+modules.createNsisTempDir(resources_path,temp_path,output_name,version + '.0',p7zip_path,app_path)
+
+# 制作nsis安装包 "@PROJECT_NAME@_%(Setup)_v@PROJECT_VERSION_STRING@.exe"
+modules.buildNsis(os.path.join(resources_path,'NSIS/makensis.exe'),os.path.join(temp_path,'SetupScripts/Labelife/labelife_setup_package.nsi'),output_name)
+if len(parts) == 2:
+    part1 = parts[0]   # 即'1.0.8'
+    part2 = parts[1]   # 即'x'
+    if len(part2) > 3:
+        cprint.info("-----开始签名[setup]---------")
+        arch_v = "64"
+        if(arch == "i386"):
+            arch_v = "32"
+        exe_file = f'{project_name}_{arch_v}_v{version}.exe'
+        cprint.info(f"exe->{exe_file}")
+        modules.signSetupExe(sign_client_exe, output_path, exe_file)
+        cprint.info("-----完成签名---------")
+
+# 复制到共享目录
+qt_build = "d:/qt_build"
+parts = version.rsplit('.', 1)
+if len(parts) == 2:
+    part1 = parts[0]   # 即'1.0.8'
+    part2 = parts[1]   # 即'x'
+
+    qt_build = os.path.join(qt_build, part1, version)
+    cprint.info("qt_build->" + qt_build)
+    
+    os.makedirs(qt_build, exist_ok=True)
+    
+modules.copy_by_suffix(output_path, '.7z', qt_build, f'_{version}_')
+modules.copy_by_suffix(output_path, '.exe', qt_build, f'_v{version}.')
+
+cprint.info("-----打包完成，请检查文件签名确认是否打包成功---------")

@@ -1,0 +1,48 @@
+﻿from pathlib import Path
+import shutil
+import time
+import os
+
+def copy_with_retry(src: Path, dst: Path, max_retries: int = 3) -> bool:
+    """带重试机制的文件复制"""
+    for attempt in range(max_retries):
+        try:
+            shutil.copy2(str(src), str(dst))
+            if dst.exists() and dst.stat().st_size == src.stat().st_size:
+                print(f"成功复制: {src.name}")
+                return True
+        except Exception as e:
+            print(f"尝试 {attempt + 1}/{max_retries} 失败: {src.name} - {str(e)}")
+            if attempt < max_retries - 1:
+                time.sleep(1)  # 等待1秒后重试
+    return False
+
+def main():
+    cmake_path = Path(__file__).parent
+    output_dir = cmake_path / "win_resources" / "Output"
+    target_dir = Path(r"D:\qt_build")
+    
+    # 验证源目录
+    if not output_dir.exists():
+        print(f"错误：源目录不存在 - {output_dir}")
+        return
+    
+    # 创建目标目录
+    target_dir.mkdir(parents=True, exist_ok=True)
+    
+    # 复制所有.exe文件
+    copied_files = 0
+    total_files = 0
+    
+    for exe_file in output_dir.glob("*.exe"):
+        total_files += 1
+        if copy_with_retry(exe_file, target_dir / exe_file.name):
+            copied_files += 1
+    
+    # 输出结果
+    print(f"\n操作完成 - 成功: {copied_files}/{total_files}")
+    if copied_files < total_files:
+        print("提示：部分文件复制失败，请检查错误信息")
+
+if __name__ == "__main__":
+    main()

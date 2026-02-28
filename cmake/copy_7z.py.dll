@@ -1,0 +1,26 @@
+﻿import shutil
+from pathlib import Path
+
+# 获取当前脚本所在目录
+cmake_path = Path(__file__).parent
+
+# 构建输出目录路径 (deploy/install_amd64)
+output_dir = cmake_path / "deploy" / "install_amd64"
+
+# 目标目录 (D:\qt_build)
+target_dir = Path(r"D:\qt_build")
+
+# 确保目标目录存在
+target_dir.mkdir(parents=True, exist_ok=True)
+
+# 计数器
+copied_count = 0
+
+# 遍历所有 .7z 文件并复制
+for src_file in output_dir.glob("*.7z"):
+    dest_file = target_dir / src_file.name
+    shutil.copy2(src_file, dest_file)  # 保留文件元数据
+    print(f"已复制: {src_file} -> {dest_file}")
+    copied_count += 1
+
+print(f"\n操作完成! 共复制 {copied_count} 个文件到 {target_dir}")

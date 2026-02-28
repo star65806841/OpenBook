@@ -1,0 +1,565 @@
+﻿#!/usr/bin/env python3
+import os
+import string
+import cprint
+import shutil
+import subprocess
+import pexpect
+import sys
+import time
+from systemtype import SystemType
+from pathlib import Path
+
+class Modules:
+    # 拷贝目录,将src目录下的所有文件拷贝到dest目录下，如果源目录不存在，则直接退出
+    # 如果目标目录不存在则创建,如果存在则拷贝覆盖
+    # src:源目录
+    # dest:目标目录
+    # ignoreNameList:忽略名字带有这些值的项目
+    def copyDir(self,src,dest,ignoreNameList=None):
+        if not os.path.exists(src):
+            cprint.errorExit("源目录不存在 (%(src)s)" % {"src":src},1)
+        
+        cprint.copyInfo(src,dest)
+        if ignoreNameList is None:
+            shutil.copytree(src, dest, dirs_exist_ok = True)
+        else:
+            def _ingored_def(path, filenames):
+                list = []
+                for filename in filenames:
+                    for i in ignoreNameList:
+                        if filename.find(i) != -1:
+                            list.append(filename)
+                            continue
+                return list
+            shutil.copytree(src, dest,dirs_exist_ok = True,ignore=_ingored_def)
+
+    # 拷贝文件
+    # src:源文件路径
+    # dest:目标文件路径
+    def copyFile(self,src,dest):
+        cprint.copyInfo(src,dest)
+        shutil.copy(src,dest)
+
+    # 删除文件夹中的文件
+    # src:文件夹路径
+    # dest:文件/文件夹名字,可为多个
+    def deleteFiles(self,src,dest):
+        # ret = os.system("rm -rf " + " ".join(dest))
+        if src == "" or src == "/":
+            cprint.warning("没有删除文件")
+            return
+        
+        for str in dest:
+            if str == "":
+                continue
+            path = os.path.join(src,str)
+            if not os.path.exists(path):
+                continue
+            if os.path.isfile(path):
+                os.remove(path)
+            else:
+                shutil.rmtree(path)
+
+        cprint.info("删除文件成功:" + ",".join(dest))
+
+    # 删除文件夹
+    # dir:文件夹路径
+    def deleteDir(self,dir):
+        if dir == "" or dir == "/":
+            cprint.warning("该文件夹不允许删除:" + dir)
+            return
+        
+        shutil.rmtree(dir)
+        cprint.info("删除文件夹成功:" + dir)
+
+    # 部署可执行,拷贝相关插件,文件和链接库
+    # deploy_path: deploy可执行路径
+    # qmake_path: qmake可执行的路径
+    # qml_dir: qml扩展路径
+    # tgt_file_path: 目标文件路径
+    # thirdpartypath: 第三方库路径,Linux系统专用
+    def deployqt(self,deploy_path,qmake_path,qml_dir,tgt_file_path,thirdpartypath = ''):
+        cprint.info("开始拷贝依赖")
+        if SystemType.isWin():
+            # 构建params
+            params = " --qmldir %(qml)s" % {"qml":qml_dir}
+            None
+        elif SystemType.isMac():
+            params = " -qmldir=%(qml)s" % {"qml":qml_dir}
+            None
+        
+        cmd = deploy_path + " %(src)s %(params)s" % {"src":tgt_file_path,"params":params}
+        cprint.info("start run " + cmd)
+        ret = os.system(cmd) 
+        if ret == 0:
+            cprint.finish(cmd)
+        else:
+            cprint.errorExit(cmd,2)
+
+    # 压缩文件夹成7z
+    # p7zip_path: 7z可执行路径
+    # src_dir: 压缩文件夹路径
+    # name: 文件夹名字
+    # zip_name: 压缩包名字，不包含后缀
+    def compress7z(self,p7zip_path,src_dir,name,zip_name):   
+        zippath = os.path.join(src_dir,zip_name + ".7z")
+        if os.path.exists(zippath):
+            os.remove(zippath)
+
+        ret = os.system("%(cmd)s a -r  %(tgt)s %(src)s" % {
+                "cmd":p7zip_path,
+                "src":os.path.join(src_dir,name),
+                "tgt":zippath
+            })
+
+        if ret == 0:
+            cprint.finish("压缩成功----" + zippath)
+        else:
+            cprint.skipinfo(False,"压缩失败----" + zippath,1)
+
+    # 压缩文件夹,通过后缀名来确定压缩格式
+    # p7zip_path: 7z可执行路径
+    # src_path: 压缩文件夹路径
+    # output_path: 压缩输出路径
+    def compress(self,p7zip_path,src_path,output_path):  
+        if os.path.exists(output_path):
+            os.remove(output_path)
+
+        ret = os.system("%(cmd)s a -r  %(tgt)s %(src)s" % {
+                "cmd":p7zip_path,
+                "src":src_path,
+                "tgt":output_path
+            })
+
+        if ret == 0:
+            cprint.finish("压缩成功----" + output_path)
+        else:
+            cprint.skipinfo(False,"压缩失败----" + output_path,1)
+    def compressApp(self, seven_zip_exe, src_dir, output_dir):
+        """
+        使用7z递归压缩目标目录到输出目录
+    
+        参数:
+            seven_zip_exe: 7z.exe的完整路径
+            src_dir: 要压缩的源目录
+            output_dir: 输出目录（压缩文件将保存到这里）
+         """
+        # 确保输出目录存在
+        os.makedirs(output_dir, exist_ok=True)
+    
+        # 设置压缩文件路径（输出目录下的app.7z）
+        zip_path = os.path.join(output_dir, "app.7z")
+    
+        # 删除已存在的压缩文件
+        if os.path.exists(zip_path):
+            try:
+                os.remove(zip_path)
+                print(f"已删除旧文件: {zip_path}")
+            except Exception as e:
+                print(f"删除旧文件失败: {e}")
+                return False
+    
+        try:
+            # 构建7z命令（递归压缩整个目录）
+            command = [
+                seven_zip_exe,  # 7z.exe路径
+                "a",             # 添加文件
+                "-r",            # 递归子目录
+                "-bb3",          # 显示详细日志
+                zip_path,        # 输出压缩文件
+                os.path.join(src_dir, "*")  # 源目录所有内容
+            ]
+        
+            # 执行压缩命令
+            result = subprocess.run(
+                command,
+                capture_output=True,
+                text=True,
+                check=True
+            )
+        
+            # 输出压缩结果
+            print("压缩成功!")
+            print(f"压缩文件保存在: {zip_path}")
+            print(f"压缩大小: {os.path.getsize(zip_path)//1024} KB")
+            print("-" * 50)
+            print("压缩日志:")
+            print(result.stdout)
+            return True
+        
+        except subprocess.CalledProcessError as e:
+            print("压缩失败!")
+            print(f"错误代码: {e.returncode}")
+            print(f"错误信息: {e.stderr}")
+            return False
+        except Exception as e:
+            print(f"发生未知错误: {str(e)}")
+            return False
+    # 拷贝dmg_settings.json到目标目录
+    # 仅限mac使用
+    # json_path: json源文件路径
+    # to_path: 在该路径生成格式化后到json文件
+    # title: 软件包名字
+    # background_path: 背景图路径
+    # volume_path: 卷图标
+    # app_path: app包的路径
+    def copyDmgSettings(self,json_path,to_path,title,background_path,volume_path,app_path):
+        cprint.copyInfo(json_path,to_path)
+
+        with open(json_path,'r', encoding='utf-8') as json_file:
+            data = json_file.read()
+
+        data = data % {
+            'title': title,
+            'background': background_path,
+            'volume_icon':volume_path,
+            'app_path': app_path
+        }
+
+        with open(to_path,'w', encoding='utf-8') as to_file:
+            to_file.write(data)
+
+    # 构建dmg包
+    # settings_path: 配置文件路径
+    # volume_name: 卷名字
+    # output_name: dmg名字
+    def buildDmg(self,settings_path,volume_name,output_name):
+        cprint.info("开始制作dmg包:" + output_name)
+
+        cmd = 'dmgbuild -s %(settings_path)s "%(volume)s" %(dmg)s.dmg' % {"settings_path":settings_path,"volume":volume_name,"dmg":output_name}
+        cprint.info("start run->" + cmd)
+        ret = os.system(cmd) 
+        if ret == 0:
+            cprint.finish(cmd)
+        else:
+            cprint.errorExit(cmd,2)
+        cprint.info("制作dmg包完成->" + output_name)
+    #
+    # 创建 DMG
+    #create-dmg \
+    #--volname "Labelife" \
+    #--background "installBG@2x.png" \
+    #--window-pos 50 50 \
+    #--window-size 540 360 \
+    #--icon-size 120 \
+    #--icon "Labelife.app" 60 165 \
+    #--app-drop-link 380 165 \
+    #"Labelife_test.dmg" \
+    #"Labelife.app"
+    def createDmg(self, outpath, output_name, background, appPath, volume_name):
+        cprint.info("开始制作dmg包:" + output_name)
+        
+        output_dmg = os.path.join(outpath,output_name + ".dmg")
+        if os.path.isfile(output_dmg):
+            cprint.info("remove exist ->" + output_dmg)
+            os.remove(output_dmg)
+
+        cmd = 'create-dmg --volname "%(volume_name)s" --background "%(background)s" --window-pos 50 50 --window-size 540 360 --icon-size 120 --icon "Labelife.app" 60 165 --app-drop-link 380 165 "%(dmg)s.dmg" "%(appPath)s"' % \
+             {"volume_name": volume_name, "background": background, "dmg": output_name, "appPath": appPath}
+        cprint.info("start rum ->" + cmd)
+        ret = os.system(cmd)
+        
+        #ret = os.system('diskutil unmount /Volumes/Labelife')
+        
+        cprint.info("制作dmg包完成->" + output_name)
+        return output_dmg
+
+    # 构建nsis包
+    # rcs_path: win_resources路径，该路径下包含所有的工具和文件
+    # temp_path: 代码文件和工具拷贝的临时打包路径
+    # output_name: 输出的安装包名字
+    # version: 版本号
+    # p7zip_path: 7z可执行路径
+    # app_path: 程序打包路径
+    def createNsisTempDir(self,rcs_path,temp_path,output_name,version,p7zip_path,app_path):
+        cprint.info("开始创建nsis安装包文件夹:" + temp_path)
+
+        if os.path.exists(temp_path):
+            self.deleteDir(temp_path)
+
+        self.copyDir(rcs_path,temp_path,['NSIS','skins','.in'])
+
+        # self.compress(p7zip_path,os.path.join(rcs_path,'skin'),os.path.join(temp_path,'skin.zip'))
+        # 拷贝shapes组件
+        uninst_src = os.path.join(temp_path, 'uninst/uninst.exe')
+        if os.path.exists(uninst_src):
+            self.copyFile(uninst_src, os.path.join(app_path,'uninst.exe'))
+        else:
+           cprint.warning(f"未找到卸载程序文件: {uninst_src}")
+    
+        output_name = os.path.join(temp_path,'SetupScripts')
+        self.compressApp(p7zip_path,app_path,output_name)
+
+        # 架构判断逻辑
+        setup_arch = "64" if "amd64" in temp_path.lower() else "32"
+        nsiName = os.path.join(output_name,'Labelife/labelife_setup_package.nsi')
+        with open(nsiName,'r', encoding='utf-8') as in_file:
+            data = in_file.read()
+        data = data.replace('%(Setup)', setup_arch)
+        with open(nsiName,'w', encoding='utf-8') as out_file:
+            out_file.write(data) 
+
+    # 构建nsis包
+    # nsis_path: nsis可执行文件路径
+    # nsis_file: 打包脚本路径
+    # output_name: 输出的安装包名字
+    def buildNsis(self,nsis_path,nsis_file,output_name):
+        cprint.info("开始制作nsis包:" + output_name)
+
+        cmd = nsis_path + ' ' + nsis_file
+        cprint.info("start run " + cmd)
+        ret = os.system(cmd) 
+        if ret == 0:
+            cprint.finish(cmd)
+        else:
+            cprint.errorExit(cmd,2)
+
+    def copy_by_suffix(self, app_path, suffix, out_path, version):
+        """
+        根据文件后缀名复制文件
+        
+        参数:
+            app_path: 要搜索的源目录路径
+            suffix: 文件后缀名（如 "txt", ".jpg" 或 "*.png"）
+            out_path: 目标输出目录路径
+        
+        返回:
+            int: 成功复制的文件数量
+            -1: 路径不存在
+        """
+        # 1. 前置条件检查
+        if not os.path.exists(app_path):
+            print(f"Error: Source path'{app_path}' It doesn't exist")
+            return -1
+    
+        # 标准化后缀格式（支持带点、不带点、带星号等形式）
+        suffix = suffix.lower().strip()
+        if suffix.startswith("*."):
+            suffix = suffix[2:]
+        if suffix.startswith("."):
+            suffix = suffix[1:]
+    
+        # 2. 确保输出目录存在
+        os.makedirs(out_path, exist_ok=True)
+    
+        # 3. 遍历目录查找匹配文件
+        copied_count = 0
+        for filename in os.listdir(app_path):
+            file_path = os.path.join(app_path, filename)
+        
+            # 只处理文件，忽略目录
+            if os.path.isfile(file_path):
+                if(file_path.find(version) == -1):
+                    continue
+                # 检查文件后缀是否匹配
+                if filename.lower().endswith(f".{suffix}"):
+                    dst_file = os.path.join(out_path, filename)
+                
+                    # 处理目标文件重名情况
+                    counter = 1
+                    base_name, ext = os.path.splitext(filename)
+                    while os.path.exists(dst_file):
+                        new_name = f"{base_name}_{counter}{ext}"
+                        dst_file = os.path.join(out_path, new_name)
+                        counter += 1
+                
+                    # 复制文件
+                    try:
+                        shutil.copy2(file_path, dst_file)
+                        cprint.info(f"Copied: {file_path} -> {dst_file}")
+                        copied_count += 1
+                    except Exception as e:
+                        cprint.error(f"Copy failed {file_path}: {str(e)}")
+    
+        # 4. 返回结果
+        if copied_count == 0:
+            cprint.warning(f"Error: in '{app_path}' Not found .{suffix} the file")
+        else:
+            cprint.info(f"Successful replication {copied_count} num .{suffix} file to {out_path}")
+    
+        return copied_count
+
+    def get_binary_files_using_file(self, directory):
+        """
+        使用 file 命令检测二进制文件
+        """
+        binary_files = []
+        
+        for root, dirs, files in os.walk(directory):
+            for file in files:
+                file_path = os.path.join(root, file)
+
+                try:
+                    # 使用 file 命令检测文件类型
+                    result = subprocess.run(['file', '-b', file_path], capture_output=True, text=True, timeout=5)                    
+                    if result.returncode == 0:
+                        file_type = result.stdout.lower()
+                        # 检测常见的二进制文件类型
+                        if any(keyword in file_type for keyword in [ 'mach-o', 'executable', 'binary', 'library',  'universal binary', 'dynamically linked']):
+                            binary_files.append(file_path)
+                            
+                except (subprocess.TimeoutExpired, Exception):
+                    continue
+
+        return binary_files
+
+    def flatten_framework(self, framework_path: str):
+        """
+        将带 Versions/A 结构的 macOS Framework 展平为单层结构。
+        示例：flatten_framework("Labelife.app/Contents/Frameworks/Parfait.framework")
+        """
+
+        # 1️⃣ 检查路径合法性
+        if not os.path.isdir(framework_path):
+            raise FileNotFoundError(f"Framework not found: {framework_path}")
+
+        versions_path = os.path.join(framework_path, "Versions")
+        version_a_path = os.path.join(versions_path, "A")
+        if not os.path.isdir(version_a_path):
+            print(f"[WARN] {version_a_path} not found, maybe already flattened?")
+            return
+
+        print(f"Flattening framework: {framework_path}")
+
+        # 2️⃣ 遍历 Versions/A 内容
+        for item in os.listdir(version_a_path):
+            src = os.path.join(version_a_path, item)
+            dst = os.path.join(framework_path, item)
+
+            # 删除现有符号链接（Headers, Resources, Parfait）
+            if os.path.islink(dst):
+                os.unlink(dst)
+
+            # 删除旧文件或目录（避免冲突）
+            if os.path.exists(dst):
+                if os.path.isdir(dst):
+                    shutil.rmtree(dst)
+                else:
+                    os.remove(dst)
+
+            # 复制实际内容到顶层
+            if os.path.isdir(src):
+                shutil.copytree(src, dst, symlinks=False)
+            else:
+                shutil.copy2(src, dst)
+
+            print(f"  Copied: {src} → {dst}")
+
+        # 3️⃣ 删除 Versions 目录
+        shutil.rmtree(versions_path)
+        print(f"  Removed: {versions_path}")
+
+        print(f"[OK] Framework flattened successfully → {framework_path}")
+
+    def fix_parfait(self, app_path: Path):
+        framework_path = app_path + "/Contents/Frameworks/Parfait.framework"
+        executable_path = app_path + "/Contents/MacOS/Labelife"
+
+        # 1. 修复 Parfait.framework 的 install_name
+        os.system(f"install_name_tool -id @executable_path/../Frameworks/Parfait.framework/Parfait {str(framework_path )}/Parfait")
+
+        # 2. 修复 Labelife 可执行文件对 Parfait.framework 的引用
+        os.system(f"install_name_tool -change @rpath/Parfait.framework/Versions/A/Parfait @executable_path/../Frameworks/Parfait.framework/Parfait {str(executable_path)}")
+
+        # 3. 添加 rpath 指向 Frameworks
+        os.system(f"install_name_tool -add_rpath @executable_path/../Frameworks {str(executable_path)})")
+
+        print("Done! Please codesign the app again if needed.")
+
+    def signFileAndApp(self):
+        directory_path = "Labelife.app"
+        binary_files = self.get_binary_files_using_file(directory_path)
+
+        for file_path in binary_files:
+            if(file_path.find('Parfait.framework') > -1):
+                continue
+            cprint.info('开始签名 ->' + file_path)
+            cmd = f'codesign --entitlements=app.entitlements --verify --verbose --timestamp --options runtime --sign "Developer ID Application: ZHUHAI QUYIN TECHNOLOGY CO.,LTD. (J7DJ82QB95)" {file_path}'
+            os.system(cmd)
+            self.verify_sign(file_path)                       
+    
+        cprint.info('开始签名 -> Parfait.framework')        
+        
+        parfait_framework = 'Labelife.app/Contents/Frameworks/Parfait.framework'
+        self.flatten_framework(parfait_framework)
+        self.fix_parfait(directory_path) # 解决依赖问题：otool -D Labelife.app/Contents/Frameworks/Parfait.framework/Parfait
+        parfait_crash_handler = 'Labelife.app/Contents/Frameworks/Parfait.framework/Resources/parfait_crash_handler'        
+        cmd = f'codesign --entitlements=parfait_crash_handler.entitlements --deep --force --verbose --timestamp --options runtime --sign "Developer ID Application: ZHUHAI QUYIN TECHNOLOGY CO.,LTD. (J7DJ82QB95)" {parfait_crash_handler}'
+        self.run_cmd(cmd)
+        self.verify_sign(parfait_crash_handler)        
+
+        cmd = f'codesign --entitlements=parfait_crash_handler.entitlements --deep --force --verbose --timestamp --options runtime --sign "Developer ID Application: ZHUHAI QUYIN TECHNOLOGY CO.,LTD. (J7DJ82QB95)" {parfait_framework}'
+        self.run_cmd(cmd)
+        self.verify_sign(parfait_framework)
+
+        cprint.info('开始签名 -> Labelife.app')
+        cmd = 'codesign --entitlements=app.entitlements --deep --verify --verbose --timestamp --options runtime --sign "Developer ID Application: ZHUHAI QUYIN TECHNOLOGY CO.,LTD. (J7DJ82QB95)" Labelife.app'
+        self.run_cmd(cmd)
+        self.verify_sign('Labelife.app')
+
+    def signDmg(self, dmg):
+
+        cprint.info('开始签名 -> ' + dmg)
+
+        cmd = 'codesign --force --verify --verbose --timestamp --sign "Developer ID Application: ZHUHAI QUYIN TECHNOLOGY CO.,LTD. (J7DJ82QB95)" --options runtime ' + dmg
+        self.run_cmd(cmd)
+
+        self.verify_sign(dmg)        
+    
+        cprint.info('开始认证DMG -> ' + dmg)
+        self.run_cmd(f'xcrun notarytool submit {dmg} --apple-id "yingqi_t@aimotech.cn" --password "ijhe-oevu-gdma-lrca" --team-id "J7DJ82QB95" --wait')
+
+        cprint.info('操作完成，请检查认证结果，如果认证失败又无需重新打包编译，可用脚本直接认证之前生成的dmg -> ' + dmg)
+        
+        #如果认真失败，可用以下命令查询具体失败的文件或者原因
+        # xcrun notarytool log 6a0aaf66-df28-4d8a-ad9c-fa0306f5be18 --apple-id "yingqi_t@aimotech.cn" --password "ijhe-oevu-gdma-lrca" --team-id "J7DJ82QB95"
+
+    def verify_sign(self, path):        
+        #cprint.info(f"开始验证签名完整性->{path}")
+        self.run_cmd(f'codesign -v "{path}"')
+        #self.run_cmd(f'codesign --verify --deep --strict --verbose=4 "{path}"')        
+
+    def run_cmd(self, cmd):
+        cprint.info(f"运行命令->{cmd}")
+        os.system(cmd)
+
+    def run_sign_exe(self, sign_exe, need_sign_dir, signed_dir):
+        cprint.info(f'运行签名程序: {sign_exe} {need_sign_dir} {signed_dir}')
+        os.system(f'{sign_exe} {need_sign_dir} {signed_dir}')
+        
+    def signDlls(self, signExe, output_path):
+        need_sign_files = os.path.join(output_path,'need_sign_files')
+        if os.path.exists(need_sign_files):
+            self.deleteDir(need_sign_files)
+        
+        os.mkdir(need_sign_files)
+        
+        labelife = os.path.join(output_path,'Labelife')
+        self.copyDir(os.path.join(output_path,'bin'), need_sign_files)
+        self.copyFile(os.path.join(output_path,'AimoUI', 'aimoquickcontrolplugin.dll'), os.path.join(need_sign_files, 'aimoquickcontrolplugin.dll'))
+        self.copyFile(os.path.join(labelife, '7z.exe'), os.path.join(need_sign_files, '7z.exe'))
+        self.copyFile(os.path.join(labelife, '7z.dll'), os.path.join(need_sign_files, '7z.dll'))
+        self.copyFile(os.path.join(labelife, 'parfait.dll'), os.path.join(need_sign_files, 'parfait.dll'))
+        self.copyFile(os.path.join(labelife, 'parfait_crash_handler.exe'), os.path.join(need_sign_files, 'parfait_crash_handler.exe'))
+        self.copyFile(os.path.join(labelife, 'uninst.exe'), os.path.join(need_sign_files, 'uninst.exe'))
+        
+        cprint.info(f"待签名目录{need_sign_files} -> 完成目录：{labelife}")
+        self.run_sign_exe(signExe, os.path.join(output_path,'need_sign_files'), os.path.join(output_path,'Labelife'))
+        
+        self.copyFile(os.path.join(labelife, 'aimoquickcontrolplugin.dll'), os.path.join(labelife, 'qml', 'AimoUI', 'aimoquickcontrolplugin.dll'))
+        os.remove(os.path.join(labelife, 'aimoquickcontrolplugin.dll'))
+        
+    def signSetupExe(self, signExe, output_path, exe_file):
+        need_sign_exe_dir = os.path.join(output_path,'need_sign_exe')
+        #清空原有旧文件
+        if os.path.exists(need_sign_exe_dir):
+            self.deleteDir(need_sign_exe_dir)
+        
+        os.mkdir(need_sign_exe_dir)
+        
+        self.copyFile(os.path.join(output_path, exe_file), os.path.join(need_sign_exe_dir, exe_file))
+        os.remove(os.path.join(output_path, exe_file))
+        
+        cprint.info(f"待签名目录{need_sign_exe_dir} -> 完成目录：{output_path}")        
+        self.run_sign_exe(signExe, need_sign_exe_dir, output_path)            
